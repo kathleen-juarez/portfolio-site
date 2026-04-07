@@ -1,0 +1,9 @@
+---
+title: "listings-yaml-index-thing"
+listing: 
+  contents: listings
+  type: grid
+  categories: true
+  sort: 
+    - "title desc"
+---

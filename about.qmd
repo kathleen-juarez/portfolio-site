@@ -2,7 +2,11 @@
 title: "About"
 ---
 
-About this site
+# Coded by Yours Truly
+
+Jack of all trades with a Masters of Science
+
+Peep that code:
 
 ```{r}
 1 + 1

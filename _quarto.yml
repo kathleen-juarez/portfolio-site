@@ -11,13 +11,17 @@ website:
         text: About
       - href: resume-Kathleen.qmd
         text: Resume
+      - href: marketing-analytics.qmd
+        text: Marketing Analytics
+      - href: listings-yaml-index.qmd
+        text: listings/writing/blog
         
         
     
 format:
   html:
     theme:
-      - cosmo
+      - jolla
       - brand
     css: styles.css
     toc: true
