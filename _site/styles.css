@@ -90,3 +90,22 @@ $border-radius: .4rem !default;
   letter-spacing: 0.03em;
   z-index: 11;
 }
+
+.navbar-nav a[href*="about"] {
+  position: relative;
+}
+
+.navbar-nav a[href*="about"]:hover::after {
+  content: "Coded by yours truly! ✨";
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: hotpink;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+}

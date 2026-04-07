@@ -16,13 +16,10 @@ format:
 </div>
 ```
 
-
-
-
 ## Let's Connect
 
 You can [email me](mailto:you@example.com) or connect on [LinkedIn](https://www.linkedin.com/in/your-profile).
 
----
+------------------------------------------------------------------------
 
 *Welcome to my portfolio.*
