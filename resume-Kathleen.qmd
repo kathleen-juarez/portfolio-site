@@ -14,7 +14,7 @@ Results-oriented marketing and analytics professional with a strong foundation i
 # Education
 
 | Degree | Year | College / Department | Institution |
-|------------------|------------------|-------------------|------------------|
+|----|----|----|----|
 | \[Your Degree\] | \[Start – Graduation Year\] | \[Your College or Department\] | \[Your University\] |
 | \[Previous Degree or Certification\] | \[Start – End Year\] | \[Your College or Department\] | \[Your University\] |
 

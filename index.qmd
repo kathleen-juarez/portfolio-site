@@ -1,19 +1,28 @@
 ---
-title: "portfolio-website"
+title: ""
+page-layout: full
+format:
+  html:
+    css: styles/hero.css
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
+```{=html}
+<div class="hero-wrapper">
+  <img src="water.JPG" alt="Water hero image" class="hero-image" />
+  <div class="hero-overlay">
+    <div class="hero-title">Your Headline Here</div>
+    <div class="hero-subtitle">Your subheading goes here</div>
+  </div>
+</div>
 ```
+
+
+
 
 ## Let's Connect
 
 You can [email me](mailto:you@example.com) or connect on [LinkedIn](https://www.linkedin.com/in/your-profile).
 
-------------------------------------------------------------------------
+---
 
 *Welcome to my portfolio.*
