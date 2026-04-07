@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "portfolio-website",
+    "title": "",
     "section": "",
-    "text": "Your Headline Here\n    Your subheading goes here"
+    "text": "Welcome to my portfolio.\n\n  \n  \n    Your Headline Here\n    Your subheading goes here"
   },
   {
     "objectID": "about.html",
@@ -30,9 +30,9 @@
   {
     "objectID": "index.html#lets-connect",
     "href": "index.html#lets-connect",
-    "title": "portfolio-website",
+    "title": "",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\nYou can email me or connect on LinkedIn.\n\nWelcome to my portfolio."
+    "text": "Let’s Connect\nYou can email me or connect on LinkedIn."
   },
   {
     "objectID": "listings-yaml-index.html",
@@ -40,5 +40,12 @@
     "title": "listings-yaml-index-thing",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "about.html#about-this-site",
+    "href": "about.html#about-this-site",
+    "title": "About This Site",
+    "section": "",
+    "text": "This portfolio was designed and hand-coded by me using Quarto, HTML, and CSS — no templates or drag-and-drop builders involved.\n\n\n\n\n\n\nNoteWhy hand-code it?\n\n\n\nI wanted full control over the design and to demonstrate that my marketing skills are backed by real technical ability.\n\n\n\n\n\nDesign — layout, color, and typography decisions made from scratch\nStructure — built with Quarto’s publishing framework\nStyling — custom CSS for things like the pink tooltip you just hovered over 😉\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nQuarto\nSite framework\n\n\nCSS\nCustom styling\n\n\nGitHub\nVersion control & hosting"
   }
 ]
