@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Welcome to my portfolio.\n\n  \n  \n    Your Headline Here\n    Your subheading goes here"
+    "text": "Your Headline Here\n    Your subheading goes here"
   },
   {
     "objectID": "about.html",
@@ -32,7 +32,7 @@
     "href": "index.html#lets-connect",
     "title": "",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\nYou can email me or connect on LinkedIn."
+    "text": "Let’s Connect\nYou can email me or connect on LinkedIn.\nWelcome to my portfolio."
   },
   {
     "objectID": "listings-yaml-index.html",
