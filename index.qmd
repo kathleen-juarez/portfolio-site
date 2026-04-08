@@ -5,6 +5,7 @@ format:
   html:
     css: styles/hero.css
 ---
+
 ```{=html}
 <div class="hero-wrapper">
   <img src="water.JPG" alt="Water hero image" class="hero-image" />
@@ -14,8 +15,11 @@ format:
   </div>
 </div>
 ```
-#
-#
+
+# 
+
+# 
+
 ```{=html}
 <!-- Trigger Button -->
 <button onclick="document.getElementById('siteModal').style.display='flex'" 
@@ -67,9 +71,13 @@ format:
   });
 </script>
 ```
-#
-#
-#
+
+# 
+
+# 
+
+# 
+
 ## Let's Connect
 
 You can [email me](mailto:you@example.com) or connect on [LinkedIn](https://www.linkedin.com/in/your-profile).
@@ -77,5 +85,3 @@ You can [email me](mailto:you@example.com) or connect on [LinkedIn](https://www.
 *Welcome to my portfolio.*
 
 ------------------------------------------------------------------------
-
-
