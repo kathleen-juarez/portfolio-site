@@ -10,7 +10,7 @@ format:
 <div class="hero-wrapper">
   <img src="water.JPG" alt="Water hero image" class="hero-image" />
   <div class="hero-overlay">
-    <div class="hero-title">Your Headline Here</div>
+    <div class="hero-title">Welcome To My Portfolio</div>
     <div class="hero-subtitle">Your subheading goes here</div>
   </div>
 </div>
@@ -23,7 +23,7 @@ format:
 ```{=html}
 <!-- Trigger Button -->
 <button onclick="document.getElementById('siteModal').style.display='flex'" 
-  style="background: hotpink; color: white; border: none; padding: 10px 20px; 
+  style="background: #7e82ad; color: white; border: none; padding: 10px 20px; 
   border-radius: 20px; cursor: pointer; font-size: 1rem;">
   ✨ Behind the Scenes
 </button>

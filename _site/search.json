@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Your Headline Here\n    Your subheading goes here"
+    "text": "Welcome To My Portfolio\n    Your subheading goes here"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About This Site",
     "section": "",
-    "text": "Coded by Yours Truly\nJack of all trades with a Masters of Science\nPeep that code:\n\n1 + 1\n\n[1] 2"
+    "text": "Jack of all trades with a Masters of Science\nPeep that code:\n\n\nThis portfolio was designed and hand-coded by me using Quarto, HTML, and CSS — no templates or drag-and-drop builders involved.\n\n\n\n\n\n\nNoteWhy hand-code it?\n\n\n\nI wanted full control over the design and to demonstrate that my marketing skills are backed by real technical ability.\n\n\n\n\n\nDesign — layout, color, and typography decisions made from scratch\nStructure — built with Quarto’s publishing framework\nStyling — custom CSS for things like the pink tooltip you just hovered over 😉\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nQuarto\nSite framework\n\n\nCSS\nCustom styling\n\n\nGitHub\nVersion control & hosting"
   },
   {
     "objectID": "Resume-Kathleen.html",
