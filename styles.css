@@ -1,6 +1,9 @@
 /* css styles */
 /*-- scss:defaults --*/
 
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Pinyon+Script&family=Marck+Script&family=Style+Script&family=Rouge+Script&family=Euphoria+Script&family=Lobster+Two&family=Lobster&family=Berkshire+Swash&family=Carter+One&family=Mr+Dafoe&family=Charm&family=Pattaya&family=Arima&display=swap');
+
 $theme: "minty" !default;
 
 $white:    #fff !default;
@@ -256,14 +259,24 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  font-family: 'Arima';
+  margin-right: 9rem;
 }
 
-#7e82ad
-#6a81a5
-#66ada9 
-#7aa496
-#669966
-#ddc28f
-#ad9ca4
+/* Nav links (Home, Resume, Marketing Analytics, etc.) */
+.navbar-nav .nav-link {
+  font-family: 'Story Script', sans-serif;
+  font-size: 1rem;
+}
 
+#7e82ad  /* muted purple-blue */
+#6a81a5  /* steel blue */
+#66ada9  /* teal */
+#7aa496  /* sage green */
+#669966  /* medium green */
+#ddc28f  /* warm tan */
+#ad9ca4  /* dusty mauve */
 
+header > nav {
+  background-color: #6a81a5 !important;
+}

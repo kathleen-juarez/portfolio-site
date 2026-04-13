@@ -4,6 +4,7 @@ project:
 website:
   title: "Kathleen Juarez"
   navbar:
+    background: "#6a81a5"
     left:
       - href: index.qmd
         text: Home
