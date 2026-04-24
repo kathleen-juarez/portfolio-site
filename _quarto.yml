@@ -12,8 +12,14 @@ website:
         href: index.qmd
       - text: Resume
         href: resume-Kathleen.qmd
-      - text: Marketing Analytics
-        href: marketing-analytics.qmd
+      - text: Marketing 
+      #  href: marketing-analytics.qmd
+      - text: Analytics
+        menu:
+          - text: Funnel Analysis
+          #  href: 
+          - text: Interactive Dashboard
+          #  href: 
       - text: Design
         href: Design.qmd
      # - href: Writing-test.qmd
