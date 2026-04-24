@@ -3,5 +3,5 @@ title: "VWestwood"
 description: "A short description that shows on the card"
 date: 2026-04-24
 categories: [writing, longform]
-image: water.JPG  # optional thumbnail
+image: candelabra-aloe.jpg  # optional thumbnail
 ---
