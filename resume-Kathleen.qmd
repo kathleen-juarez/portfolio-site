@@ -4,11 +4,11 @@ title: "resume-Kathleen"
 
 # Professional Summary
 
-A digital marketer with a writer's instinct and an analyst's curiosity, using data to tell better stories and make smarter marketing decisions. 
+### **A digital marketer with a writer's instinct and an analyst's curiosity, using data to tell better stories and make smarter marketing decisions.** 
 
-My interests lie in digital marketing strategy, audience engagement, and campaign performance, understanding how people discover, interact with, and respond to digital content. What sets my approach apart is an analytical perspective: I enjoy using tools such as Google Analytics 4, Hubspot CRM, and R to explore customer behavior and uncover insights that help refine messaging, improve digital experiences, and guide smarter marketing decisions. 
+### My  interests lie in digital marketing strategy, audience engagement, and campaign performance, understanding how people discover, interact with, and respond to digital content. What sets my approach apart is an analytical perspective: I enjoy using tools such as Google Analytics 4, Hubspot CRM, and R to explore customer behavior and uncover insights that help refine messaging, improve digital experiences, and guide smarter marketing decisions. 
 
-My professional background spans communications, marketing, and event coordination, where I've managed multi-channel campaigns and projects from concept through execution — developing content, coordinating across teams, and tracking performance to measure what works. These experiences shaped my interest in the convergence of creative messaging, audience connection, and measurable outcomes. I'm drawn to the intersection where a well-told story meets a well-read dataset. That's where the most interesting marketing problems live and where I do my best work..
+### My professional background spans communications, marketing, and event coordination, where I've managed multi-channel campaigns and projects from concept through execution — developing content, coordinating across teams, and tracking performance to measure what works. These experiences shaped my interest in the convergence of creative messaging, audience connection, and measurable outcomes. I'm drawn to the intersection where a well-told story meets a well-read dataset. That's where the most interesting marketing problems live and where I do my best work..
 
 # Technical Skills
 
@@ -17,10 +17,10 @@ My professional background spans communications, marketing, and event coordinati
 
 # Education
 
-|   | Degree | Year | College / Department | Institution |
-|--|------------------|------------------|------------------|------------------|
-| ![](cpp-seal.png) | Master of Science | 2024-2026 | Digital Marketing and Analytics | Cal Poly Pomona |
-|  | Bachelor of Arts | 2013-2016 | English - Creative Writing | University of Southern California |
+|   | Institution | Degree | Year | College / Department |
+|----------|----------|------------------|------------------|------------------|
+| ![](cpp-seal.png) | Cal Poly Pomona | Master of Science | 2024-2026 | Digital Marketing and Analytics |
+|  | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
 # Work Experience
 
