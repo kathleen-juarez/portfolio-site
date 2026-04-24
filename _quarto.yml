@@ -14,15 +14,16 @@ website:
         text: Marketing Analytics
       - href: listings-yaml-index.qmd
         text: listings/writing/blog
-      - href: about.qmd
-        text: About This Site
-        id: about-nav-link
+     # - href: Writing-test.qmd
       - text: Writing
         menu:
-          - text: Sub Test 1
+          - text: Sub Test 1 - Long Form
             href: subtest1.qmd
           - text: Sub Test 2
             href: subtest2.qmd
+      - href: about.qmd
+        text: About This Site
+        id: about-nav-link
           
         
     
