@@ -8,14 +8,14 @@ website:
   navbar:
     background: "#6a81a5"
     left:
-      - href: index.qmd
-        text: Home
-      - href: resume-Kathleen.qmd
-        text: Resume
-      - href: marketing-analytics.qmd
-        text: Marketing Analytics
-      - href: Design.qmd
-        text: Design
+      - text: Home
+        href: index.qmd
+      - text: Resume
+        href: resume-Kathleen.qmd
+      - text: Marketing Analytics
+        href: marketing-analytics.qmd
+      - text: Design
+        href: Design.qmd
      # - href: Writing-test.qmd
       - text: Writing
         menu:
