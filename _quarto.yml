@@ -14,8 +14,8 @@ website:
         text: Resume
       - href: marketing-analytics.qmd
         text: Marketing Analytics
-      - href: listings-yaml-index.qmd
-        text: listings/writing/blog
+      - href: Design.qmd
+        text: Design
      # - href: Writing-test.qmd
       - text: Writing
         menu:

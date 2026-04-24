@@ -1,5 +1,5 @@
 ---
-title: "listings-yaml-index-thing"
+title: "Design"
 listing: 
   contents: listing-folder
   type: grid
@@ -7,5 +7,3 @@ listing:
   sort: 
     - "title desc"
 ---
-
-![](images/yaml-for-list-pages.png)
