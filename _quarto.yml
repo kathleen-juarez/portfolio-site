@@ -3,10 +3,8 @@ project:
   output-dir: docs
 
 website:
-  site-url: "https://kathleenjuarez.com"
-
-website:
   title: "Kathleen Juarez"
+  site-url: "https://kathleenjuarez.com"
   navbar:
     background: "#6a81a5"
     left:
