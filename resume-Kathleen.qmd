@@ -10,16 +10,59 @@ title: "resume-Kathleen"
 
 ##### My professional background spans communications, marketing, and event coordination, where I've managed multi-channel campaigns and projects from concept through execution — developing content, coordinating across teams, and tracking performance to measure what works. These experiences shaped my interest in the convergence of creative messaging, audience connection, and measurable outcomes. I'm drawn to the intersection where a well-told story meets a well-read dataset. That's where the most interesting marketing problems live and where I do my best work.
 
-# Technical Skills
+# Skills
 
--   **Programming Languages:** R, Python, SQL, etc.\
--   **Web Technologies:** HTML, CSS/SCSS, JavaScript, Quarto, CMS Platforms, Analytics Tools
+-   **Digital Marketing & Campaigns**
+
+    -    Multi-channel campaign planning, execution & performance optimization
+
+    -   Social media content, management & digital storytelling
+
+    -   Email marketing, automation & brand messaging
+
+    -   Database marketing & audience segmentation
+
+-   **Content Creation & Design**
+
+    -   Adobe Creative Suite (Photoshop, Illustrator, InDesign)
+
+    -   Canva, CapCut (video editing)
+
+    -   HTML/CSS fundamentals (website & email editing)
+
+    -   Writing — email, social media, web, newsletters, presentations, editorial, promotional, film & TV scripts
+
+-   **Marketing Technology**
+
+    -   HubSpot CRM (segmentation, workflows & automation)
+
+    -   Google Analytics 4 (GA4)
+
+    -   SEO/SEM — SEMrush, Moz
+
+    -   Website CMS & content management
+
+-   **Analytics & Reporting**
+
+    -   Audience engagement metrics & conversion analysis
+
+    -   Marketing forecasting & performance analysis
+
+    -   R, SQL/BigQuery & data visualization
+
+-   **Applied AI for Marketing**
+
+    -   AI-assisted campaign optimization & content development
+
+    -   Predictive modeling for marketing performance
+
+    -   AI-powered digital marketing workflows
 
 # Education
 
 |   | Institution | Degree | Year | College / Department |
 |---------------|---------------|---------------|---------------|---------------|
-| ![](cpp-seal.png) | Cal Poly Pomona | Master of Science | 2024-2026 | Digital Marketing and Analytics |
+| ![](cpp-seal.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
 |  | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
 # Work Experience
