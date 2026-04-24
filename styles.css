@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Pinyon+Script&family=Marck+Script&family=Style+Script&family=Rouge+Script&family=Euphoria+Script&family=Lobster+Two&family=Lobster&family=Berkshire+Swash&family=Carter+One&family=Mr+Dafoe&family=Charm&family=Pattaya&family=Arima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap');
 
 $theme: "minty" !default;
 
@@ -259,7 +260,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  font-family: 'Arima';
+  font-family: 'BJCree';
   margin-right: 9rem;
 }
 
