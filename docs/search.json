@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "Welcome To My Portfolio\n    Your subheading goes here"
-  },
-  {
-    "objectID": "index.html#lets-connect",
-    "href": "index.html#lets-connect",
-    "title": "",
-    "section": "Let’s Connect",
-    "text": "Let’s Connect\nYou can email me or connect on LinkedIn.\nWelcome to my portfolio."
-  },
-  {
     "objectID": "marketing-analytics.html",
     "href": "marketing-analytics.html",
     "title": "marketing analytics",
@@ -40,6 +26,20 @@
     "title": "subtest - long form writing",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Welcome To My Portfolio\n    Your subheading goes here"
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "",
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\nYou can email me or connect on LinkedIn.\nWelcome to my portfolio."
   },
   {
     "objectID": "about.html",
