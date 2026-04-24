@@ -10,7 +10,7 @@ format:
 <div class="hero-wrapper">
   <img src="water.JPG" alt="Water hero image" class="hero-image" />
   <div class="hero-overlay">
-    <div class="hero-title">Marketer in Practice,<br>Writer at Heart</div>
+    <div class="hero-title">Marketer in Practice,Writer at Heart</div>
     <div class="hero-subtitle">WELCOME TO MY PORTFOLIO!</div>
   </div>
 </div>
