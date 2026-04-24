@@ -1,14 +1,12 @@
 [
   {
-    "listing": "/listings-yaml-index.html",
+    "listing": "/Writing-test.html",
     "items": []
   },
   {
     "listing": "/subtest1.html",
-    "items": []
-  },
-  {
-    "listing": "/Writing-test.html",
-    "items": []
+    "items": [
+      "/Longform-listing-folder/VWestwood.html"
+    ]
   }
 ]

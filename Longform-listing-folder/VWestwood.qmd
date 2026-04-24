@@ -1,8 +1,7 @@
 ---
 title: "VWestwood"
-title: "My First Post"
 description: "A short description that shows on the card"
 date: 2026-04-24
-categories: [writing, personal]
+categories: [writing, longform]
 image: water.JPG  # optional thumbnail
 ---

@@ -1,7 +1,7 @@
 ---
 title: "subtest - long form writing"
 listing: 
-  contents: listing-folder
+  contents: Longform-listing-folder
   type: grid
   categories: true
   sort: 
