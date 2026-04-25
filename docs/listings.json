@@ -12,5 +12,12 @@
   {
     "listing": "/Writing-test.html",
     "items": []
+  },
+  {
+    "listing": "/Longform-writing.html",
+    "items": [
+      "/Longform-listing-folder/westwood-review.html",
+      "/Longform-listing-folder/VWestwood.html"
+    ]
   }
 ]

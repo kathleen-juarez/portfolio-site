@@ -14,7 +14,7 @@ title: "resume-Kathleen"
 
 -   **Digital Marketing & Campaigns**
 
-    -    Multi-channel campaign planning, execution & performance optimization
+    -   Multi-channel campaign planning, execution & performance optimization
 
     -   Social media content, management & digital storytelling
 
@@ -61,13 +61,13 @@ title: "resume-Kathleen"
 # Education
 
 |   | Institution | Degree | Year | College / Department |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | ![](cpp-seal.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
 |  | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
 # Work Experience
 
-### Communications Coordinator and Property Assistant,           The Ratkovich Company
+### Communications Coordinator and Property Assistant, The Ratkovich Company
 
 *\[2019 – Present\]*
 
@@ -86,7 +86,7 @@ title: "resume-Kathleen"
 -   Supported content production, event coordination, and stakeholder communication for brand activations and media initiatives.
 -   Ensured brand consistency through fact-checking, proofreading, and adherence to editorial standards
 
-### Summer Day Camp Director and Grant Writer,                    YMCA of West San Gabriel Valley
+### Summer Day Camp Director and Grant Writer, YMCA of West San Gabriel Valley
 
 *\[2014 – 2017\]*
 
