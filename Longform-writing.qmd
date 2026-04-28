@@ -1,7 +1,7 @@
 ---
 title: "Long-form writing"
 listing: 
-  contents: Longform-listing-folder/Westwood
+  contents: Longform-listing-folder
   type: grid
   categories: true
   sort: 
