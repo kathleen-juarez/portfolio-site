@@ -1,0 +1,97 @@
+---
+title: "resume-Kathleen"
+---
+
+# Professional Summary
+
+### **A digital marketer with a writer's instinct and an analyst's curiosity, using data to tell better stories and make smarter marketing decisions.** 
+
+##### My interests lie in digital marketing strategy, audience engagement, and campaign performance, understanding how people discover, interact with, and respond to digital content. What sets my approach apart is an analytical perspective: I enjoy using tools such as Google Analytics 4, Hubspot CRM, and R to explore customer behavior and uncover insights that help refine messaging, improve digital experiences, and guide smarter marketing decisions. 
+
+##### My professional background spans communications, marketing, and event coordination, where I've managed multi-channel campaigns and projects from concept through execution — developing content, coordinating across teams, and tracking performance to measure what works. These experiences shaped my interest in the convergence of creative messaging, audience connection, and measurable outcomes. I'm drawn to the intersection where a well-told story meets a well-read dataset. That's where the most interesting marketing problems live and where I do my best work.
+
+# Skills
+
+-   **Digital Marketing & Campaigns**
+
+    -   Multi-channel campaign planning, execution & performance optimization
+
+    -   Social media content, management & digital storytelling
+
+    -   Email marketing, automation & brand messaging
+
+    -   Database marketing & audience segmentation
+
+-   **Content Creation & Design**
+
+    -   Adobe Creative Suite (Photoshop, Illustrator, InDesign)
+
+    -   Canva, CapCut (video editing)
+
+    -   HTML/CSS fundamentals (website & email editing)
+
+    -   Writing — email, social media, web, newsletters, presentations, editorial, promotional, film & TV scripts
+
+-   **Marketing Technology**
+
+    -   HubSpot CRM (segmentation, workflows & automation)
+
+    -   Google Analytics 4 (GA4)
+
+    -   SEO/SEM — SEMrush, Moz
+
+    -   Website CMS & content management
+
+-   **Analytics & Reporting**
+
+    -   Audience engagement metrics & conversion analysis
+
+    -   Marketing forecasting & performance analysis
+
+    -   R, SQL/BigQuery & data visualization
+
+-   **Applied AI for Marketing**
+
+    -   AI-assisted campaign optimization & content development
+
+    -   Predictive modeling for marketing performance
+
+    -   AI-powered digital marketing workflows
+
+# Education
+
+|   | Institution | Degree | Year | College / Department |
+|----|----|----|----|----|
+| ![](cpp-seal.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
+|  | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
+
+# Work Experience
+
+### Communications Coordinator and Property Assistant, The Ratkovich Company
+
+*\[2019 – Present\]*
+
+-   Designed and executed multi-channel campaigns across email, print, and digital platforms to drive community engagement and connection.
+-   Built and managed audience segmentation strategies in HubSpot CRM, using engagement metrics to refine messaging, optimize timing, and improve communication effectiveness.
+-   Produced branded content including newsletters, social media graphics, flyers, and event materials to support engagement initiatives and maintain consistent storytelling.
+-   Collaborated cross-functionally with internal teams and stakeholders to align messaging, coordinate timelines, and support property-wide communications.
+
+------------------------------------------------------------------------
+
+### Editorial Intern, Flaunt Magazine
+
+*\[2018\]*
+
+-   Wrote and edited editorial content aligned with brand voice, increasing audience engagement and relevance.
+-   Supported content production, event coordination, and stakeholder communication for brand activations and media initiatives.
+-   Ensured brand consistency through fact-checking, proofreading, and adherence to editorial standards
+
+### Summer Day Camp Director and Grant Writer, YMCA of West San Gabriel Valley
+
+*\[2014 – 2017\]*
+
+-   Directed internal communications and coordinated daily schedules for 200+ campers and a team of 20+ staff, ensuring consistent messaging and smooth operations.
+-   Researched, budgeted, and wrote grants, and supported implementation once funds were received, contributing to program funding and sustainability.
+-   Composed organizational documents and correspondence, supporting clear communication across staff, stakeholders, and leadership.
+-   Led recruitment marketing efforts for seasonal staff, including crafting job postings and screening applicants.
+-   Planned, scheduled, and executed field trips and daily events, balancing logistics, vendor coordination, and budget adherence.
