@@ -11,7 +11,7 @@ website:
       - text: Home
         href: index.qmd
       - text: Resume
-        href: resume-Kathleen (1).qmd
+        href: resume/resume-Kathleen (1).qmd
       - text: Marketing 
       #  href: marketing-analytics.qmd
       - text: Analytics
