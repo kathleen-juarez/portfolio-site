@@ -273,6 +273,12 @@ body {
   font-size: 1rem;
 }
 
+
+/* Add breathing room between navbar and listing tiles */
+.quarto-listing {
+  padding-top: 2.5rem;
+}
+
 #7e82ad  /* muted purple-blue */
 #6a81a5  /* steel blue */
 #66ada9  /* teal */
