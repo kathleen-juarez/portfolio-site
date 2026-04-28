@@ -35,18 +35,16 @@ format:
   <!-- Pull quote -->
   <section class="pull-quote-section">
     <blockquote class="pull-quote">
-      &ldquo;When does someone cease to be a daring provocateur,<br>and becomemuseum worthy?&rdquo;
+      &ldquo;When does someone cease to be a daring provocateur,<br>and become museum worthy?&rdquo;
     </blockquote>
   </section>
 </div>
 ```
-
 ::: {layout-ncol="2"}
 ![](westwooddocrunway.jpg){fig-align="center" width="627"}
 
 ![](vivienne-westwood-documentary.jpg){fig-align="left" width="614"}
 :::
-
 ```{=html}
 
   <!-- Body -->

@@ -262,3 +262,30 @@ html, body {
 .dot {
   color: #8b5e3c; /* was var(--accent) */
 }
+
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.pull-quote-section {
+  padding: 1.2rem 1.5rem;
+  margin-bottom: .5 rem;
+}
+
+.hero-subtitle {
+  color: #ad9ca4;
+}
+
+.quarto-layout-row {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pull-quote-section {
+  margin-bottom: 0;
+}
+
+.quarto-layout-panel {
+  margin: 0;
+  padding: 0;
+}
