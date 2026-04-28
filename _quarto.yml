@@ -25,7 +25,7 @@ website:
      # - href: Writing-test.qmd
       - text: Writing
         menu:
-          - text: Sub Test 1 - Long Form
+          - text: Long-Form
             href: Longform-writing.qmd
           - text: Sub Test 2
             href: subtest2.qmd
