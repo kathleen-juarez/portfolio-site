@@ -75,7 +75,7 @@ format:
 
 # Professional Summary
 
-#### Digital marketer with a background in communications, content, and campaign execution. I bring an analytical edge to creative work to understand audience behavior and translate insights into stronger strategy. My best work lives where a compelling story meets a well-read dataset. 
+### Digital marketer with a background in communications, content, and campaign execution. I bring an analytical edge to creative work to understand audience behavior and translate insights into stronger strategy. My best work lives where a compelling story meets a well-read dataset. 
 
 ##### 
 
