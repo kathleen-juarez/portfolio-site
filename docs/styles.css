@@ -279,6 +279,10 @@ body {
   padding-top: 2.5rem;
 }
 
+h1#professional-summary + h3 {
+  color: #000000;
+}
+
 #7e82ad  /* muted purple-blue */
 #6a81a5  /* steel blue */
 #66ada9  /* teal */
