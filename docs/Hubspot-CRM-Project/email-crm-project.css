@@ -117,7 +117,7 @@
 .step-number {
   width: 30px;
   height: 30px;
-  background: #0e6ba8;
+  background: #7aa496;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -143,7 +143,7 @@
 
 .pipeline-arrow {
   font-size: 1.4rem;
-  color: #0e6ba8;
+  color: #ad9ca4;
   align-self: center;
   padding: 0 0.1rem;
   display: none; /* hidden on small viewports; flex on large */
@@ -194,8 +194,9 @@
 
 /* ===== Outcomes Grid ===== */
 .outcomes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(2, auto) !important;
   gap: 1.25rem;
   margin: 1.5rem 0 2rem 0;
 }
@@ -249,4 +250,11 @@ td {
 
 tr:nth-child(even) td {
   background: #f7f9fc;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
 }

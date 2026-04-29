@@ -13,18 +13,21 @@ format:
     css: email-crm-project.css
     page-layout: full
 ---
-
+#
+#
 ```{=html}
 <div class="hero-banner">
   <div class="hero-content">
-    <div class="hero-badge">📬 Marketing & CRM</div>
     <h1 class="hero-title">Tenant Email Notification System</h1>
     <p class="hero-subtitle">
       Replacing a fragile, manual Outlook-based distribution list with a
       fully automated CRM pipeline powered by HubSpot — improving deliverability,
       personalization, and opt-in compliance.
     </p>
+    </p>
+    </p>
     <div class="hero-stats">
+      <div class="stat-chip">📬 Marketing & CRM</div>
       <div class="stat-chip">✅ Self-updating contact lists</div>
       <div class="stat-chip">📊 Open &amp; click-rate analytics</div>
       <div class="stat-chip">🔒 One-click unsubscribe</div>
@@ -33,6 +36,7 @@ format:
   </div>
 </div>
 ```
+
 
 ## Project Overview
 
@@ -136,30 +140,6 @@ This approach did not scale, produced stale lists, and offered **no visibility**
 **Delivery Analytics** The HubSpot dashboard tracks delivery status, open rates, and click-through rates per campaign, giving the property management team concrete feedback on communication effectiveness.
 
 **Campus-Wide Rollout** The launch used a printed flyer with QR code, a Bitly short link for digital sharing, and an introductory email to the existing list — all inviting tenants to opt in to the new system.
-
-------------------------------------------------------------------------
-
-## Project Slides
-
-The slide deck below walks through the full before/after comparison, system screenshots, and the implementation rollout in detail.
-
-```{=html}
-<div class="slides-container">
-  <div class="slides-header">
-    <span class="slides-label">📑 Full Project Presentation</span>
-    <a href="project_slides.pdf" download class="download-btn">⬇ Download PDF</a>
-  </div>
-  <iframe
-    src="project_slides.pdf"
-    width="100%"
-    height="600px"
-    style="border: none; border-radius: 0 0 8px 8px;"
-    title="Email Marketing and CRM Creation Presentation">
-    <p>Your browser does not support embedded PDFs.
-       <a href="project_slides.pdf">Download the PDF</a> to view it.</p>
-  </iframe>
-</div>
-```
 
 ------------------------------------------------------------------------
 
