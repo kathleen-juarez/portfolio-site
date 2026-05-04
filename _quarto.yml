@@ -13,8 +13,13 @@ website:
       - text: Resume
         href: resume/resume-Kathleen (1).qmd
       - text: Marketing 
+        menu:
+          - text: Hubspot CRM
+            href: email-crm-project.qmd
+        # - text: 
+          #  href: 
       #  href: marketing-analytics.qmd
-      - text: Analytics
+      - text: Data Analytics
         menu:
           - text: Funnel Analysis
           #  href: 

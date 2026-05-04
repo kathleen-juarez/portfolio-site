@@ -294,26 +294,9 @@ tr:nth-child(even) td {
 th {
   background: #7e82ad;
 }
+
 .project-overview-intro {
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.7;
-}
-
-.info-card {
-  padding: 0.5rem .75rem;
-}
-
-.info-card h3 .anchor-section {
-  display: none !important;
-}
-
-.project-challenge-intro {
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.7;
-}
-
-.hero-banner {
-  background: linear-gradient(135deg, #6a81a5 0%, #66ada9 55%, #7aa496 100%);
 }
