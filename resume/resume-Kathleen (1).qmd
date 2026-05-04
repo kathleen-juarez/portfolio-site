@@ -5,6 +5,7 @@ format:
     page-layout: full
     margin-left: 60px
     margin-right: 60px
+    css: styles.css
 ---
 
 ```{=html}
@@ -73,11 +74,10 @@ format:
 </style>
 ```
 
-
 # Professional Summary
 
-::: {.project-professional-summary}
-Digital marketer with a background in communications, content, and campaign execution. I bring an analytical edge to creative work to understand audience behavior and translate insights into stronger strategy. My best work lives where a compelling story meets a well-read dataset.
+::: project-professional-summary
+#### Digital marketer with a background in communications, content, and campaign execution. I bring an analytical edge to creative work to understand audience behavior and translate insights into stronger strategy. My best work lives where a compelling story meets a well-read dataset.
 :::
 
 ##### 
@@ -139,9 +139,9 @@ Digital marketer with a background in communications, content, and campaign exec
 # Education
 
 |   | Institution | Degree | Year | College / Department |
-|---------------|---------------|---------------|---------------|---------------|
-| ![](cpp-seal.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
-|  | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
+|:------------:|---------------|---------------|---------------|---------------|
+| ![](CPP.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
+| ![](USC-SEAL.png){width="150"} | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
 # Work Experience
 
