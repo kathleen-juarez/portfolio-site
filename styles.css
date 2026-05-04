@@ -291,3 +291,8 @@ h1#professional-summary + h3 {
 #ddc28f  /* warm tan */
 #ad9ca4  /* dusty mauve */
 
+.project-professional-summary {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.7;
+}

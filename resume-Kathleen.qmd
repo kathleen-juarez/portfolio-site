@@ -61,7 +61,7 @@ title: "resume-Kathleen"
 # Education
 
 |   | Institution | Degree | Year | College / Department |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | ![](cpp-seal.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
 |  | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
