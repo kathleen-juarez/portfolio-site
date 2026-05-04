@@ -15,7 +15,7 @@ website:
       - text: Marketing 
         menu:
           - text: Hubspot CRM
-            href: email-crm-project.qmd
+            href: Hubspot-CRM-Project/email-crm-project.qmd
         # - text: 
           #  href: 
       #  href: marketing-analytics.qmd
