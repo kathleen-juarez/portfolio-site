@@ -258,3 +258,45 @@ tr:nth-child(even) td {
   gap: 0.6rem;
   justify-content: center;
 }
+
+/* ===== Hero Banner ===== */
+.hero-banner {
+  background: linear-gradient(135deg, #7e82ad 0%, #6a81a5 55%, #66ada9 100%);
+}
+
+.problem-card {
+  background: #fdf6ec;
+  border-color: #ddc28f;
+}
+
+.solution-card {
+  background: #f0f7f4;
+  border-color: #669966;
+}
+
+.pipeline-step {
+  background: #f3f5f9;
+  border: 1px solid #c5cfe0;
+}
+
+.slides-header {
+  background: #7e82ad;
+}
+
+.outcome-card {
+  border: 1px solid #d5dce8;
+}
+
+tr:nth-child(even) td {
+  background: #f3f5f9;
+}
+
+th {
+  background: #7e82ad;
+}
+
+.project-overview-intro {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.7;
+}

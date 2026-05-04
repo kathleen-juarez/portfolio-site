@@ -158,6 +158,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a>
   <ul class="collapse">
+  <li><a href="#tools-technologies" id="toc-tools-technologies" class="nav-link" data-scroll-target="#tools-technologies">Tools &amp; Technologies</a></li>
   <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
   <li><a href="#the-challenge-a-broken-manual-system" id="toc-the-challenge-a-broken-manual-system" class="nav-link" data-scroll-target="#the-challenge-a-broken-manual-system">The Challenge: A Broken Manual System</a></li>
   <li><a href="#the-solution-hubspot-crm-pipeline" id="toc-the-solution-hubspot-crm-pipeline" class="nav-link" data-scroll-target="#the-solution-hubspot-crm-pipeline">The Solution: HubSpot CRM Pipeline</a>
@@ -165,7 +166,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#key-feature-highlights" id="toc-key-feature-highlights" class="nav-link" data-scroll-target="#key-feature-highlights">Key Feature Highlights</a></li>
   </ul></li>
   <li><a href="#outcomes-impact" id="toc-outcomes-impact" class="nav-link" data-scroll-target="#outcomes-impact">Outcomes &amp; Impact</a></li>
-  <li><a href="#tools-technologies" id="toc-tools-technologies" class="nav-link" data-scroll-target="#tools-technologies">Tools &amp; Technologies</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -208,9 +208,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="hero-content">
     <h1 class="hero-title">Tenant Email Notification System</h1>
     <p class="hero-subtitle">
-      Replacing a fragile, manual Outlook-based distribution list with a
-      fully automated CRM pipeline powered by HubSpot — improving deliverability,
-      personalization, and opt-in compliance.
+      Replacing a manual Outlook-based distribution list with a
+      fully automated CRM pipeline powered by HubSpot 
     </p>
     <p></p>
     <p></p>
@@ -223,9 +222,45 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </div>
+<section id="tools-technologies" class="level2">
+<h2 class="anchored" data-anchor-id="tools-technologies">Tools &amp; Technologies</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>HubSpot</strong></td>
+<td>CRM, contact management, email builder, analytics</td>
+</tr>
+<tr class="even">
+<td><strong>Bitly</strong></td>
+<td>URL shortening for printed materials and QR codes</td>
+</tr>
+<tr class="odd">
+<td><strong>Microsoft Excel</strong></td>
+<td>Data export / migration from Outlook</td>
+</tr>
+<tr class="even">
+<td><strong>Outlook</strong></td>
+<td>Legacy system (replaced)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>The Alhambra Property Management Office previously relied on a <strong>fully manual email workflow</strong>: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.</p>
+<div class="project-overview-intro">
+<p>Property Management Office previously relied on a fully manual email workflow: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.</p>
+</div>
 <div class="card-row">
   <div class="info-card problem-card">
     <div class="card-icon">⚠️</div>
@@ -251,19 +286,19 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </div>
 </section>
-<section id="the-challenge-a-broken-manual-system" class="level2">
+<section id="the-challenge-a-broken-manual-system" class="level2 project-challenge-intro">
 <h2 class="anchored" data-anchor-id="the-challenge-a-broken-manual-system">The Challenge: A Broken Manual System</h2>
-<p>Managing tenant communications for a commercial property campus should be straightforward — but the legacy process created significant operational overhead and compliance risk.</p>
+<p>The legacy process for managing tenant communications was outdated and created significant operational overhead and compliance risk.</p>
+</section>
 <p><strong>How it worked before:</strong></p>
 <ol type="1">
 <li>A tenant submitted a paper or digital form with their contact information</li>
 <li>Staff manually typed each contact into a named Outlook folder (one per building)</li>
-<li>Contacts <em>stayed</em> in that folder indefinitely unless manually moved</li>
+<li>Contacts stayed in that folder indefinitely unless manually moved</li>
 <li>Bounce-backs required staff to notice and remove addresses by hand</li>
 <li>Opt-out requests arrived via individual emails to the office</li>
 </ol>
-<p>This approach did not scale, produced stale lists, and offered <strong>no visibility</strong> into whether emails were actually being read.</p>
-</section>
+<p>This approach did not scale, produced stale lists, and offered no visibility into whether emails were actually being read.</p>
 <section id="the-solution-hubspot-crm-pipeline" class="level2">
 <h2 class="anchored" data-anchor-id="the-solution-hubspot-crm-pipeline">The Solution: HubSpot CRM Pipeline</h2>
 <div class="pipeline-steps">
@@ -342,53 +377,6 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </div>
 <hr>
-</section>
-<section id="tools-technologies" class="level2">
-<h2 class="anchored" data-anchor-id="tools-technologies">Tools &amp; Technologies</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 29%">
-<col style="width: 70%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Role</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>HubSpot</strong></td>
-<td>CRM, contact management, email builder, analytics</td>
-</tr>
-<tr class="even">
-<td><strong>Bitly</strong></td>
-<td>URL shortening for printed materials and QR codes</td>
-</tr>
-<tr class="odd">
-<td><strong>Microsoft Excel</strong></td>
-<td>Data export / migration from Outlook</td>
-</tr>
-<tr class="even">
-<td><strong>Outlook</strong></td>
-<td>Legacy system (replaced)</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>About This Project
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This system was built for The Alhambra Property Management Office to modernize campus-wide tenant communications. The project covers CRM setup, contact migration, form creation, email template design, and campaign launch strategy.</p>
-</div>
-</div>
 
 
 </section>

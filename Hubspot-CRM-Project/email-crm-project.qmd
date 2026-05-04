@@ -13,16 +13,18 @@ format:
     css: email-crm-project.css
     page-layout: full
 ---
-#
-#
+
+# 
+
+# 
+
 ```{=html}
 <div class="hero-banner">
   <div class="hero-content">
     <h1 class="hero-title">Tenant Email Notification System</h1>
     <p class="hero-subtitle">
-      Replacing a fragile, manual Outlook-based distribution list with a
-      fully automated CRM pipeline powered by HubSpot — improving deliverability,
-      personalization, and opt-in compliance.
+      Replacing a manual Outlook-based distribution list with a
+      fully automated CRM pipeline powered by HubSpot 
     </p>
     </p>
     </p>
@@ -37,10 +39,24 @@ format:
 </div>
 ```
 
+## Tools & Technologies
+
+| Tool                | Role                                              |
+|---------------------|---------------------------------------------------|
+| **HubSpot**         | CRM, contact management, email builder, analytics |
+| **Bitly**           | URL shortening for printed materials and QR codes |
+| **Microsoft Excel** | Data export / migration from Outlook              |
+| **Outlook**         | Legacy system (replaced)                          |
+
+------------------------------------------------------------------------
 
 ## Project Overview
 
-Property Management Office previously relied on a **fully manual email workflow**: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.
+::: {.project-overview-intro}
+
+Property Management Office previously relied on a fully manual email workflow: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.
+
+:::
 
 ```{=html}
 <div class="card-row">
@@ -69,19 +85,24 @@ Property Management Office previously relied on a **fully manual email workflow*
 </div>
 ```
 
+
+::: {.project-challenge-intro}
+
 ## The Challenge: A Broken Manual System
 
-Managing tenant communications for a commercial property campus should be straightforward — but the legacy process created significant operational overhead and compliance risk.
+The legacy process for managing tenant communications was outdated and created significant operational overhead and compliance risk.
+
+:::
 
 **How it worked before:**
 
 1.  A tenant submitted a paper or digital form with their contact information
 2.  Staff manually typed each contact into a named Outlook folder (one per building)
-3.  Contacts *stayed* in that folder indefinitely unless manually moved
+3.  Contacts stayed in that folder indefinitely unless manually moved
 4.  Bounce-backs required staff to notice and remove addresses by hand
 5.  Opt-out requests arrived via individual emails to the office
 
-This approach did not scale, produced stale lists, and offered **no visibility** into whether emails were actually being read.
+This approach did not scale, produced stale lists, and offered no visibility into whether emails were actually being read.
 
 ## The Solution: HubSpot CRM Pipeline
 
@@ -172,19 +193,4 @@ This approach did not scale, produced stale lists, and offered **no visibility**
 
 ------------------------------------------------------------------------
 
-## Tools & Technologies
 
-| Tool                | Role                                              |
-|---------------------|---------------------------------------------------|
-| **HubSpot**         | CRM, contact management, email builder, analytics |
-| **Bitly**           | URL shortening for printed materials and QR codes |
-| **Microsoft Excel** | Data export / migration from Outlook              |
-| **Outlook**         | Legacy system (replaced)                          |
-
-------------------------------------------------------------------------
-
-::: callout-note
-## About This Project
-
-This system was built for The Alhambra Property Management Office to modernize campus-wide tenant communications. The project covers CRM setup, contact migration, form creation, email template design, and campaign launch strategy.
-:::
