@@ -40,7 +40,7 @@ format:
 
 ## Project Overview
 
-The Alhambra Property Management Office previously relied on a **fully manual email workflow**: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.
+Property Management Office previously relied on a **fully manual email workflow**: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.
 
 ```{=html}
 <div class="card-row">
