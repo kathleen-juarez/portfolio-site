@@ -56,18 +56,18 @@
     "text": "Let’s Connect\nYou can email me or connect on LinkedIn.\nWelcome to my portfolio."
   },
   {
-    "objectID": "Hubspot-CRM-Project/email-crm-project.html#tools-technologies",
-    "href": "Hubspot-CRM-Project/email-crm-project.html#tools-technologies",
-    "title": "Tenant Email Notification System",
-    "section": "Tools & Technologies",
-    "text": "Tools & Technologies\n\n\n\n\n\n\n\nTool\nRole\n\n\n\n\nHubSpot\nCRM, contact management, email builder, analytics\n\n\nBitly\nURL shortening for printed materials and QR codes\n\n\nMicrosoft Excel\nData export / migration from Outlook\n\n\nOutlook\nLegacy system (replaced)\n\n\n\n\n\n  \n    ⚠️\n    The Problem\n    \n      Static contact lists required constant manual upkeep\n      No automated bounce-back removal\n      Opt-outs required emailing staff directly\n      General and sensitive notifications shared the same list\n      No open/click tracking or delivery analytics\n    \n  \n  \n    ✅\n    The Solution\n    \n      HubSpot CRM with dynamic, self-updating contact lists\n      Custom email sign-up form with automatic contact creation\n      Resubmission auto-updates existing contacts\n      Personalization tokens (e.g., tenant name in greeting)\n      Built-in unsubscribe, mobile-optimized templates"
-  },
-  {
     "objectID": "Hubspot-CRM-Project/email-crm-project.html#project-overview",
     "href": "Hubspot-CRM-Project/email-crm-project.html#project-overview",
     "title": "Tenant Email Notification System",
     "section": "Project Overview",
     "text": "Project Overview\n\nProperty Management Office previously relied on a fully manual email workflow: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform."
+  },
+  {
+    "objectID": "Hubspot-CRM-Project/email-crm-project.html#tools-technologies",
+    "href": "Hubspot-CRM-Project/email-crm-project.html#tools-technologies",
+    "title": "Tenant Email Notification System",
+    "section": "Tools & Technologies",
+    "text": "Tools & Technologies\n\n\n\n\n\n\n\nTool\nRole\n\n\n\n\nHubSpot\nCRM, contact management, email builder, analytics\n\n\nBitly\nURL shortening for printed materials and QR codes\n\n\nMicrosoft Excel\nData export / migration from Outlook\n\n\nOutlook\nLegacy system (replaced)\n\n\n\n\n\n  \n    ⚠️\n    The Problem\n    \n      Static contact lists required constant manual upkeep\n      No automated bounce-back removal\n      Opt-outs required emailing staff directly\n      General and sensitive notifications shared the same list\n      No open/click tracking or delivery analytics\n    \n  \n  \n    ✅\n    The Solution\n    \n      HubSpot CRM with dynamic, self-updating contact lists\n      Custom email sign-up form with automatic contact creation\n      Resubmission auto-updates existing contacts\n      Personalization tokens (e.g., tenant name in greeting)\n      Built-in unsubscribe, mobile-optimized templates"
   },
   {
     "objectID": "Hubspot-CRM-Project/email-crm-project.html#the-challenge-a-broken-manual-system",
