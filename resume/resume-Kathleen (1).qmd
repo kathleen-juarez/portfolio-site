@@ -80,8 +80,6 @@ format:
 #### Digital marketer with a background in communications, content, and campaign execution. I bring an analytical edge to creative work to understand audience behavior and translate insights into stronger strategy. My best work lives where a compelling story meets a well-read dataset.
 :::
 
-##### 
-
 # Skills
 
 ```{=html}
@@ -138,10 +136,13 @@ format:
 
 # Education
 
-|   | Institution | Degree | Year | College / Department |
-|:------------:|---------------|---------------|---------------|---------------|
-| ![](CPP.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
-| ![](USC-SEAL.png){width="150"} | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
++--------------------------------+--------------------------------------------------------------+------------------------+----------------+--------------------------------------+
+|                                | Institution                                                  | Degree                 | Year           | College / Department                 |
++:==============================:+==============================================================+========================+================+======================================+
+| ![](CPP.png)                   | #### Cal Poly Pomona,   Singelyn Graduate School of Business | #### Master of Science | #### 2024-2026 | #### Digital Marketing and Analytics |
++--------------------------------+--------------------------------------------------------------+------------------------+----------------+--------------------------------------+
+| ![](USC-SEAL.png){width="150"} | #### University of Southern California                       | #### Bachelor of Arts  | #### 2013-2016 | #### English - Creative Writing      |
++--------------------------------+--------------------------------------------------------------+------------------------+----------------+--------------------------------------+
 
 # Work Experience
 
