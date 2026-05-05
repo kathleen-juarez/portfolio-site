@@ -22,7 +22,7 @@ website:
       - text: Data Analytics
         menu:
           - text: Funnel Analysis
-          #  href: 
+            href: Funnel Analysis/funnel-analysis.qmd
           - text: Interactive Dashboard
           #  href: 
       - text: Design

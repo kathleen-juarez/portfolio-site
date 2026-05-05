@@ -1,0 +1,308 @@
+---
+title: "Website Behavior & Booking Funnel Optimization"
+subtitle: "Analytics Objective 5 | Google Analytics 4 | Jan 1 – Apr 21, 2026"
+author: "Kathleen Juarez"
+date: today
+format:
+  revealjs:
+    theme: simple
+    css: ao5-presentation.css
+    transition: fade
+    slide-number: true
+    progress: true
+    embed-resources: true
+    width: 1050
+    height: 620
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(scales)
+library(knitr)
+library(kableExtra)
+
+sessions_raw <- read_csv("A05_data/A05_data_sessions.csv",
+                         skip = 9, show_col_types = FALSE) |>
+  rename(channel = 1, sessions = 2, total_users = 3) |>
+  filter(!is.na(channel), channel != "")
+
+events_raw <- read_csv("A05_data/A05_data_ga4-events.csv",
+                       skip = 9, show_col_types = FALSE) |>
+  rename(event_name = 1, channel = 2, event_count = 3, total_users = 4) |>
+  filter(!is.na(event_name), event_name != "")
+
+extract_event <- function(event_nm, col_name) {
+  events_raw |>
+    filter(event_name == event_nm) |>
+    select(channel, {{ col_name }} := total_users)
+}
+
+page_view        <- extract_event("page_view",            page_views)
+form_start       <- extract_event("form_start",           form_starts)
+booking_complete <- extract_event("booking_complete",     bookings)
+schedule_appt    <- extract_event("Schedule_Appointment", sched_appt_users)
+contact_us       <- extract_event("contact_us",           contact_us_users)
+
+ga4_data <- sessions_raw |>
+  select(channel, sessions) |>
+  left_join(page_view,        by = "channel") |>
+  left_join(form_start,       by = "channel") |>
+  left_join(booking_complete, by = "channel") |>
+  left_join(schedule_appt,    by = "channel") |>
+  left_join(contact_us,       by = "channel") |>
+  mutate(across(-channel, ~replace_na(., 0))) |>
+  mutate(
+    page_view_rate    = if_else(sessions > 0,    page_views  / sessions,   0),
+    form_start_rate   = if_else(page_views > 0,  form_starts / page_views, 0),
+    booking_rate      = if_else(form_starts > 0, bookings    / form_starts, 0),
+    overall_conv_rate = if_else(sessions > 0,    bookings    / sessions,   0)
+  )
+
+totals <- ga4_data |>
+  summarise(
+    channel           = "TOTAL",
+    sessions          = sum(sessions),
+    page_views        = sum(page_views),
+    form_starts       = sum(form_starts),
+    bookings          = sum(bookings),
+    sched_appt_users  = sum(sched_appt_users),
+    contact_us_users  = sum(contact_us_users),
+    overall_conv_rate = sum(bookings) / sum(sessions)
+  )
+
+site_avg <- totals$overall_conv_rate
+
+theme_ao5 <- theme_minimal(base_size = 13) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.y = element_line(color = "#edf0f7"),
+    axis.ticks         = element_blank(),
+    legend.position    = "none",
+    plot.title         = element_text(face = "bold", size = 13, color = "#1a1a2e"),
+    plot.subtitle      = element_text(size = 10, color = "#6b7280",
+                                      margin = margin(b = 8))
+  )
+```
+
+## {.title-slide-custom}
+
+::: {.title-block}
+**Analytics Objective 5**
+
+# Website Behavior &<br>Booking Funnel Optimization
+
+Using GA4 event-level data to find where users drop off, what creates friction, and what drives bookings.
+
+::: {.chip-row}
+[📅 Jan 1 – Apr 21, 2026]{.chip} [563 Sessions]{.chip} [6 Traffic Channels]{.chip} [R / tidyverse]{.chip}
+:::
+:::
+
+---
+
+## Methodology {.section-slide}
+
+**Descriptive Funnel Analysis** — GA4 event-level data, *total users* metric throughout
+
+:::: {.columns}
+
+::: {.column width="52%"}
+**Funnel Stages (Dependent Variable)**
+
+| # | Stage | Description |
+|---|-------|-------------|
+| 1 | Sessions | Entry point |
+| 2 | Page Views | Surface engagement |
+| 3 | Form Start | Booking initiated |
+| 4 | Booking Complete | Conversion |
+
+:::
+
+::: {.column width="48%"}
+**Traffic Channels (Independent Variable)**
+
+- Direct
+- Organic Search
+- Organic Social
+- Referral
+- Unassigned
+- Paid Search
+
+:::
+
+::::
+
+---
+
+## The Core Problem {.section-slide}
+
+```{r}
+#| label: fig-funnel-pres
+#| fig-width: 8
+#| fig-height: 4
+
+funnel_long <- tibble(
+  stage = factor(
+    c("Sessions", "Page Views", "Form Start", "Booking\nComplete"),
+    levels = c("Sessions", "Page Views", "Form Start", "Booking\nComplete")
+  ),
+  count     = c(totals$sessions, totals$page_views,
+                totals$form_starts, totals$bookings),
+  highlight = c(FALSE, FALSE, TRUE, FALSE)
+)
+
+ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
+  geom_col(width = 0.52) +
+  geom_text(aes(label = comma(count)),
+            vjust = -0.45, size = 4.2, fontface = "bold", color = "#1a1a2e") +
+  scale_fill_manual(values = c("FALSE" = "#7e82ad", "TRUE" = "#C0392B")) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.18))) +
+  labs(
+    title    = "Most Users Exit Before Completing Any High-Intent Action",
+    subtitle = paste0(
+      "Page View Rate: ",       percent(totals$page_views  / totals$sessions,   accuracy = 0.1),
+      "  |  Form Start Rate: ", percent(totals$form_starts / totals$page_views, accuracy = 0.1),
+      "  |  Overall Conv.: ",   percent(site_avg, accuracy = 0.1)
+    ),
+    x = NULL, y = "Unique Users"
+  ) +
+  theme_ao5
+```
+
+::: {.callout-box}
+**91.9% drop-off** from page views to form starts — the critical friction point, consistent across all six channels
+:::
+
+---
+
+## Not All Traffic Is Equal {.section-slide}
+
+```{r}
+#| label: fig-channels-pres
+#| fig-width: 8
+#| fig-height: 4.2
+
+ga4_data |>
+  mutate(
+    channel   = fct_reorder(channel, overall_conv_rate),
+    above_avg = overall_conv_rate > site_avg
+  ) |>
+  ggplot(aes(x = channel, y = overall_conv_rate, fill = above_avg)) +
+  geom_col(width = 0.52) +
+  geom_text(aes(label = percent(overall_conv_rate, accuracy = 0.1)),
+            hjust = -0.15, size = 3.8, fontface = "bold", color = "#1a1a2e") +
+  geom_hline(yintercept = site_avg, linetype = "dashed",
+             color = "#9ca3af", linewidth = 0.55) +
+  annotate("text", x = 0.65, y = site_avg + 0.0025,
+           label = paste0("Site avg: ", percent(site_avg, accuracy = 0.1)),
+           size = 3.2, color = "#9ca3af", hjust = 0) +
+  coord_flip() +
+  scale_fill_manual(values = c("FALSE" = "#b0bcd4", "TRUE" = "#7e82ad")) +
+  scale_y_continuous(labels = percent_format(accuracy = 1),
+                     expand = expansion(mult = c(0, 0.28))) +
+  labs(
+    title    = "Organic Search Is the Only Tracked Channel Above Site Average",
+    subtitle = "Conv. Rate = booking_complete users ÷ sessions",
+    x = NULL, y = NULL
+  ) +
+  theme_ao5 +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.major.x = element_line(color = "#edf0f7"))
+```
+
+---
+
+## Funnel Performance by Channel {.section-slide}
+
+```{r}
+#| label: tbl-funnel-pres
+
+ga4_data |>
+  arrange(desc(overall_conv_rate)) |>
+  bind_rows(totals) |>
+  mutate(overall_conv_rate = percent(overall_conv_rate, accuracy = 0.1)) |>
+  select(
+    `Traffic Channel` = channel,
+    Sessions          = sessions,
+    `Page Views`      = page_views,
+    `Contact Us`      = contact_us_users,
+    `Form Starts`     = form_starts,
+    `Sched. Appts`    = sched_appt_users,
+    `Conv. Rate`      = overall_conv_rate
+  ) |>
+  kbl(align = c("l","c","c","c","c","c","c")) |>
+  kable_styling(bootstrap_options = c("condensed", "bordered"),
+                full_width = TRUE, font_size = 13) |>
+  row_spec(0, bold = TRUE, background = "#7e82ad", color = "white") |>
+  row_spec(seq(1, nrow(ga4_data), by = 2), background = "white",   color = "#333") |>
+  row_spec(seq(2, nrow(ga4_data), by = 2), background = "#f3f5f9", color = "#333") |>
+  row_spec(nrow(ga4_data) + 1, bold = TRUE,
+           background = "#e8edf6", color = "#1a1a2e") |>
+  footnote(
+    general = "Contact Us and Sched. Appts are high-intent signals (link clicks), not sequential funnel gates.",
+    general_title = "", footnote_as_chunk = TRUE
+  )
+```
+
+---
+
+## Subgroup Validation {.section-slide}
+
+Drop-off from page views → form starts, confirmed across all channels
+
+```{r}
+#| label: tbl-dropoff-pres
+
+ga4_data |>
+  mutate(dropoff = 1 - form_start_rate) |>
+  arrange(dropoff) |>
+  select(
+    `Traffic Channel` = channel,
+    `Page Views`      = page_views,
+    `Form Starts`     = form_starts,
+    `Form Start Rate` = form_start_rate,
+    `Drop-off Rate`   = dropoff
+  ) |>
+  mutate(across(c(`Form Start Rate`, `Drop-off Rate`),
+                ~percent(., accuracy = 0.1))) |>
+  kbl(align = c("l","c","c","c","c")) |>
+  kable_styling(bootstrap_options = c("striped", "condensed", "bordered"),
+                full_width = TRUE, font_size = 13) |>
+  row_spec(0, bold = TRUE, background = "#7e82ad", color = "white")
+```
+
+::: {.callout-box}
+Drop-off exceeds **83% in every channel** — confirming a structural on-site barrier, not a channel-specific issue
+:::
+
+---
+
+## Strategic Recommendations {.section-slide}
+
+::: {.rec-list}
+
+::: {.rec-item}
+[1]{.rec-num} **Redesign the Mid-Funnel Experience** — Strengthen CTAs, sharpen the value proposition, and simplify the path to the booking form. Highest-leverage fix without additional spend.
+:::
+
+::: {.rec-item}
+[2]{.rec-num} **Invest in Organic Search & SEO** — Converts at 2.3%, more than 2× the site average. Shift content and budget toward this channel.
+:::
+
+::: {.rec-item}
+[3]{.rec-num} **Audit UTM Tagging for Unassigned Traffic** — The site's highest-converting source (3.1%) is currently unlabeled. Classify it through proper UTM configuration and GA4 audit.
+:::
+
+::: {.rec-item}
+[4]{.rec-num} **Deploy Purchase Event Tracking via GTM** — Track completed purchases, not just bookings, to connect marketing to actual revenue outcomes.
+:::
+
+:::

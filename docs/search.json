@@ -117,5 +117,89 @@
     "title": "Writing -Test - listings-yaml-index-thing",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html",
+    "href": "Funnel Analysis/A05_analysis (2).html",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "",
+    "text": "📊 Analytics Objective 5\n  \n  \n    Using Google Analytics 4 event-level data to identify where users drop off,\n    diagnose friction in the booking pathway, and evaluate acquisition channel\n    quality across a 112-day observation window.\n  \n  \n    🗓 Jan 1 – Apr 21, 2026\n    📈 GA4 Event Data\n    📉 Descriptive Funnel Analysis\n    🔢 R / tidyverse\n    6 Traffic Channels"
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#project-overview",
+    "href": "Funnel Analysis/A05_analysis (2).html#project-overview",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Project Overview",
+    "text": "Project Overview\n\nThis analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on AO5: Website Behavior & Booking Funnel Optimization.\n\nThe core business problem is a gap between website traffic and bookings. The business was attracting visitors through multiple acquisition channels but had no systematic view of where those visitors were dropping off or which channels were actually driving conversions. AO5 was designed to diagnose that gap using GA4’s event-level behavioral data.\n\n  \n    ⚠️\n    The Problem\n    \n      No visibility into where users were leaving the site\n      Traffic volume treated as a proxy for success\n      Booking form drop-off untracked and unaddressed\n      Channel quality vs. volume not distinguished\n    \n  \n  \n    ✅\n    The Analytical Goal\n    \n      Map the four-stage booking funnel using GA4 events\n      Identify the largest friction point in the user journey\n      Segment funnel performance by traffic channel\n      Validate patterns through subgroup analysis"
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#literature-conceptual-framework",
+    "href": "Funnel Analysis/A05_analysis (2).html#literature-conceptual-framework",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Literature & Conceptual Framework",
+    "text": "Literature & Conceptual Framework\nThis analysis is grounded in four complementary theoretical frameworks that explain both the structure of the user journey and the behavioral mechanisms that predict conversion.\n\n  \n    Customer Journey\n    Lemon & Verhoef (2016)\n    Consumers move through structured stages — awareness, consideration, purchase — and friction at any point reduces downstream conversion. The website functions as a sequence of behavioral touchpoints, making funnel analysis directly applicable.\n  \n  \n    Clickstream / Path Analysis\n    Montgomery et al. (2004)\n    Timestamped browsing data can identify navigation states and transition probabilities. GA4 event-level exports provide sufficient granularity to locate exit points and quantify behavioral predictors of booking.\n  \n  \n    Theory of Planned Behavior\n    Ajzen (1991)\n    Behavioral intention is the immediate predictor of action. If perceived behavioral control is weakened by an unclear booking flow or missing information, intention fails to translate into a booking — even for motivated visitors.\n  \n  \n    Choice Architecture\n    Thaler & Benartzi (2004)\n    Subtle changes in information presentation and CTA placement strongly affect decision outcomes. Observed drop-off patterns may reflect structural design barriers rather than lack of consumer interest.\n  \n\n\nSynthesis: Together, these frameworks position the 91.9% form-start drop-off not as a traffic problem but as a behavioral and structural design issue — one addressable through deliberate changes to the on-site experience."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#methodology",
+    "href": "Funnel Analysis/A05_analysis (2).html#methodology",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Methodology",
+    "text": "Methodology\nThe method selected is a Descriptive Funnel Analysis using GA4 event-level exports. The funnel maps user progression through four sequential behavioral stages, using total users (not event count) throughout to avoid inflation from repeat-event firing within a single session.\n\nFunnel Stages\n\n  \n    1\n    \n      Sessions\n      Entry point — all website visits; denominator for overall conversion rate\n    \n  \n  →\n  \n    2\n    \n      Page Views\n      Users engaging with site content; surface-level behavioral signal\n    \n  \n  →\n  \n    3\n    \n      Form Start\n      User begins filling the booking form — highest-intent observable action\n    \n  \n  →\n  \n    4\n    \n      Booking Complete\n      Form submitted — confirmed booking intent; the conversion event\n    \n  \n\n\nNote on supplementary signals: contact_us and Schedule_Appointment events are reported as behavioral context but are not positioned as sequential funnel gates. form_start users exceed their combined totals, confirming the booking form is accessible through multiple site paths.\n\n\n\nDerived Metrics\n\n\n\nMetric\nFormula\n\n\n\n\nPage View Rate\npage_view users ÷ sessions\n\n\nForm Start Rate\nform_start users ÷ page_view users\n\n\nBooking Rate\nbooking_complete ÷ form_start users\n\n\nOverall Conv. Rate\nbooking_complete ÷ sessions\n\n\n\nTraffic channel (GA4 Default Channel Group) is used as the primary segmentation variable, enabling comparison across six acquisition sources: Direct, Organic Search, Organic Social, Referral, Unassigned, and Paid Search."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#statistical-summary",
+    "href": "Funnel Analysis/A05_analysis (2).html#statistical-summary",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Statistical Summary",
+    "text": "Statistical Summary\n\n\n\n\n\nMetric\nValue\n\n\n\n\nTotal Sessions\n563\n\n\nPage View Users\n470\n\n\nForm Start Users\n38\n\n\nBookings Completed\n5\n\n\nPage View Rate\n83.5%\n\n\nForm Start Rate (of page views)\n8.1%\n\n\nBooking Rate (of form starts)\n13.2%\n\n\nOverall Conversion Rate\n0.9%\n\n\nLargest Drop-off Stage\npage_view → form_start (91.9% drop-off)"
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#key-findings-the-core-problem",
+    "href": "Funnel Analysis/A05_analysis (2).html#key-findings-the-core-problem",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Key Findings — The Core Problem",
+    "text": "Key Findings — The Core Problem\nThe funnel narrows sharply and unevenly. The dominant friction point is the transition from page viewing to form initiation — a 91.9% drop-off rate that holds across every traffic channel.\n\nFunnel: Most Users Exit Before Starting the Booking Form\n\n\n\n\n\n\n\n\nFigure 1: Unique users at each stage of the booking funnel. Red bar indicates the largest drop-off point."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#not-all-traffic-is-equal",
+    "href": "Funnel Analysis/A05_analysis (2).html#not-all-traffic-is-equal",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Not All Traffic Is Equal",
+    "text": "Not All Traffic Is Equal\n\nConversion Rate by Traffic Channel\n\n\n\n\n\n\n\n\nFigure 2: Booking conversion rate by traffic channel. Dashed line = site average."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#booking-funnel-performance-by-traffic-channel",
+    "href": "Funnel Analysis/A05_analysis (2).html#booking-funnel-performance-by-traffic-channel",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Booking Funnel Performance by Traffic Channel",
+    "text": "Booking Funnel Performance by Traffic Channel\n\n\n\n\nTable 1\n\n\n\n\n\n\nTraffic Channel\nSessions\nPage Views\nContact Us\nForm Starts\nSched. Appts\nConv. Rate\n\n\n\n\nUnassigned\n32\n29\n2\n3\n2\n3.1%\n\n\nOrganic Search\n86\n61\n4\n4\n4\n2.3%\n\n\nOrganic Social\n207\n203\n2\n12\n3\n0.5%\n\n\nDirect\n213\n167\n9\n18\n6\n0.5%\n\n\nReferral\n21\n6\n2\n1\n2\n0.0%\n\n\nPaid Search\n4\n4\n0\n0\n0\n0.0%\n\n\nTOTAL\n563\n470\n19\n38\n17\n0.9%\n\n\n\n Jan 1–Apr 21, 2026. Channels sorted by descending conversion rate. Conv. Rate = booking_complete users ÷ sessions. Contact Us and Sched. Appts are high-intent behavioral signals (link clicks), not sequential funnel gates."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#subgroup-validation-drop-off-by-channel",
+    "href": "Funnel Analysis/A05_analysis (2).html#subgroup-validation-drop-off-by-channel",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Subgroup Validation: Drop-off by Channel",
+    "text": "Subgroup Validation: Drop-off by Channel\nBecause Direct traffic accounts for 37.8% of total sessions, aggregate drop-off rates could be pulled by its volume. The table below confirms the form-start barrier is consistent across channels — not an artifact of one dominant source.\n\n\n\n\nTable 2\n\n\n\n\n\n\nTraffic Channel\nPage Views\nForm Starts\nForm Start Rate\nDrop-off Rate\n\n\n\n\nReferral\n6\n1\n16.7%\n83.3%\n\n\nDirect\n167\n18\n10.8%\n89.2%\n\n\nUnassigned\n29\n3\n10.3%\n89.7%\n\n\nOrganic Search\n61\n4\n6.6%\n93.4%\n\n\nOrganic Social\n203\n12\n5.9%\n94.1%\n\n\nPaid Search\n4\n0\n0.0%\n100.0%\n\n\n\n\n\n\n\n\n\nFinding: Drop-off at the form-start stage exceeds 83% in every channel with measurable traffic. This universality confirms the barrier is a structural feature of the on-site experience — not a channel-specific anomaly.\n\n\nHigh-Intent Behavioral Signals\n\nNote: Schedule_Appointment and contact_us are link clicks to the page hosting the booking form. They are reported here as behavioral context rather than sequential funnel stages, because form_start users exceed the combined click totals — indicating the form is reachable through multiple paths on the site.\n\n\n\n\n\nTable 3\n\n\n\n\n\n\nTraffic Channel\nSessions\nSched. Appt Clicks\nContact Us Clicks\nForm Starts\nBookings\n\n\n\n\nDirect\n213\n6\n9\n18\n1\n\n\nOrganic Social\n207\n3\n2\n12\n1\n\n\nOrganic Search\n86\n4\n4\n4\n2\n\n\nUnassigned\n32\n2\n2\n3\n1\n\n\nReferral\n21\n2\n2\n1\n0\n\n\nPaid Search\n4\n0\n0\n0\n0\n\n\nTOTAL\n563\n17\n19\n38\n5\n\n\n\n\n\n\n\n\n\n\nOn Predictive Modeling\nPredictive analytics were considered but determined to be methodologically inappropriate given the available data. With fewer than 10 observed conversion events across 112 days, the dataset does not meet the minimum sample size requirements to train a statistically reliable model. Should the recommended tracking improvements be implemented and 12+ months of booking data accumulate, logistic regression or session-scoring models would become viable next steps."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#presentation",
+    "href": "Funnel Analysis/A05_analysis (2).html#presentation",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Presentation",
+    "text": "Presentation\nThe RevealJS slides below are rendered directly from the same R code and GA4 data as this analysis — all charts and tables stay in sync automatically when the data is updated.\n\n  \n    📊 AO5 — Booking Funnel Analysis · RevealJS\n    Open fullscreen ↗"
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#recommendations",
+    "href": "Funnel Analysis/A05_analysis (2).html#recommendations",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Recommendations",
+    "text": "Recommendations\n\n  \n    1\n    \n      Redesign the Mid-Funnel Experience\n      The 91.9% drop-off between page views and form starts is the highest-leverage fix available. Strengthening calls to action, sharpening the value proposition, and reducing booking form friction can increase appointments without requiring additional marketing spend.\n    \n  \n  \n    2\n    \n      Prioritize Organic Search & SEO Investment\n      Organic Search converts at 2.3% — more than twice the site average and more than 4× the efficiency of Organic Social. Shifting content and budget investment toward this channel is likely to yield stronger returns than broad social reach alone.\n    \n  \n  \n    3\n    \n      Audit Channel Tracking & UTM Configuration\n      Unassigned traffic converts at 3.1% — the highest rate on the site — but its source is currently invisible. Auditing UTM tagging and GA4 configuration to properly classify this traffic is a critical step toward understanding what is driving the best results.\n    \n  \n  \n    4\n    \n      Deploy Purchase Event Tracking via Google Tag Manager\n      Current tracking measures booking form submissions — not completed purchases. Configuring GTM to capture purchase completions will allow future analyses to connect marketing activity to actual revenue outcomes, enabling true ROI measurement."
+  },
+  {
+    "objectID": "Funnel Analysis/A05_analysis (2).html#appendix-data-code",
+    "href": "Funnel Analysis/A05_analysis (2).html#appendix-data-code",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Appendix: Data & Code",
+    "text": "Appendix: Data & Code\n\nData Sources\n\nA05_data/A05_data_sessions.csv — Traffic Acquisition report (GA4), sessions by Default Channel Group\nA05_data/A05_data_ga4-events.csv — Events report (GA4), total users per event per channel\n\n\n\nR Packages\n\n\n\n\n\n\n\nPackage\nRole\n\n\n\n\ntidyverse\nData wrangling and visualization (dplyr, ggplot2, readr)\n\n\nscales\nPercent and comma formatting for labels\n\n\nknitr / kableExtra\nTable rendering with custom styling\n\n\n\n\n\nReproducibility Notes\nAll analysis runs end-to-end from the raw GA4 CSV exports — no manual data entry. Re-render this document and ao5-presentation.qmd together whenever the underlying CSVs are updated; all figures and tables will reflect the new data automatically."
   }
 ]
