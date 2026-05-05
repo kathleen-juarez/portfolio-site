@@ -28,12 +28,12 @@ library(scales)
 library(knitr)
 library(kableExtra)
 
-sessions_raw <- read_csv("A05_data/A05_data_sessions.csv",
+sessions_raw <- read_csv("A05_data_sessions.csv",
                          skip = 9, show_col_types = FALSE) |>
   rename(channel = 1, sessions = 2, total_users = 3) |>
   filter(!is.na(channel), channel != "")
 
-events_raw <- read_csv("A05_data/A05_data_ga4-events.csv",
+events_raw <- read_csv("A05_data_ga4-events.csv",
                        skip = 9, show_col_types = FALSE) |>
   rename(event_name = 1, channel = 2, event_count = 3, total_users = 4) |>
   filter(!is.na(event_name), event_name != "")
@@ -92,55 +92,51 @@ theme_ao5 <- theme_minimal(base_size = 13) +
   )
 ```
 
-## {.title-slide-custom}
+##  {.title-slide-custom}
 
-::: {.title-block}
+:::: title-block
 **Analytics Objective 5**
 
 # Website Behavior &<br>Booking Funnel Optimization
 
 Using GA4 event-level data to find where users drop off, what creates friction, and what drives bookings.
 
-::: {.chip-row}
+::: chip-row
 [📅 Jan 1 – Apr 21, 2026]{.chip} [563 Sessions]{.chip} [6 Traffic Channels]{.chip} [R / tidyverse]{.chip}
 :::
-:::
+::::
 
----
+------------------------------------------------------------------------
 
 ## Methodology {.section-slide}
 
 **Descriptive Funnel Analysis** — GA4 event-level data, *total users* metric throughout
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="52%"}
 **Funnel Stages (Dependent Variable)**
 
-| # | Stage | Description |
-|---|-------|-------------|
-| 1 | Sessions | Entry point |
-| 2 | Page Views | Surface engagement |
-| 3 | Form Start | Booking initiated |
-| 4 | Booking Complete | Conversion |
-
+| \#  | Stage            | Description        |
+|-----|------------------|--------------------|
+| 1   | Sessions         | Entry point        |
+| 2   | Page Views       | Surface engagement |
+| 3   | Form Start       | Booking initiated  |
+| 4   | Booking Complete | Conversion         |
 :::
 
 ::: {.column width="48%"}
 **Traffic Channels (Independent Variable)**
 
-- Direct
-- Organic Search
-- Organic Social
-- Referral
-- Unassigned
-- Paid Search
-
+-   Direct
+-   Organic Search
+-   Organic Social
+-   Referral
+-   Unassigned
+-   Paid Search
 :::
+:::::
 
-::::
-
----
+------------------------------------------------------------------------
 
 ## The Core Problem {.section-slide}
 
@@ -177,11 +173,11 @@ ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
   theme_ao5
 ```
 
-::: {.callout-box}
+::: callout-box
 **91.9% drop-off** from page views to form starts — the critical friction point, consistent across all six channels
 :::
 
----
+------------------------------------------------------------------------
 
 ## Not All Traffic Is Equal {.section-slide}
 
@@ -218,7 +214,7 @@ ga4_data |>
         panel.grid.major.x = element_line(color = "#edf0f7"))
 ```
 
----
+------------------------------------------------------------------------
 
 ## Funnel Performance by Channel {.section-slide}
 
@@ -252,7 +248,7 @@ ga4_data |>
   )
 ```
 
----
+------------------------------------------------------------------------
 
 ## Subgroup Validation {.section-slide}
 
@@ -279,30 +275,28 @@ ga4_data |>
   row_spec(0, bold = TRUE, background = "#7e82ad", color = "white")
 ```
 
-::: {.callout-box}
+::: callout-box
 Drop-off exceeds **83% in every channel** — confirming a structural on-site barrier, not a channel-specific issue
 :::
 
----
+------------------------------------------------------------------------
 
 ## Strategic Recommendations {.section-slide}
 
-::: {.rec-list}
-
-::: {.rec-item}
+::::::: rec-list
+::: rec-item
 [1]{.rec-num} **Redesign the Mid-Funnel Experience** — Strengthen CTAs, sharpen the value proposition, and simplify the path to the booking form. Highest-leverage fix without additional spend.
 :::
 
-::: {.rec-item}
+::: rec-item
 [2]{.rec-num} **Invest in Organic Search & SEO** — Converts at 2.3%, more than 2× the site average. Shift content and budget toward this channel.
 :::
 
-::: {.rec-item}
+::: rec-item
 [3]{.rec-num} **Audit UTM Tagging for Unassigned Traffic** — The site's highest-converting source (3.1%) is currently unlabeled. Classify it through proper UTM configuration and GA4 audit.
 :::
 
-::: {.rec-item}
+::: rec-item
 [4]{.rec-num} **Deploy Purchase Event Tracking via GTM** — Track completed purchases, not just bookings, to connect marketing to actual revenue outcomes.
 :::
-
-:::
+:::::::
