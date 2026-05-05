@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kathleen Juarez">
+<meta name="dcterms.date" content="2026-05-05">
+
+<title>Website Behavior &amp; Booking Funnel Optimization – Kathleen Juarez</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4fe673378cffad7e8ea8ae6fc157cd2a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Kathleen Juarez</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resume/resume-Kathleen (1).html"> 
+<span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-marketing" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Marketing</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-marketing">    
+        <li>
+    <a class="dropdown-item" href="../Hubspot-CRM-Project/email-crm-project.html">
+ <span class="dropdown-text">Hubspot CRM</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-analytics" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Analytics</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-analytics">    
+        <li class="dropdown-header">Funnel Analysis</li>
+        <li class="dropdown-header">Interactive Dashboard</li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../Design.html"> 
+<span class="menu-text">Design</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-writing" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Writing</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-writing">    
+        <li>
+    <a class="dropdown-item" href="../Longform-writing.html">
+ <span class="dropdown-text">Long-Form</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../subtest2.html">
+ <span class="dropdown-text">Sub Test 2</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About This Site</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ao5-presentation (2).html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Website Behavior &amp; Booking Funnel Optimization</h1>
+<p class="subtitle lead">Analytics Objective 5 | Google Analytics 4 | Jan 1 – Apr 21, 2026</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kathleen Juarez </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 5, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level2 title-slide-custom">
+<h2 class="title-slide-custom anchored" data-anchor-id="section"></h2>
+<div class="title-block">
+<p><strong>Analytics Objective 5</strong></p>
+<section id="website-behavior-booking-funnel-optimization" class="level1">
+<h1>Website Behavior &amp;<br>Booking Funnel Optimization</h1>
+<p>Using GA4 event-level data to find where users drop off, what creates friction, and what drives bookings.</p>
+<div class="chip-row">
+<p><span class="chip">📅 Jan 1 – Apr 21, 2026</span> <span class="chip">563 Sessions</span> <span class="chip">6 Traffic Channels</span> <span class="chip">R / tidyverse</span></p>
+</div>
+</section>
+</div>
+<hr>
+</section>
+<section id="methodology" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="methodology">Methodology</h2>
+<p><strong>Descriptive Funnel Analysis</strong> — GA4 event-level data, <em>total users</em> metric throughout</p>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><strong>Funnel Stages (Dependent Variable)</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Stage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Sessions</td>
+<td>Entry point</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Page Views</td>
+<td>Surface engagement</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Form Start</td>
+<td>Booking initiated</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Booking Complete</td>
+<td>Conversion</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:48%;">
+<p><strong>Traffic Channels (Independent Variable)</strong></p>
+<ul>
+<li>Direct</li>
+<li>Organic Search</li>
+<li>Organic Social</li>
+<li>Referral</li>
+<li>Unassigned</li>
+<li>Paid Search</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-core-problem" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="the-core-problem">The Core Problem</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-funnel-pres" class="quarto-float quarto-figure quarto-figure-center anchored" width="768">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funnel-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ao5-presentation--2-_files/figure-html/fig-funnel-pres-1.png" id="fig-funnel-pres" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-funnel-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-box">
+<p><strong>91.9% drop-off</strong> from page views to form starts — the critical friction point, consistent across all six channels</p>
+</div>
+<hr>
+</section>
+<section id="not-all-traffic-is-equal" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="not-all-traffic-is-equal">Not All Traffic Is Equal</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-channels-pres" class="quarto-float quarto-figure quarto-figure-center anchored" width="768">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-channels-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ao5-presentation--2-_files/figure-html/fig-channels-pres-1.png" id="fig-channels-pres" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-channels-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="funnel-performance-by-channel" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="funnel-performance-by-channel">Funnel Performance by Channel</h2>
+<div class="cell">
+<div id="tbl-funnel-pres" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-funnel-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption>
+<div aria-describedby="tbl-funnel-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-condensed table-bordered do-not-create-environment caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Traffic Channel</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Sessions</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Page Views</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Contact Us</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Form Starts</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Sched. Appts</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Conv. Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">Unassigned</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">32</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">29</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">2</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">3</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">2</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">3.1%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">Organic Search</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">86</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">61</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">4</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">4</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">4</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">2.3%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">Organic Social</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">207</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">203</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">2</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">12</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">3</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">0.5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">Direct</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">213</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">167</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">9</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">18</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">6</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">0.5%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">Referral</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">21</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">6</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">2</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">1</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">2</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: white !important;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">Paid Search</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">4</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">4</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">0</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">0</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">0</td>
+<td style="text-align: center; color: rgba(51, 51, 51, 255) !important; background-color: rgba(243, 245, 249, 255) !important;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">TOTAL</td>
+<td style="text-align: center; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">563</td>
+<td style="text-align: center; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">470</td>
+<td style="text-align: center; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">19</td>
+<td style="text-align: center; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">38</td>
+<td style="text-align: center; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">17</td>
+<td style="text-align: center; font-weight: bold; color: rgba(26, 26, 46, 255) !important; background-color: rgba(232, 237, 246, 255) !important;">0.9%</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><sup></sup> Contact Us and Sched. Appts are high-intent signals (link clicks), not sequential funnel gates.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="subgroup-validation" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="subgroup-validation">Subgroup Validation</h2>
+<p>Drop-off from page views → form starts, confirmed across all channels</p>
+<div class="cell">
+<div id="tbl-dropoff-pres" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-dropoff-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2
+</figcaption>
+<div aria-describedby="tbl-dropoff-pres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-condensed table-bordered do-not-create-environment caption-top table-sm small">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Traffic Channel</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Page Views</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Form Starts</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Form Start Rate</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(126, 130, 173, 255) !important;">Drop-off Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Referral</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">16.7%</td>
+<td style="text-align: center;">83.3%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Direct</td>
+<td style="text-align: center;">167</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">10.8%</td>
+<td style="text-align: center;">89.2%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unassigned</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">10.3%</td>
+<td style="text-align: center;">89.7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Organic Search</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">6.6%</td>
+<td style="text-align: center;">93.4%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Organic Social</td>
+<td style="text-align: center;">203</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5.9%</td>
+<td style="text-align: center;">94.1%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Paid Search</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.0%</td>
+<td style="text-align: center;">100.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="callout-box">
+<p>Drop-off exceeds <strong>83% in every channel</strong> — confirming a structural on-site barrier, not a channel-specific issue</p>
+</div>
+<hr>
+</section>
+<section id="strategic-recommendations" class="level2 section-slide">
+<h2 class="section-slide anchored" data-anchor-id="strategic-recommendations">Strategic Recommendations</h2>
+<div class="rec-list">
+<div class="rec-item">
+<p><span class="rec-num">1</span> <strong>Redesign the Mid-Funnel Experience</strong> — Strengthen CTAs, sharpen the value proposition, and simplify the path to the booking form. Highest-leverage fix without additional spend.</p>
+</div>
+<div class="rec-item">
+<p><span class="rec-num">2</span> <strong>Invest in Organic Search &amp; SEO</strong> — Converts at 2.3%, more than 2× the site average. Shift content and budget toward this channel.</p>
+</div>
+<div class="rec-item">
+<p><span class="rec-num">3</span> <strong>Audit UTM Tagging for Unassigned Traffic</strong> — The site’s highest-converting source (3.1%) is currently unlabeled. Classify it through proper UTM configuration and GA4 audit.</p>
+</div>
+<div class="rec-item">
+<p><span class="rec-num">4</span> <strong>Deploy Purchase Event Tracking via GTM</strong> — Track completed purchases, not just bookings, to connect marketing to actual revenue outcomes.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/kathleenjuarez\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
