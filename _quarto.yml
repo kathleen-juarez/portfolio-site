@@ -23,7 +23,7 @@ website:
         menu:
           - text: Funnel Analysis
             href: Funnel Analysis/funnel-analysis.qmd
-          - text: Interactive Dashboard
+          # - text: Interactive Dashboard
           #  href: 
       - text: Design
         href: Design.qmd
@@ -32,8 +32,8 @@ website:
         menu:
           - text: Long-Form
             href: Longform-writing.qmd
-          - text: Sub Test 2
-            href: subtest2.qmd
+        #  - text: Sub Test 2
+         #   href: subtest2.qmd
       - href: about.qmd
         text: About This Site
         id: about-nav-link

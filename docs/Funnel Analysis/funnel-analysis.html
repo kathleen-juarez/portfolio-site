@@ -4383,7 +4383,7 @@ z-index: 11;
 position: relative;
 }
 .navbar-nav a[href*="about"]:hover::after {
-content: "Coded by yours truly! ✨";
+content: "Coded by yours truly!;
 position: absolute;
 bottom: -2rem;
 left: 50%;
@@ -4438,6 +4438,11 @@ margin-right: 9rem;
 .navbar-nav .nav-link {
 font-family: 'Story Script', sans-serif;
 font-size: 1rem;
+font-weight: 700;
+padding-bottom: 0 !important; 
+}
+.navbar-collapse {
+justify-content: flex-start !important;
 }
 
 .quarto-listing {
@@ -4469,7 +4474,23 @@ font-size: 1.15rem;
 font-weight: 600;
 line-height: 1.7;
 color: Black;
-}</style>
+}
+
+.hero-wrapper {
+margin-bottom: 0 !important;
+}
+h4 {
+margin-top: 0.5rem !important;
+padding-top: 0 !important;
+}
+
+#education ~ table h4,
+#education ~ table p,
+#education ~ table td {
+font-family: 'Times New Roman', Times, serif !important;
+font-size: 1.5rem !important;
+}
+</style>
 <style type="text/css">
 
 .hero-banner {

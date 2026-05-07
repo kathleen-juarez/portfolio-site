@@ -2,6 +2,14 @@
 title: "About This Site"
 ---
 
+```{=html}
+<style>
+.anchor-section { display: none; }
+.anchorjs-link { display: none; }
+a.anchor-section { display: none; }
+</style>
+```
+
 # Coded by Yours Truly
 
 Jack of all trades with a Masters of Science
