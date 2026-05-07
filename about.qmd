@@ -14,7 +14,13 @@ a.anchor-section { display: none; }
 
 Jack of all trades with a Masters of Science
 
-Peep that code:
+### Peep that code 👀:
+
+<https://github.com/kathleen-juarez/portfolio-site.git>
+
+::: .{.callout-note collapse="true"}
+## What's GitHub?
+:::
 
 ## About This Site
 
