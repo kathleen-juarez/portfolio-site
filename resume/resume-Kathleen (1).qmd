@@ -138,8 +138,8 @@ format:
 
 |   | Institution | Degree | Year | College / Department |
 |:-----------:|:-----------------:|:-----------:|:-----------:|:-----------:|
-| ![](CPP.png) | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
-| ![](USC-SEAL.png){width="150"} | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
+| ![](CPP.png){width="140" height="110"} | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
+| ![](USC-SEAL.png){width="120"} | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
 # Work Experience
 
