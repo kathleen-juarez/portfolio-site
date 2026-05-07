@@ -339,7 +339,6 @@ th {
 #quarto-margin-sidebar .nav-link:hover {
   color: #66ada9  !important;
   font-weight: 600;
-  border-left: 3px solid #7aa496 !important;
   border-radius: 4px !important;
 }
 
