@@ -101,7 +101,7 @@
 
 .info-card h3 {
   margin: 0 0 0.8rem 0;
-  font-size: 1.05rem;
+  font-size: 2 rem;
   font-weight: 700;
 }
 
@@ -111,7 +111,7 @@
   line-height: 1.85;
 }
 
-.info-card li { font-size: 0.875rem; }
+.info-card li { font-size: 1rem; }
 
 /* ── Theory Grid ───────────────────────────────────── */
 .theory-grid {
@@ -197,7 +197,7 @@
 
 .step-content p {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.55;
   color: #444;
 }
@@ -365,4 +365,13 @@ tr:nth-child(even) td {
 
 .solution-card {
   border: 2px solid #4a7c4e;
+}
+
+.sidebar nav a {
+  color: #7aa496 !important;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: white !important;
 }

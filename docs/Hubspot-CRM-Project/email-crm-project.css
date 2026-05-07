@@ -304,3 +304,11 @@ th {
 .hero-banner {
   background: linear-gradient(135deg, #6a81a5 0%, #66ada9 55%, #7aa496 100%);
 }
+
+.problem-card {
+  border: 2px solid #f0a500;
+}
+
+.solution-card {
+  border: 2px solid #4a7c4e;
+}

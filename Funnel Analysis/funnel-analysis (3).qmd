@@ -125,10 +125,10 @@ theme_ao5 <- theme_minimal(base_size = 12) +
 ## Project Overview
 
 ::: project-overview-intro
-This analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on Website Behavior & Booking Funnel Optimization.
-:::
+This report is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. This objective focuses on website behavior and booking funnel optimization.
+Despite traffic arriving through multiple acquisition channels, the business lacked visibility into where visitors were dropping off and which channels were actually converting. This analysis uses GA4 event-level data to diagnose that gap.
 
-The core business problem is a gap between website traffic and bookings. The business was attracting visitors through multiple acquisition channels but had no systematic view of where those visitors were dropping off or which channels were actually driving conversions. AO5 was designed to diagnose that gap using GA4's event-level behavioral data.
+:::
 
 ```{=html}
 <div class="card-row">
@@ -195,16 +195,15 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
 </div>
 ```
 
-> **Note on supplementary signals:** `contact_us` and `Schedule_Appointment` events are reported as behavioral context but are not positioned as sequential funnel gates. `form_start` users exceed their combined totals, confirming the booking form is accessible through multiple site paths.
 
 ### Derived Metrics
 
 | Metric             | Formula                               |
 |--------------------|---------------------------------------|
-| Page View Rate     | `page_view users ÷ sessions`          |
-| Form Start Rate    | `form_start users ÷ page_view users`  |
-| Booking Rate       | `booking_complete ÷ form_start users` |
-| Overall Conv. Rate | `booking_complete ÷ sessions`         |
+| Page View Rate     | page_view users ÷ sessions          |
+| Form Start Rate    | form_start users ÷ page_view users  |
+| Booking Rate       | booking_complete ÷ form_start users |
+| Overall Conv. Rate | booking_complete ÷ sessions         |
 
 Traffic channel (GA4 Default Channel Group) is used as the primary segmentation variable, enabling comparison across six acquisition sources: Direct, Organic Search, Organic Social, Referral, Unassigned, and Paid Search.
 
@@ -286,7 +285,7 @@ ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
   geom_col(width = 0.52) +
   geom_text(aes(label = comma(count)),
             vjust = -0.4, size = 3.8, fontface = "bold", color = "#1A1A1A") +
-  scale_fill_manual(values = c("FALSE" = "#7e82ad", "TRUE" = "#C0392B")) +
+  scale_fill_manual(values = c("FALSE" = "#66ada9", "TRUE" = "#C0392B")) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
   labs(title = "Most Users Exit Before Completing Any High-Intent Action",
        x = NULL, y = "Users") +
@@ -321,7 +320,7 @@ ga4_data |>
            label = paste0("Site avg: ", percent(site_avg, accuracy = 0.1)),
            size = 3.2, color = "#888888", hjust = 0) +
   coord_flip() +
-  scale_fill_manual(values = c("FALSE" = "#b0bcd4", "TRUE" = "#7e82ad")) +
+  scale_fill_manual(values = c("FALSE" = "#7aa496", "TRUE" = "#66ada9")) +
   scale_y_continuous(labels = percent_format(accuracy = 1),
                      expand = expansion(mult = c(0, 0.28))) +
   labs(x = NULL, y = NULL) +
@@ -369,7 +368,7 @@ ga4_data |>
 
 ### High-Intent Behavioral Signals
 
-> **Note:** `Schedule_Appointment` and `contact_us` are link clicks to the page hosting the booking form. They are reported here as behavioral context rather than sequential funnel stages, because `form_start` users exceed the combined click totals — indicating the form is reachable through multiple paths on the site.
+Schedule_Appointment and contact_us are link clicks to the page hosting the booking form. They are reported here as behavioral context rather than sequential funnel stages.
 
 ```{r}
 #| label: tbl-signals
@@ -452,8 +451,8 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 
 | Package | Role |
 |------------------------------------|------------------------------------|
-| `tidyverse` | Data wrangling and visualization (`dplyr`, `ggplot2`, `readr`) |
-| `scales` | Percent and comma formatting for labels |
-| `knitr` / `kableExtra` | Table rendering with custom styling |
+| tidyverse | Data wrangling and visualization (dplyr, ggplot2, readr) |
+| scales | Percent and comma formatting for labels |
+| knitr / kableExtra | Table rendering with custom styling |
 
 
