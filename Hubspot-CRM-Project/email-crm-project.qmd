@@ -39,14 +39,10 @@ format:
 </div>
 ```
 
-
-
 ## Project Overview
 
-::: {.project-overview-intro}
-
+::: project-overview-intro
 Property Management Office previously relied on a fully manual email workflow: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform.
-
 :::
 
 ## Tools & Technologies
@@ -59,7 +55,6 @@ Property Management Office previously relied on a fully manual email workflow: c
 | **Outlook**         | Legacy system (replaced)                          |
 
 ------------------------------------------------------------------------
-
 
 ```{=html}
 <div class="card-row">
@@ -88,13 +83,10 @@ Property Management Office previously relied on a fully manual email workflow: c
 </div>
 ```
 
-
-::: {.project-challenge-intro}
-
+::: project-challenge-intro
 ## The Challenge: A Broken Manual System
 
 The legacy process for managing tenant communications was outdated and created significant operational overhead and compliance risk.
-
 :::
 
 **How it worked before:**
@@ -195,5 +187,3 @@ This approach did not scale, produced stale lists, and offered no visibility int
 ```
 
 ------------------------------------------------------------------------
-
-

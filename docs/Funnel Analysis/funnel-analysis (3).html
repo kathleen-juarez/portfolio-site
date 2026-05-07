@@ -4769,6 +4769,12 @@ font-size: 0.82rem;
 color: #5a5e8a;
 font-weight: 600;
 }
+.hero-stats {
+justify-content: center;
+}
+.pipeline-arrow {
+font-size: 4rem; 
+}
 </style>
 </head>
 
@@ -4856,7 +4862,10 @@ font-weight: 600;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
   <li><a href="#literature-conceptual-framework" id="toc-literature-conceptual-framework" class="nav-link" data-scroll-target="#literature-conceptual-framework">Literature &amp; Conceptual Framework</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
   <ul class="collapse">
@@ -4885,6 +4894,7 @@ font-weight: 600;
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
   <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R Packages</a></li>
   <li><a href="#reproducibility-notes" id="toc-reproducibility-notes" class="nav-link" data-scroll-target="#reproducibility-notes">Reproducibility Notes</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -4924,6 +4934,11 @@ font-weight: 600;
 </header>
 
 
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
 <div class="hero-banner">
   <h1 class="hero-title">Website Behavior &amp; Booking Funnel Analysis</h1>
   <p class="hero-subtitle">
@@ -4940,7 +4955,7 @@ font-weight: 600;
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
 <div class="project-overview-intro">
-<p>This analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on <strong>AO5: Website Behavior &amp; Booking Funnel Optimization</strong>.</p>
+<p>This analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on Website Behavior &amp; Booking Funnel Optimization.</p>
 </div>
 <p>The core business problem is a gap between website traffic and bookings. The business was attracting visitors through multiple acquisition channels but had no systematic view of where those visitors were dropping off or which channels were actually driving conversions. AO5 was designed to diagnose that gap using GA4’s event-level behavioral data.</p>
 <div class="card-row">
@@ -5004,7 +5019,6 @@ font-weight: 600;
 <h3 class="anchored" data-anchor-id="funnel-stages">Funnel Stages</h3>
 <div class="pipeline-steps">
   <div class="pipeline-step">
-    <div class="step-number">1</div>
     <div class="step-content">
       <h4 class="anchored">Sessions</h4>
       <p>Entry point — all website visits; denominator for overall conversion rate</p>
@@ -5012,7 +5026,6 @@ font-weight: 600;
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">2</div>
     <div class="step-content">
       <h4 class="anchored">Page Views</h4>
       <p>Users engaging with site content; surface-level behavioral signal</p>
@@ -5020,7 +5033,6 @@ font-weight: 600;
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">3</div>
     <div class="step-content">
       <h4 class="anchored">Form Start</h4>
       <p>User begins filling the booking form — highest-intent observable action</p>
@@ -5028,7 +5040,6 @@ font-weight: 600;
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">4</div>
     <div class="step-content">
       <h4 class="anchored">Booking Complete</h4>
       <p>Form submitted — confirmed booking intent; the conversion event</p>
@@ -5575,6 +5586,7 @@ Table 3
 <p>All analysis runs end-to-end from the raw GA4 CSV exports — no manual data entry. Re-render this document and <code>ao5-presentation.qmd</code> together whenever the underlying CSVs are updated; all figures and tables will reflect the new data automatically.</p>
 
 
+</section>
 </section>
 </section>
 

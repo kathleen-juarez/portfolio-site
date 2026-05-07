@@ -102,6 +102,10 @@ theme_ao5 <- theme_minimal(base_size = 12) +
   )
 ```
 
+# 
+
+# 
+
 ```{=html}
 <div class="hero-banner">
   <h1 class="hero-title">Website Behavior &amp; Booking Funnel Analysis</h1>
@@ -121,7 +125,7 @@ theme_ao5 <- theme_minimal(base_size = 12) +
 ## Project Overview
 
 ::: project-overview-intro
-This analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on **AO5: Website Behavior & Booking Funnel Optimization**.
+This analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on Website Behavior & Booking Funnel Optimization.
 :::
 
 The core business problem is a gap between website traffic and bookings. The business was attracting visitors through multiple acquisition channels but had no systematic view of where those visitors were dropping off or which channels were actually driving conversions. AO5 was designed to diagnose that gap using GA4's event-level behavioral data.
@@ -195,7 +199,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
 ```{=html}
 <div class="pipeline-steps">
   <div class="pipeline-step">
-    <div class="step-number">1</div>
     <div class="step-content">
       <h4>Sessions</h4>
       <p>Entry point — all website visits; denominator for overall conversion rate</p>
@@ -203,7 +206,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">2</div>
     <div class="step-content">
       <h4>Page Views</h4>
       <p>Users engaging with site content; surface-level behavioral signal</p>
@@ -211,7 +213,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">3</div>
     <div class="step-content">
       <h4>Form Start</h4>
       <p>User begins filling the booking form — highest-intent observable action</p>
@@ -219,7 +220,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">4</div>
     <div class="step-content">
       <h4>Booking Complete</h4>
       <p>Form submitted — confirmed booking intent; the conversion event</p>
@@ -469,11 +469,7 @@ ga4_data |>
   row_spec(nrow(ga4_data) + 1, bold = TRUE, background = "#d6e8f5")
 ```
 
-### On Predictive Modeling
-
-Predictive analytics were considered but determined to be methodologically inappropriate given the available data. With fewer than 10 observed conversion events across 112 days, the dataset does not meet the minimum sample size requirements to train a statistically reliable model. Should the recommended tracking improvements be implemented and 12+ months of booking data accumulate, logistic regression or session-scoring models would become viable next steps.
-
-------------------------------------------------------------------------
+### 
 
 ## Presentation
 
@@ -537,7 +533,7 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 ### R Packages
 
 | Package | Role |
-|----|----|
+|------------------------------------|------------------------------------|
 | `tidyverse` | Data wrangling and visualization (`dplyr`, `ggplot2`, `readr`) |
 | `scales` | Percent and comma formatting for labels |
 | `knitr` / `kableExtra` | Table rendering with custom styling |

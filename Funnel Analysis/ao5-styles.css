@@ -349,3 +349,11 @@ tr:nth-child(even) td {
   color: #5a5e8a;
   font-weight: 600;
 }
+
+.hero-stats {
+  justify-content: center;
+}
+
+.pipeline-arrow {
+  font-size: 4rem; /* increase this value to taste */
+}
