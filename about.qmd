@@ -18,8 +18,12 @@ Jack of all trades with a Masters of Science
 
 <https://github.com/kathleen-juarez/portfolio-site.git>
 
-::: .{.callout-note collapse="true"}
+::: {.callout-note collapse="true"}
 ## What's GitHub?
+
+*If you're asking yourself this question, you've clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman's innocence*.
+
+GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other's work
 :::
 
 ## About This Site
