@@ -312,3 +312,25 @@ th {
 .solution-card {
   border: 2px solid #4a7c4e;
 }
+
+.sidebar nav a {
+  color: #7aa496 !important;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: white !important;
+}
+
+/* ── Quarto TOC sidebar ──────────────────────────────── */
+#quarto-margin-sidebar .nav-link {
+  color: #7aa496;
+  font-size: 0.82rem;
+}
+
+#quarto-margin-sidebar .nav-link.active,
+#quarto-margin-sidebar .nav-link:hover {
+  color: #7aa496;
+  font-weight: 600;
+  border-left: 3px solid #7aa496 !important;
+}
