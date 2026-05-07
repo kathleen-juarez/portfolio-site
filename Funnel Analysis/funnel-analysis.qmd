@@ -13,9 +13,12 @@ format:
     css: ao5-styles.css
     page-layout: full
     embed-resources: true
+    code-fold: true
+    code-summary: "Show figure code"
 execute:
   warning: false
   message: false
+  echo: false
 ---
 
 ```{r}
@@ -99,6 +102,10 @@ theme_ao5 <- theme_minimal(base_size = 12) +
   )
 ```
 
+# 
+
+# 
+
 ```{=html}
 <div class="hero-banner">
   <h1 class="hero-title">Website Behavior &amp; Booking Funnel Analysis</h1>
@@ -118,10 +125,8 @@ theme_ao5 <- theme_minimal(base_size = 12) +
 ## Project Overview
 
 ::: project-overview-intro
-This analytics objective is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. The full project spans five analytics objectives; this page focuses on **AO5: Website Behavior & Booking Funnel Optimization**.
+This report is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. This objective focuses on website behavior and booking funnel optimization. Despite traffic arriving through multiple acquisition channels, the business lacked visibility into where visitors were dropping off and which channels were actually converting. This analysis uses GA4 event-level data to diagnose that gap.
 :::
-
-The core business problem is a gap between website traffic and bookings. The business was attracting visitors through multiple acquisition channels but had no systematic view of where those visitors were dropping off or which channels were actually driving conversions. AO5 was designed to diagnose that gap using GA4's event-level behavioral data.
 
 ```{=html}
 <div class="card-row">
@@ -150,39 +155,6 @@ The core business problem is a gap between website traffic and bookings. The bus
 
 ------------------------------------------------------------------------
 
-## Literature & Conceptual Framework
-
-This analysis is grounded in four complementary theoretical frameworks that explain both the structure of the user journey and the behavioral mechanisms that predict conversion.
-
-```{=html}
-<div class="theory-grid">
-  <div class="theory-card">
-    <div class="theory-tag">Customer Journey</div>
-    <h4>Lemon &amp; Verhoef (2016)</h4>
-    <p>Consumers move through structured stages — awareness, consideration, purchase — and friction at any point reduces downstream conversion. The website functions as a sequence of behavioral touchpoints, making funnel analysis directly applicable.</p>
-  </div>
-  <div class="theory-card">
-    <div class="theory-tag">Clickstream / Path Analysis</div>
-    <h4>Montgomery et al. (2004)</h4>
-    <p>Timestamped browsing data can identify navigation states and transition probabilities. GA4 event-level exports provide sufficient granularity to locate exit points and quantify behavioral predictors of booking.</p>
-  </div>
-  <div class="theory-card">
-    <div class="theory-tag">Theory of Planned Behavior</div>
-    <h4>Ajzen (1991)</h4>
-    <p>Behavioral intention is the immediate predictor of action. If perceived behavioral control is weakened by an unclear booking flow or missing information, intention fails to translate into a booking — even for motivated visitors.</p>
-  </div>
-  <div class="theory-card">
-    <div class="theory-tag">Choice Architecture</div>
-    <h4>Thaler &amp; Benartzi (2004)</h4>
-    <p>Subtle changes in information presentation and CTA placement strongly affect decision outcomes. Observed drop-off patterns may reflect structural design barriers rather than lack of consumer interest.</p>
-  </div>
-</div>
-```
-
-> **Synthesis:** Together, these frameworks position the 91.9% form-start drop-off not as a traffic problem but as a behavioral and structural design issue — one addressable through deliberate changes to the on-site experience.
-
-------------------------------------------------------------------------
-
 ## Methodology
 
 The method selected is a **Descriptive Funnel Analysis** using GA4 event-level exports. The funnel maps user progression through four sequential behavioral stages, using *total users* (not event count) throughout to avoid inflation from repeat-event firing within a single session.
@@ -192,7 +164,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
 ```{=html}
 <div class="pipeline-steps">
   <div class="pipeline-step">
-    <div class="step-number">1</div>
     <div class="step-content">
       <h4>Sessions</h4>
       <p>Entry point — all website visits; denominator for overall conversion rate</p>
@@ -200,7 +171,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">2</div>
     <div class="step-content">
       <h4>Page Views</h4>
       <p>Users engaging with site content; surface-level behavioral signal</p>
@@ -208,7 +178,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">3</div>
     <div class="step-content">
       <h4>Form Start</h4>
       <p>User begins filling the booking form — highest-intent observable action</p>
@@ -216,7 +185,6 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
   </div>
   <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">4</div>
     <div class="step-content">
       <h4>Booking Complete</h4>
       <p>Form submitted — confirmed booking intent; the conversion event</p>
@@ -225,16 +193,14 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
 </div>
 ```
 
-> **Note on supplementary signals:** `contact_us` and `Schedule_Appointment` events are reported as behavioral context but are not positioned as sequential funnel gates. `form_start` users exceed their combined totals, confirming the booking form is accessible through multiple site paths.
-
 ### Derived Metrics
 
-| Metric             | Formula                               |
-|--------------------|---------------------------------------|
-| Page View Rate     | `page_view users ÷ sessions`          |
-| Form Start Rate    | `form_start users ÷ page_view users`  |
-| Booking Rate       | `booking_complete ÷ form_start users` |
-| Overall Conv. Rate | `booking_complete ÷ sessions`         |
+| Metric             | Formula                             |
+|--------------------|-------------------------------------|
+| Page View Rate     | page_view users ÷ sessions          |
+| Form Start Rate    | form_start users ÷ page_view users  |
+| Booking Rate       | booking_complete ÷ form_start users |
+| Overall Conv. Rate | booking_complete ÷ sessions         |
 
 Traffic channel (GA4 Default Channel Group) is used as the primary segmentation variable, enabling comparison across six acquisition sources: Direct, Organic Search, Organic Social, Referral, Unassigned, and Paid Search.
 
@@ -245,6 +211,7 @@ Traffic channel (GA4 Default Channel Group) is used as the primary segmentation 
 ```{r}
 #| label: summary-stats
 #| echo: false
+#| code-fold: false
 
 summary_df <- tibble(
   Metric = c(
@@ -286,7 +253,7 @@ summary_df |>
 
 ------------------------------------------------------------------------
 
-## Key Findings — The Core Problem
+## Key Findings
 
 The funnel narrows sharply and unevenly. The dominant friction point is the transition from page viewing to form initiation — a **91.9% drop-off rate** that holds across every traffic channel.
 
@@ -297,7 +264,9 @@ The funnel narrows sharply and unevenly. The dominant friction point is the tran
 #| fig-width: 7
 #| fig-height: 4
 #| fig-cap: "Unique users at each stage of the booking funnel. Red bar indicates the largest drop-off point."
-#| echo: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show figure code"
 
 funnel_long <- tibble(
   stage = factor(
@@ -313,7 +282,7 @@ ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
   geom_col(width = 0.52) +
   geom_text(aes(label = comma(count)),
             vjust = -0.4, size = 3.8, fontface = "bold", color = "#1A1A1A") +
-  scale_fill_manual(values = c("FALSE" = "#7e82ad", "TRUE" = "#C0392B")) +
+  scale_fill_manual(values = c("FALSE" = "#66ada9", "TRUE" = "#C0392B")) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
   labs(title = "Most Users Exit Before Completing Any High-Intent Action",
        x = NULL, y = "Users") +
@@ -322,8 +291,6 @@ ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
 
 ------------------------------------------------------------------------
 
-## Not All Traffic Is Equal
-
 ### Conversion Rate by Traffic Channel
 
 ```{r}
@@ -331,7 +298,9 @@ ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
 #| fig-width: 7
 #| fig-height: 4
 #| fig-cap: "Booking conversion rate by traffic channel. Dashed line = site average."
-#| echo: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show figure code"
 
 ga4_data |>
   mutate(
@@ -348,7 +317,7 @@ ga4_data |>
            label = paste0("Site avg: ", percent(site_avg, accuracy = 0.1)),
            size = 3.2, color = "#888888", hjust = 0) +
   coord_flip() +
-  scale_fill_manual(values = c("FALSE" = "#b0bcd4", "TRUE" = "#7e82ad")) +
+  scale_fill_manual(values = c("FALSE" = "#7aa496", "TRUE" = "#66ada9")) +
   scale_y_continuous(labels = percent_format(accuracy = 1),
                      expand = expansion(mult = c(0, 0.28))) +
   labs(x = NULL, y = NULL) +
@@ -364,6 +333,7 @@ ga4_data |>
 ```{r}
 #| label: tbl-funnel
 #| echo: false
+#| code-fold: false
 
 ga4_data |>
   arrange(desc(overall_conv_rate)) |>
@@ -388,54 +358,19 @@ ga4_data |>
   row_spec(seq(1, nrow(ga4_data), by = 2), background = "white",   color = "#333") |>
   row_spec(seq(2, nrow(ga4_data), by = 2), background = "#f3f5f9", color = "#333") |>
   row_spec(nrow(ga4_data) + 1, bold = TRUE,
-           background = "#e8edf6", color = "#1a1a2e") |>
-  footnote(
-    general = "Jan 1–Apr 21, 2026. Channels sorted by descending conversion rate. Conv. Rate = booking_complete users ÷ sessions. Contact Us and Sched. Appts are high-intent behavioral signals (link clicks), not sequential funnel gates.",
-    general_title = "",
-    footnote_as_chunk = TRUE
-  )
+           background = "#e8edf6", color = "#1a1a2e")
 ```
 
 ------------------------------------------------------------------------
 
-## Subgroup Validation: Drop-off by Channel
-
-Because Direct traffic accounts for 37.8% of total sessions, aggregate drop-off rates could be pulled by its volume. The table below confirms the form-start barrier is consistent across channels — not an artifact of one dominant source.
-
-```{r}
-#| label: tbl-dropoff
-#| echo: false
-
-ga4_data |>
-  mutate(dropoff = 1 - form_start_rate) |>
-  arrange(dropoff) |>
-  select(
-    `Traffic Channel` = channel,
-    `Page Views`      = page_views,
-    `Form Starts`     = form_starts,
-    `Form Start Rate` = form_start_rate,
-    `Drop-off Rate`   = dropoff
-  ) |>
-  mutate(across(c(`Form Start Rate`, `Drop-off Rate`),
-                ~percent(., accuracy = 0.1))) |>
-  kbl(align = c("l","c","c","c","c")) |>
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed", "bordered"),
-    full_width = FALSE,
-    font_size  = 13
-  ) |>
-  row_spec(0, bold = TRUE, background = "#7e82ad", color = "white")
-```
-
-> **Finding:** Drop-off at the form-start stage exceeds 83% in every channel with measurable traffic. This universality confirms the barrier is a structural feature of the on-site experience — not a channel-specific anomaly.
-
 ### High-Intent Behavioral Signals
 
-> **Note:** `Schedule_Appointment` and `contact_us` are link clicks to the page hosting the booking form. They are reported here as behavioral context rather than sequential funnel stages, because `form_start` users exceed the combined click totals — indicating the form is reachable through multiple paths on the site.
+Schedule_Appointment and contact_us are link clicks to the page hosting the booking form. They are reported here as behavioral context rather than sequential funnel stages.
 
 ```{r}
 #| label: tbl-signals
 #| echo: false
+#| code-fold: false
 
 ga4_data |>
   arrange(desc(sessions)) |>
@@ -458,25 +393,6 @@ ga4_data |>
   row_spec(nrow(ga4_data) + 1, bold = TRUE, background = "#d6e8f5")
 ```
 
-### On Predictive Modeling
-
-Predictive analytics were considered but determined to be methodologically inappropriate given the available data. With fewer than 10 observed conversion events across 112 days, the dataset does not meet the minimum sample size requirements to train a statistically reliable model. Should the recommended tracking improvements be implemented and 12+ months of booking data accumulate, logistic regression or session-scoring models would become viable next steps.
-
-------------------------------------------------------------------------
-
-## Presentation
-
-The RevealJS slides below are rendered directly from the same R code and GA4 data as this analysis — all charts and tables stay in sync automatically when the data is updated.
-
-```{=html}
-
-<iframe src="ao5-presentation.html" width="100%" height="500px"
-        style="border:none;"
-        allowfullscreen
-        allow="fullscreen">
-</iframe>
-```
-
 ------------------------------------------------------------------------
 
 ## Recommendations
@@ -484,28 +400,24 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 ```{=html}
 <div class="rec-list">
   <div class="rec-card">
-    <div class="rec-num">1</div>
     <div class="rec-body">
       <h4>Redesign the Mid-Funnel Experience</h4>
       <p>The 91.9% drop-off between page views and form starts is the highest-leverage fix available. Strengthening calls to action, sharpening the value proposition, and reducing booking form friction can increase appointments without requiring additional marketing spend.</p>
     </div>
   </div>
   <div class="rec-card">
-    <div class="rec-num">2</div>
     <div class="rec-body">
       <h4>Prioritize Organic Search &amp; SEO Investment</h4>
       <p>Organic Search converts at 2.3% — more than twice the site average and more than 4× the efficiency of Organic Social. Shifting content and budget investment toward this channel is likely to yield stronger returns than broad social reach alone.</p>
     </div>
   </div>
   <div class="rec-card">
-    <div class="rec-num">3</div>
     <div class="rec-body">
       <h4>Audit Channel Tracking &amp; UTM Configuration</h4>
       <p>Unassigned traffic converts at 3.1% — the highest rate on the site — but its source is currently invisible. Auditing UTM tagging and GA4 configuration to properly classify this traffic is a critical step toward understanding what is driving the best results.</p>
     </div>
   </div>
   <div class="rec-card">
-    <div class="rec-num">4</div>
     <div class="rec-body">
       <h4>Deploy Purchase Event Tracking via Google Tag Manager</h4>
       <p>Current tracking measures booking form submissions — not completed purchases. Configuring GTM to capture purchase completions will allow future analyses to connect marketing activity to actual revenue outcomes, enabling true ROI measurement.</p>
@@ -516,21 +428,12 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 
 ------------------------------------------------------------------------
 
-## Appendix: Data & Code
-
-### Data Sources
-
-1.  `A05_data/A05_data_sessions.csv` — Traffic Acquisition report (GA4), sessions by Default Channel Group
-2.  `A05_data/A05_data_ga4-events.csv` — Events report (GA4), total users per event per channel
+## Appendix
 
 ### R Packages
 
 | Package | Role |
-|------------------------------------|------------------------------------|
-| `tidyverse` | Data wrangling and visualization (`dplyr`, `ggplot2`, `readr`) |
-| `scales` | Percent and comma formatting for labels |
-| `knitr` / `kableExtra` | Table rendering with custom styling |
-
-### Reproducibility Notes
-
-All analysis runs end-to-end from the raw GA4 CSV exports — no manual data entry. Re-render this document and `ao5-presentation.qmd` together whenever the underlying CSVs are updated; all figures and tables will reflect the new data automatically.
+|----|----|
+| tidyverse | Data wrangling and visualization (dplyr, ggplot2, readr) |
+| scales | Percent and comma formatting for labels |
+| knitr / kableExtra | Table rendering with custom styling |
