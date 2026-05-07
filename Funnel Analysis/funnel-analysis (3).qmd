@@ -157,39 +157,6 @@ The core business problem is a gap between website traffic and bookings. The bus
 
 ------------------------------------------------------------------------
 
-## Literature & Conceptual Framework
-
-This analysis is grounded in four complementary theoretical frameworks that explain both the structure of the user journey and the behavioral mechanisms that predict conversion.
-
-```{=html}
-<div class="theory-grid">
-  <div class="theory-card">
-    <div class="theory-tag">Customer Journey</div>
-    <h4>Lemon &amp; Verhoef (2016)</h4>
-    <p>Consumers move through structured stages — awareness, consideration, purchase — and friction at any point reduces downstream conversion. The website functions as a sequence of behavioral touchpoints, making funnel analysis directly applicable.</p>
-  </div>
-  <div class="theory-card">
-    <div class="theory-tag">Clickstream / Path Analysis</div>
-    <h4>Montgomery et al. (2004)</h4>
-    <p>Timestamped browsing data can identify navigation states and transition probabilities. GA4 event-level exports provide sufficient granularity to locate exit points and quantify behavioral predictors of booking.</p>
-  </div>
-  <div class="theory-card">
-    <div class="theory-tag">Theory of Planned Behavior</div>
-    <h4>Ajzen (1991)</h4>
-    <p>Behavioral intention is the immediate predictor of action. If perceived behavioral control is weakened by an unclear booking flow or missing information, intention fails to translate into a booking — even for motivated visitors.</p>
-  </div>
-  <div class="theory-card">
-    <div class="theory-tag">Choice Architecture</div>
-    <h4>Thaler &amp; Benartzi (2004)</h4>
-    <p>Subtle changes in information presentation and CTA placement strongly affect decision outcomes. Observed drop-off patterns may reflect structural design barriers rather than lack of consumer interest.</p>
-  </div>
-</div>
-```
-
-> **Synthesis:** Together, these frameworks position the 91.9% form-start drop-off not as a traffic problem but as a behavioral and structural design issue — one addressable through deliberate changes to the on-site experience.
-
-------------------------------------------------------------------------
-
 ## Methodology
 
 The method selected is a **Descriptive Funnel Analysis** using GA4 event-level exports. The funnel maps user progression through four sequential behavioral stages, using *total users* (not event count) throughout to avoid inflation from repeat-event firing within a single session.
@@ -290,7 +257,7 @@ summary_df |>
 
 ------------------------------------------------------------------------
 
-## Key Findings — The Core Problem
+## Key Findings 
 
 The funnel narrows sharply and unevenly. The dominant friction point is the transition from page viewing to form initiation — a **91.9% drop-off rate** that holds across every traffic channel.
 
@@ -327,8 +294,6 @@ ggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +
 ```
 
 ------------------------------------------------------------------------
-
-## Not All Traffic Is Equal
 
 ### Conversion Rate by Traffic Channel
 
@@ -397,47 +362,10 @@ ga4_data |>
   row_spec(seq(1, nrow(ga4_data), by = 2), background = "white",   color = "#333") |>
   row_spec(seq(2, nrow(ga4_data), by = 2), background = "#f3f5f9", color = "#333") |>
   row_spec(nrow(ga4_data) + 1, bold = TRUE,
-           background = "#e8edf6", color = "#1a1a2e") |>
-  footnote(
-    general = "Jan 1–Apr 21, 2026. Channels sorted by descending conversion rate. Conv. Rate = booking_complete users ÷ sessions. Contact Us and Sched. Appts are high-intent behavioral signals (link clicks), not sequential funnel gates.",
-    general_title = "",
-    footnote_as_chunk = TRUE
-  )
+           background = "#e8edf6", color = "#1a1a2e")
 ```
 
 ------------------------------------------------------------------------
-
-## Subgroup Validation: Drop-off by Channel
-
-Because Direct traffic accounts for 37.8% of total sessions, aggregate drop-off rates could be pulled by its volume. The table below confirms the form-start barrier is consistent across channels — not an artifact of one dominant source.
-
-```{r}
-#| label: tbl-dropoff
-#| echo: false
-#| code-fold: false
-
-ga4_data |>
-  mutate(dropoff = 1 - form_start_rate) |>
-  arrange(dropoff) |>
-  select(
-    `Traffic Channel` = channel,
-    `Page Views`      = page_views,
-    `Form Starts`     = form_starts,
-    `Form Start Rate` = form_start_rate,
-    `Drop-off Rate`   = dropoff
-  ) |>
-  mutate(across(c(`Form Start Rate`, `Drop-off Rate`),
-                ~percent(., accuracy = 0.1))) |>
-  kbl(align = c("l","c","c","c","c")) |>
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed", "bordered"),
-    full_width = FALSE,
-    font_size  = 13
-  ) |>
-  row_spec(0, bold = TRUE, background = "#7e82ad", color = "white")
-```
-
-> **Finding:** Drop-off at the form-start stage exceeds 83% in every channel with measurable traffic. This universality confirms the barrier is a structural feature of the on-site experience — not a channel-specific anomaly.
 
 ### High-Intent Behavioral Signals
 
@@ -469,8 +397,6 @@ ga4_data |>
   row_spec(nrow(ga4_data) + 1, bold = TRUE, background = "#d6e8f5")
 ```
 
-### 
-
 ## Presentation
 
 The RevealJS slides below are rendered directly from the same R code and GA4 data as this analysis — all charts and tables stay in sync automatically when the data is updated.
@@ -491,28 +417,24 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 ```{=html}
 <div class="rec-list">
   <div class="rec-card">
-    <div class="rec-num">1</div>
     <div class="rec-body">
       <h4>Redesign the Mid-Funnel Experience</h4>
       <p>The 91.9% drop-off between page views and form starts is the highest-leverage fix available. Strengthening calls to action, sharpening the value proposition, and reducing booking form friction can increase appointments without requiring additional marketing spend.</p>
     </div>
   </div>
   <div class="rec-card">
-    <div class="rec-num">2</div>
     <div class="rec-body">
       <h4>Prioritize Organic Search &amp; SEO Investment</h4>
       <p>Organic Search converts at 2.3% — more than twice the site average and more than 4× the efficiency of Organic Social. Shifting content and budget investment toward this channel is likely to yield stronger returns than broad social reach alone.</p>
     </div>
   </div>
   <div class="rec-card">
-    <div class="rec-num">3</div>
     <div class="rec-body">
       <h4>Audit Channel Tracking &amp; UTM Configuration</h4>
       <p>Unassigned traffic converts at 3.1% — the highest rate on the site — but its source is currently invisible. Auditing UTM tagging and GA4 configuration to properly classify this traffic is a critical step toward understanding what is driving the best results.</p>
     </div>
   </div>
   <div class="rec-card">
-    <div class="rec-num">4</div>
     <div class="rec-body">
       <h4>Deploy Purchase Event Tracking via Google Tag Manager</h4>
       <p>Current tracking measures booking form submissions — not completed purchases. Configuring GTM to capture purchase completions will allow future analyses to connect marketing activity to actual revenue outcomes, enabling true ROI measurement.</p>
@@ -523,12 +445,8 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 
 ------------------------------------------------------------------------
 
-## Appendix: Data & Code
+## Appendix
 
-### Data Sources
-
-1.  `A05_data/A05_data_sessions.csv` — Traffic Acquisition report (GA4), sessions by Default Channel Group
-2.  `A05_data/A05_data_ga4-events.csv` — Events report (GA4), total users per event per channel
 
 ### R Packages
 
@@ -538,6 +456,4 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 | `scales` | Percent and comma formatting for labels |
 | `knitr` / `kableExtra` | Table rendering with custom styling |
 
-### Reproducibility Notes
 
-All analysis runs end-to-end from the raw GA4 CSV exports — no manual data entry. Re-render this document and `ao5-presentation.qmd` together whenever the underlying CSVs are updated; all figures and tables will reflect the new data automatically.

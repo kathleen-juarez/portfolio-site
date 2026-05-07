@@ -357,3 +357,12 @@ tr:nth-child(even) td {
 .pipeline-arrow {
   font-size: 4rem; /* increase this value to taste */
 }
+
+
+.problem-card {
+  border: 2px solid #f0a500;
+}
+
+.solution-card {
+  border: 2px solid #4a7c4e;
+}
