@@ -10,37 +10,46 @@ a.anchor-section { display: none; }
 </style>
 ```
 
-# Coded by Yours Truly
+```{=html}
+<style>
+  h1 {
+    color: #66ada9;
+  }
+</style>
+```
 
-Jack of all trades with a Masters of Science
+```{=html}
+<style>
+  h4 {
+    color: #7e82ad;
+  }
+</style>
+```
 
-### Peep that code 👀:
+# About This Site
 
-<https://github.com/kathleen-juarez/portfolio-site.git>
+::: {style="border: 2px solid #66ada9; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;"}
 
-::: {.callout-note collapse="true"}
-## What's GitHub?
-
-*If you're asking yourself this question, you've clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman's innocence*.
-
-GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other's work
+::: {style="font-size: 1.3rem; color: #6c757d ;"}
+This portfolio was designed and hand-coded by me using <br> **Quarto**, **HTML**, and **CSS**. No drag-and-drop builders involved!
 :::
 
-## About This Site
+#### See how it all came together: <br>  <https://github.com/kathleen-juarez/portfolio-site.git>
 
-This portfolio was designed and hand-coded by me using **Quarto**, **HTML**, and **CSS** — no templates or drag-and-drop builders involved.
+::: {.callout-note collapse="true" style="border-left-color: #66ada9;"}
+## What's GitHub?
 
-::: callout-note
-## Why hand-code it?
+GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other's work
 
-I wanted full control over the design and to demonstrate that my marketing skills are backed by real technical ability.
+*If you're asking yourself this question, you've clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman's innocence*.
+:::
 :::
 
 ### What went into it
 
 -   **Design** — layout, color, and typography decisions made from scratch
 -   **Structure** — built with Quarto's publishing framework
--   **Styling** — custom CSS for things like the pink tooltip you just hovered over 😉
+-   **Styling** — custom CSS for that extra bit of flare
 
 ### Tools Used
 

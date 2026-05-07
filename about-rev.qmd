@@ -1,0 +1,290 @@
+---
+title: "About This Site"
+---
+
+```{=html}
+<style>
+.anchor-section { display: none; }
+.anchorjs-link { display: none; }
+a.anchor-section { display: none; }
+</style>
+```
+
+```{=html}
+<style>
+  h1 {
+    color: #66ada9;
+  }
+</style>
+```
+
+```{=html}
+<style>
+  h4 {
+    color: #7e82ad;
+  }
+</style>
+```
+
+# About This Site
+
+::::: {style="border: 2px solid #66ada9; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;"}
+::: {style="font-size: 1.3rem; color: #6c757d;"}
+This portfolio was designed and hand-coded by me using <br> **Quarto**, **HTML**, **CSS/SCSS**, and **R**. No drag-and-drop builders involved!
+:::
+
+#### See how it all came together: <br> <https://github.com/kathleen-juarez/portfolio-site.git>
+
+::: {.callout-note collapse="true" style="border-left-color: #66ada9;"}
+## What's GitHub?
+
+GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other's work.
+
+*If you're asking yourself this question, you've clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman's innocence.*
+:::
+:::::
+
+### What went into it
+
+-   **Design** — layout, color palette, and typography decisions made from scratch
+-   **Structure** — built with Quarto's publishing framework, configured for GitHub Pages hosting
+-   **Styling** — custom CSS/SCSS architecture: global styles, hero-specific styles, and per-page stylesheets
+-   **Debugging** — a *lot* of it (see below)
+
+### Tools Used
+
+| Tool          | Purpose                               |
+|---------------|---------------------------------------|
+| Quarto        | Site framework & rendering            |
+| CSS / SCSS    | Custom styling & Bootswatch overrides |
+| HTML          | Custom components & page structure    |
+| R             | Dashboard templating & rendering      |
+| GitHub        | Version control & hosting             |
+| Chart.js      | Interactive data visualizations       |
+| Flexdashboard | Analytics dashboard layout            |
+
+------------------------------------------------------------------------
+
+### The Full Build Log
+
+This page didn't appear out of nowhere. Here's a behind-the-scenes look at what it actually took — every bug squashed, every design decision made, and every "why isn't this working" moment logged.
+
+```{=html}
+<style>
+  .changelog-section {
+    margin-bottom: 2rem;
+  }
+  .changelog-section h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #c5cfe0;
+    color: #7e82ad;
+  }
+  .changelog-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .changelog-table th {
+    background-color: #f0f3f8;
+    color: #6a81a5;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #c5cfe0;
+  }
+  .changelog-table td {
+    padding: 0.5rem 0.75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #eaeef4;
+    line-height: 1.5;
+  }
+  .changelog-table tr:hover td {
+    background-color: #f7f9fc;
+  }
+  .badge-date {
+    display: inline-block;
+    background-color: #e8edf5;
+    color: #6a81a5;
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .stat-strip {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 2rem 0;
+  }
+  .stat-box {
+    flex: 1;
+    min-width: 120px;
+    background: #f0f3f8;
+    border: 1px solid #c5cfe0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .stat-box .stat-num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #66ada9;
+    display: block;
+  }
+  .stat-box .stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 0.2rem;
+  }
+</style>
+
+<div class="stat-strip">
+  <div class="stat-box">
+    <span class="stat-num">71</span>
+    <div class="stat-label">logged changes</div>
+  </div>
+  <div class="stat-box">
+    <span class="stat-num">8</span>
+    <div class="stat-label">site sections built</div>
+  </div>
+  <div class="stat-box">
+    <span class="stat-num">10+</span>
+    <div class="stat-label">files created or modified</div>
+  </div>
+  <div class="stat-box">
+    <span class="stat-num">6</span>
+    <div class="stat-label">unique stylesheets</div>
+  </div>
+</div>
+```
+
+#### 🚀 Setup & Deployment
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Initial GitHub Pages deployment</td><td>Set up Quarto project. Configured <code>output-dir: docs</code> in <code>_quarto.yml</code> so rendered files go to <code>/docs</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Fixed 404 on live site</td><td>GitHub Pages was running Jekyll on Quarto output, ignoring folders starting with underscores. Fixed by creating <code>.nojekyll</code> in <code>/docs</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Installed Quarto R package</td><td>Resolved <em>'no package called quarto'</em> error. Switched to <code>quarto render</code> in RStudio Terminal going forward.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Fixed duplicate YAML key error</td><td>Resolved <code>YAMLException: duplicated mapping key</code> — caused by <code>website:</code> appearing twice in <code>_quarto.yml</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Fixed broken CSS/assets on live site</td><td>Site appeared unstyled post-publish. Fixed by adding <code>site-url: 'https://kathleenjuarez.com'</code> to <code>_quarto.yml</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Connected custom domain</td><td>Added 4 A records and a CNAME for www pointing to <code>kathleen-juarez.github.io</code>. DNS propagation took ~4 hours.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Renamed styles.css → styles.scss</td><td>Quarto threw an unexpected <code>'$'</code> error because the CSS file contained Sass variable syntax. Renamed, moved to <code>theme:</code> list, added <code>/*-- scss:rules --*/</code> divider.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Git branch divergence fix</td><td>Resolved non-fast-forward push errors. Workflow: <code>git stash → git restore → git pull --rebase</code>. Root cause: RStudio auto-regenerating a file after stashing.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+#### 🧭 Navigation
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Navbar setup</td><td>Configured navbar background <code>#6a81a5</code>. Nav pages: Home, Resume, Marketing Analytics, Writing, Design, About This Site.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Added dropdown submenus</td><td>Used <code>menu:</code> key instead of <code>href:</code> on parent items. Restructured Analytics and Writing sections as dropdown parents.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Fixed dropdown all-caps bug</td><td>Dropdown items were displaying in all caps due to Minty theme CSS. Fixed with <code>.navbar .dropdown-item { text-transform: none; }</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Added "Coded by yours truly" tooltip</td><td>CSS <code>:hover::after</code> pseudo-element on the About This Site nav link. Content styled in <code>#7e82ad</code> with a ✨.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Left-justified navbar links</td><td>Overrode Bootstrap's default centering with <code>justify-content: flex-start</code> and <code>margin-right: auto</code>.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Increased navbar font size &amp; weight</td><td>Bumped font size to 1.2rem and added <code>font-weight: 700</code>. Font family: Story Script.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+#### 🏠 Homepage
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Hero section built</td><td>Full-width background image (<code>water.JPG</code>). Overlay text: <em>"Marketer in Practice, Writer at Heart."</em> Hero styles in <code>styles/hero.css</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Hero full-bleed technique</td><td>Used <code>width: 100vw + margin-left: -50vw</code> to break out of Quarto's centered content container. Hid default title block.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Behind the Scenes modal built</td><td>Button opens a popup explaining the site's tech stack. Close button + backdrop click to close. Heading color refined from hotpink → site mauve (<code>#ad9ca4</code>).</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Modal copy update</td><td>Revised body copy across multiple iterations: <em>"I don't do generic. Building it from scratch meant I could be deliberate about everything: the spacing, the tone, every pixel, every word."</em></td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Centered Behind the Scenes button</td><td>Wrapped in <code>&lt;div style='display: flex; justify-content: center;'&gt;</code>.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Hero-to-contact spacing</td><td>Reduced vertical gap between hero image and Get in Touch section by adjusting margin/padding in <code>hero.css</code>.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Quarto chrome cleanup</td><td>Suppressed default Quarto padding and title block. Fixed persistent white space above hero image.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+#### 🎨 Styling / CSS
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Color palette established</td><td>Primary palette: <code>#6a81a5</code> (navbar), <code>#7e82ad</code> (buttons), <code>#ad9ca4</code> (mauve), <code>#66ada9</code> (teal), <code>#7aa496</code> (sage), <code>#ddc28f</code> (warm tan).</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>CSS/SCSS architecture</td><td>Global styles in <code>styles.scss</code>. Hero styles in <code>styles/hero.css</code>. Page-specific CSS inline per <code>.qmd</code> YAML.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Font changes via CSS</td><td>Applied custom fonts with <code>!important</code> to override Bootswatch Minty defaults. Google Fonts: Archivo Black, Prompt, Dancing Script.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Disabled heading anchor links</td><td>Anchor icons (🔗) were appearing next to all headings. Fixed with <code>anchor-sections: false</code> in YAML or CSS override.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Fixed SCSS variable syntax errors</td><td>Removed bare hex codes listed outside of any rule that were breaking the SCSS parser. Removed duplicate variable blocks.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+#### 📄 Resume Page
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Education section — Times New Roman</td><td>Applied TNR and 1.25rem font size specifically to Education table content using a targeted CSS selector.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>University seal image sizing</td><td>Adjusted CPP and USC seal dimensions explicitly. RStudio's lock-ratio feature was unreliable for these assets.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Added Table of Contents</td><td>Added <code>toc: true</code>, <code>toc-location: left</code>. Quarto auto-pulls H1 section headings into "On This Page" nav.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Education table rebuilt as HTML</td><td>Replaced markdown table with styled HTML using existing <code>.skills-table</code> class. Inherits teal headers, alternating rows, hover effect.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>SVG dividers inserted</td><td>Learned two insertion methods: inline via <code>```{=html}</code> block, or as image file reference. Used inline method for decorative dividers.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+#### ✍️ Writing Page
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Westwood film review page built</td><td>Converted a PDF film review into editorial-style QMD. Fonts: Bebas Neue + Cormorant Garamond + Karla. Features: drop cap, pull quote, aside quotes, decorative rules.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Film review image layout</td><td>Full-bleed hero with overlay title, floated mid-article image, full-width breakout image. Images placed in Quarto layout blocks outside the main <code>film-page</code> div.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Film review background set to tan</td><td>Changed background to <code>#ddc28f</code>. Defined <code>--cream</code>, <code>--ink</code>, <code>--accent</code>, <code>--muted</code> CSS variables. Overrode Quarto defaults at end of stylesheet.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>Fixed hero-subtitle text color</td><td>CSS variables weren't resolving — text was near-invisible. Hardcoded colors directly on <code>.hero-subtitle</code> and <code>.hero-meta</code>.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Listing tiles — navbar top margin</td><td>Added <code>.quarto-listing { padding-top: 2.5rem; }</code> for breathing room below the navbar. Required re-render + push to appear on live site.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+#### 📊 Analytics Pages
+
+```{=html}
+<div class="changelog-section">
+<table class="changelog-table">
+  <thead><tr><th>When</th><th>What happened</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>AO5 analytics case study built</td><td>Full case study page for a website behavior & booking funnel project. Includes stat cards, interactive Chart.js bar charts from GA4 data, data tables, and a 6-slide embedded RevealJS presentation.</td></tr>
+    <tr><td><span class="badge-date">~Apr 2026</span></td><td>AO5 page restyled</td><td>Updated to match site-wide palette: hero gradient (<code>#6a81a5 → #66ada9 → #7aa496</code>). Companion stylesheet <code>ao5-styles.css</code> created.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Interactive Flexdashboard created</td><td>Built a full Quarto Flexdashboard template with value boxes, crosstalk-linked filters, plotly scatter, histogram, grouped bar chart, and correlation heatmap.</td></tr>
+    <tr><td><span class="badge-date">May 2026</span></td><td>Dashboard planning</td><td>Brainstormed future dashboards: Campaign Performance, Social Media Content Analytics, A/B Test Simulator, Brand Sentiment Analysis. Identified Kaggle and Meta Ad Library as data sources.</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+::: {style="border: 1px solid #c5cfe0; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; background-color: #f7f9fc; font-size: 0.9rem; color: #6c757d;"}
+*This changelog is a living document — last updated May 2026. Every entry represents a real decision, a real bug, or a real late night. The site you're looking at is the sum of all of it.*
+:::
