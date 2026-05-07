@@ -564,7 +564,7 @@
     "href": "Funnel Analysis/funnel-analysis.html",
     "title": "Website Behavior & Booking Funnel Analysis",
     "section": "",
-    "text": "📊 Analytics Objective 5\n  \n  \n    Using Google Analytics 4 event-level data to identify where users drop off,\n    diagnose friction in the booking pathway, and evaluate acquisition channel\n    quality across a 112-day observation window.\n  \n  \n    🗓 Jan 1 – Apr 21, 2026\n    📈 GA4 Event Data\n    📉 Descriptive Funnel Analysis\n    🔢 R / tidyverse\n    6 Traffic Channels"
+    "text": "Using Google Analytics 4 event-level data to identify where users drop off,\n    diagnose friction in the booking pathway, and evaluate acquisition channel\n    quality across a 112-day observation window.\n  \n  \n    📈 GA4 Event Data\n     🔢 R / tidyverse\n    📉 Descriptive Funnel Analysis"
   },
   {
     "objectID": "Funnel Analysis/funnel-analysis.html#project-overview",
@@ -648,7 +648,7 @@
     "href": "Funnel Analysis/funnel-analysis (3).html",
     "title": "Website Behavior & Booking Funnel Analysis",
     "section": "",
-    "text": "📊 Analytics Objective 5\n  \n  \n    Using Google Analytics 4 event-level data to identify where users drop off,\n    diagnose friction in the booking pathway, and evaluate acquisition channel\n    quality across a 112-day observation window.\n  \n  \n    🗓 Jan 1 – Apr 21, 2026\n    📈 GA4 Event Data\n    📉 Descriptive Funnel Analysis\n    🔢 R / tidyverse\n    6 Traffic Channels"
+    "text": "Using Google Analytics 4 event-level data to identify where users drop off,\n    diagnose friction in the booking pathway, and evaluate acquisition channel\n    quality across a 112-day observation window.\n  \n  \n    📈 GA4 Event Data\n     🔢 R / tidyverse\n    📉 Descriptive Funnel Analysis"
   },
   {
     "objectID": "Funnel Analysis/funnel-analysis (3).html#project-overview",
