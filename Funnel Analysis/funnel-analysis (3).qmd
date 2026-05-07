@@ -537,7 +537,7 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 ### R Packages
 
 | Package | Role |
-|------------------------------------|------------------------------------|
+|----|----|
 | `tidyverse` | Data wrangling and visualization (`dplyr`, `ggplot2`, `readr`) |
 | `scales` | Percent and comma formatting for labels |
 | `knitr` / `kableExtra` | Table rendering with custom styling |
