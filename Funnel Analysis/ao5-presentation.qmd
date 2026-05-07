@@ -6,7 +6,7 @@ date: today
 format:
   revealjs:
     theme: simple
-    css: ao5-presentation.css
+   # css: ao5-presentation.css
     transition: fade
     slide-number: true
     progress: true

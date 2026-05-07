@@ -125,9 +125,7 @@ theme_ao5 <- theme_minimal(base_size = 12) +
 ## Project Overview
 
 ::: project-overview-intro
-This report is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. This objective focuses on website behavior and booking funnel optimization.
-Despite traffic arriving through multiple acquisition channels, the business lacked visibility into where visitors were dropping off and which channels were actually converting. This analysis uses GA4 event-level data to diagnose that gap.
-
+This report is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. This objective focuses on website behavior and booking funnel optimization. Despite traffic arriving through multiple acquisition channels, the business lacked visibility into where visitors were dropping off and which channels were actually converting. This analysis uses GA4 event-level data to diagnose that gap.
 :::
 
 ```{=html}
@@ -195,11 +193,10 @@ The method selected is a **Descriptive Funnel Analysis** using GA4 event-level e
 </div>
 ```
 
-
 ### Derived Metrics
 
-| Metric             | Formula                               |
-|--------------------|---------------------------------------|
+| Metric             | Formula                             |
+|--------------------|-------------------------------------|
 | Page View Rate     | page_view users ÷ sessions          |
 | Form Start Rate    | form_start users ÷ page_view users  |
 | Booking Rate       | booking_complete ÷ form_start users |
@@ -256,7 +253,7 @@ summary_df |>
 
 ------------------------------------------------------------------------
 
-## Key Findings 
+## Key Findings
 
 The funnel narrows sharply and unevenly. The dominant friction point is the transition from page viewing to form initiation — a **91.9% drop-off rate** that holds across every traffic channel.
 
@@ -396,19 +393,6 @@ ga4_data |>
   row_spec(nrow(ga4_data) + 1, bold = TRUE, background = "#d6e8f5")
 ```
 
-## Presentation
-
-The RevealJS slides below are rendered directly from the same R code and GA4 data as this analysis — all charts and tables stay in sync automatically when the data is updated.
-
-```{=html}
-
-<iframe src="ao5-presentation.html" width="100%" height="500px"
-        style="border:none;"
-        allowfullscreen
-        allow="fullscreen">
-</iframe>
-```
-
 ------------------------------------------------------------------------
 
 ## Recommendations
@@ -446,7 +430,6 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 
 ## Appendix
 
-
 ### R Packages
 
 | Package | Role |
@@ -454,5 +437,3 @@ The RevealJS slides below are rendered directly from the same R code and GA4 dat
 | tidyverse | Data wrangling and visualization (dplyr, ggplot2, readr) |
 | scales | Percent and comma formatting for labels |
 | knitr / kableExtra | Table rendering with custom styling |
-
-
