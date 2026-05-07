@@ -104,39 +104,30 @@ This approach did not scale, produced stale lists, and offered no visibility int
 ```{=html}
 <div class="pipeline-steps">
   <div class="pipeline-step">
-    <div class="step-number">1</div>
     <div class="step-content">
       <h4>Data Migration</h4>
-      <p>Existing Outlook contacts exported to <code>.xls</code> and bulk-imported into HubSpot, preserving all prior tenant records.</p>
+      <p>Existing Outlook contacts exported to .xls and bulk-imported into HubSpot, preserving all prior tenant records.</p>
     </div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">2</div>
     <div class="step-content">
       <h4>Sign-up Form</h4>
       <p>A HubSpot-hosted form published via QR code and short link (Bitly) captures new subscribers automatically.</p>
     </div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">3</div>
     <div class="step-content">
       <h4>Dynamic Lists</h4>
       <p>Contacts are searchable and filterable. Form submissions auto-create or auto-update records — no manual entry.</p>
     </div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">4</div>
     <div class="step-content">
       <h4>Email Campaigns</h4>
       <p>One-time blasts or automated sequences with personalization tokens, branded templates, and compliance-ready unsubscribe links.</p>
     </div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-number">5</div>
     <div class="step-content">
       <h4>Analytics</h4>
       <p>Delivery, open rate, and click-through rate tracked per campaign — closing the loop on what actually reaches tenants.</p>
@@ -147,15 +138,15 @@ This approach did not scale, produced stale lists, and offered no visibility int
 
 ### Key Feature Highlights
 
-**Dynamic Contact Management** HubSpot's list engine means contacts are always current. Resubmitting the sign-up form automatically updates an existing record rather than creating a duplicate — solving the stale-data problem that plagued Outlook folders.
+**Dynamic Contact Management:** HubSpot's list engine means contacts are always current. Resubmitting the sign-up form automatically updates an existing record rather than creating a duplicate which solved the stale-data problem that plagued Outlook folders.
 
-**Compliant Opt-Out** Every email includes a one-click unsubscribe footer, meeting CAN-SPAM requirements without requiring tenants to contact the office.
+**Compliant Opt-Out:** Every email includes a one-click unsubscribe footer, meeting CAN-SPAM requirements without requiring tenants to contact the office.
 
-**Personalization Tokens** Email greetings auto-populate with the tenant's name, making mass communications feel more personal and increasing engagement.
+**Personalization Tokens:** Email greetings auto-populate with the tenant's name, making mass communications feel more personal and increasing engagement.
 
-**Delivery Analytics** The HubSpot dashboard tracks delivery status, open rates, and click-through rates per campaign, giving the property management team concrete feedback on communication effectiveness.
+**Delivery Analytics:** The HubSpot dashboard tracks delivery status, open rates, and click-through rates per campaign, giving the property management team concrete feedback on communication effectiveness.
 
-**Campus-Wide Rollout** The launch used a printed flyer with QR code, a Bitly short link for digital sharing, and an introductory email to the existing list — all inviting tenants to opt in to the new system.
+**Campus-Wide Rollou:t** The launch used a printed flyer with QR code, a Bitly short link for digital sharing, and an introductory email to the existing list, inviting tenants to opt in to the new system.
 
 ------------------------------------------------------------------------
 

@@ -204,7 +204,7 @@ $border-radius: .4rem !default;
 }
 
 .navbar-nav a[href*="about"]:hover::after {
-  content: "Coded by yours truly! ✨";
+  content: "Coded by yours truly!;
   position: absolute;
   bottom: -2rem;
   left: 50%;
@@ -271,6 +271,12 @@ body {
 .navbar-nav .nav-link {
   font-family: 'Story Script', sans-serif;
   font-size: 1rem;
+  font-weight: 700;
+  padding-bottom: 0 !important; /* reduce gap at bottom */
+}
+
+.navbar-collapse {
+  justify-content: flex-start !important;
 }
 
 
@@ -310,3 +316,14 @@ h6 {
   line-height: 1.7;
   color: Black;
 }
+
+/* Reduce space between hero and Get in Touch */
+.hero-wrapper {
+  margin-bottom: 0 !important;
+}
+
+h4 {
+  margin-top: 0.5rem !important;
+  padding-top: 0 !important;
+}
+

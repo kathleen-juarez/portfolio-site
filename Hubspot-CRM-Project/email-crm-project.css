@@ -355,3 +355,24 @@ th {
   background:  rgba(255, 255, 255, 0.15) !important;
   box-shadow: none !important;
 }
+
+
+.pipeline-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: stretch;
+}
+
+.pipeline-step {
+  display: flex;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.pipeline-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+}

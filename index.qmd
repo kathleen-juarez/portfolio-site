@@ -17,16 +17,18 @@ format:
 </div>
 ```
 
-# 
+#### Get in Touch: 
+[email me](mailto:kathleenrjuarez8@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/kathleen-juarez-digital-marketer-writer/)
 
-# 
+------------------------------------------------------------------------
 
 ```{=html}
 <!-- Trigger Button -->
+<div style="display: flex; justify-content: center;">
 <button onclick="document.getElementById('siteModal').style.display='flex'" 
   style="background: #7e82ad; color: white; border: none; padding: 10px 20px; 
   border-radius: 20px; cursor: pointer; font-size: 1rem;">
-  ✨ Behind the Scenes
+  Behind the Scenes
 </button>
 
 <!-- Modal -->
@@ -43,27 +45,21 @@ format:
       border:none; font-size:1.5rem; cursor:pointer;">✕</button>
 
     <!-- Content -->
-    <h2 style="color:hotpink; margin-top:0;">About This Site 🌸</h2>
+    <h2 style="color: #ad9ca4; margin-top:0;">About This Site </h2>
     
-    <p>This portfolio was hand-built by me — no templates, no drag-and-drop builders.</p>
+    <p>This portfolio was hand-built by me with no drag-and-drop builders.</p>
 
-    <h4 style="color:hotpink;">🛠 Tools I Used</h4>
+    <h4 style="color: #ad9ca4;"> Tools I Used</h4>
     <ul>
       <li><strong>Quarto</strong> — for site structure and publishing</li>
       <li><strong>HTML & CSS</strong> — for custom styling and layout</li>
       <li><strong>R</strong> — for data visualizations and analytics work</li>
     </ul>
 
-    <h4 style="color:hotpink;">💡 Why I Built It This Way</h4>
-    <p>I wanted a space that felt like <em>me</em> — not a generic template. 
-    Building it from scratch let me make every design decision intentionally, 
-    the same way I approach marketing strategy.</p>
+    <h4 style="color: #ad9ca4;"> Why I Built It This Way</h4>
+    <p>I don't do generic. Building it from scratch meant I could be deliberate about everything: the spacing, the tone, every pixel, and every word was a choice. For better or for worse, I pay attention to the details most people scroll past.</p>
 
-    <h4 style="color:hotpink;">📬 Want to connect?</h4>
-    <p>Reach me at <a href="mailto:youremail@email.com" style="color:hotpink;">youremail@email.com</a></p>
-
-  </div>
-</div>
+ 
 
 <!-- Close on backdrop click -->
 <script>
@@ -72,17 +68,5 @@ format:
   });
 </script>
 ```
-
-# 
-
-# 
-
-# 
-
-## Let's Connect
-
-You can [email me](mailto:kathleenrjuarez8@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/kathleen-juarez-digital-marketer-writer/).
-
-*Welcome to my portfolio.*
 
 ------------------------------------------------------------------------
