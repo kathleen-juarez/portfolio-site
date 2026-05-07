@@ -1,0 +1,237 @@
+---
+title: "About This Site"
+---
+
+```{=html}
+<style>
+.anchor-section { display: none; }
+.anchorjs-link { display: none; }
+a.anchor-section { display: none; }
+</style>
+```
+
+```{=html}
+<style>
+  h1 {
+    color: #66ada9;
+  }
+</style>
+```
+
+```{=html}
+<style>
+  h4 {
+    color: #7e82ad;
+  }
+</style>
+```
+
+# About This Site
+
+````{=html}
+<style>
+  .hero-box {
+    border: 2px solid #66ada9;
+    border-radius: 12px;
+    padding: 2rem 2.25rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #f7f9fc 0%, #eef4f4 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #66ada9, #7aa496, #6a81a5);
+    border-radius: 12px 0 0 12px;
+  }
+  .hero-box-sub {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 1.4rem;
+    max-width: 580px;
+  }
+  .hero-github-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #66ada9;
+    text-decoration: none;
+    border-bottom: 1.5px solid #66ada9;
+    padding-bottom: 1px;
+  }
+  .hero-github-link:hover {
+    color: #7aa496;
+    border-bottom-color: #7aa496;
+  }
+  .hero-github-label {
+    font-size: 0.82rem;
+    color: #9dafc0;
+    margin-bottom: 0.3rem;
+  }
+</style>
+
+<div class="hero-box">
+  <div class="hero-box-sub" style="font-size: 1.3rem; font-weight: 500; margin-bottom: 1.1rem;">
+    This portfolio was designed and hand-coded by me using <br> <strong>Quarto</strong>, <strong>HTML</strong>, and <strong>CSS</strong>. No drag-and-drop builders involved!
+  </div>
+
+  <div class="hero-github-label">See how it all came together ↓</div>
+  <a class="hero-github-link" href="https://github.com/kathleen-juarez/portfolio-site.git" target="_blank">github.com/kathleen-juarez/portfolio-site</a>
+
+  <div style="margin-top: 1.25rem;">
+    <details style="border: 1px solid #c5cfe0; border-radius: 8px; padding: 0.75rem 1rem; background: #fff;">
+      <summary style="font-weight: 600; color: #6a81a5; cursor: pointer; font-size: 0.95rem;">📘 What's GitHub?</summary>
+      <div style="margin-top: 0.75rem; font-size: 0.9rem; color: #5a6a7a; line-height: 1.7;">
+        <p>GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other's work.</p>
+        <p><em>If you're asking yourself this question, you've clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman's innocence.</em></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+### What went into it
+
+- **Design** — a custom color palette, typography choices, and layout decisions made entirely from scratch
+- **Structure** — Quarto's publishing framework, configured for GitHub Pages with a custom domain
+- **Styling** — a multi-file CSS/SCSS architecture: global styles, a hero stylesheet, and page-specific stylesheets for each major section
+- **Content** — an editorial-style film review page, a full analytics case study with interactive visualizations, an interactive Flexdashboard, and a styled resume with a custom table of contents
+
+### Tools Used
+
+| Tool           | Purpose                               |
+|----------------|---------------------------------------|
+| Quarto         | Site framework & rendering            |
+| CSS / SCSS     | Custom styling & Bootswatch overrides |
+| HTML           | Custom components & page structure    |
+| R              | Dashboard templating & rendering      |
+| GitHub         | Version control & hosting             |
+| Chart.js       | Interactive data visualizations       |
+| Flexdashboard  | Analytics dashboard layout            |
+
+---
+
+### How it actually got built
+
+```{=html}
+<style>
+  .build-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    .build-grid { grid-template-columns: 1fr; }
+  }
+  .build-card {
+    border: 1px solid #c5cfe0;
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    background: #fff;
+  }
+  .build-card-icon {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .build-card-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #6a81a5;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+  .build-card-body {
+    font-size: 0.88rem;
+    color: #5a6a7a;
+    line-height: 1.6;
+  }
+  .stat-strip {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0 0 1.5rem 0;
+  }
+  .stat-box {
+    flex: 1;
+    min-width: 110px;
+    background: #f0f3f8;
+    border: 1px solid #c5cfe0;
+    border-radius: 8px;
+    padding: 0.9rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #66ada9;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: 0.15rem;
+  }
+</style>
+
+<div class="stat-strip">
+  <div class="stat-box">
+    <span class="stat-num">71</span>
+    <div class="stat-label">logged changes</div>
+  </div>
+  <div class="stat-box">
+    <span class="stat-num">8</span>
+    <div class="stat-label">sections built</div>
+  </div>
+  <div class="stat-box">
+    <span class="stat-num">6</span>
+    <div class="stat-label">stylesheets written</div>
+  </div>
+  <div class="stat-box">
+    <span class="stat-num">∞</span>
+    <div class="stat-label">bugs encountered</div>
+  </div>
+</div>
+
+<div class="build-grid">
+  <div class="build-card">
+    <div class="build-card-icon">🚀</div>
+    <div class="build-card-title">Deployment</div>
+    <div class="build-card-body">Getting the site live involved more than clicking "publish." Connecting a custom domain, resolving Jekyll conflicts with Quarto's file structure, fixing broken CSS on the live site, and wrangling Git branch divergence — all sorted, all documented.</div>
+  </div>
+  <div class="build-card">
+    <div class="build-card-icon">🎨</div>
+    <div class="build-card-title">Design System</div>
+    <div class="build-card-body">A deliberate six-color palette, a multi-file SCSS architecture, and custom font overrides on top of Bootswatch Minty. Every element — navbar, hero, buttons, headings — styled intentionally rather than inherited by default.</div>
+  </div>
+  <div class="build-card">
+    <div class="build-card-icon">🧭</div>
+    <div class="build-card-title">Navigation</div>
+    <div class="build-card-body">Dropdown menus, left-justified links, custom font sizing and weight, a tooltip that appears on hover over this very page's nav link — the navbar alone required half a dozen targeted CSS fixes.</div>
+  </div>
+  <div class="build-card">
+    <div class="build-card-icon">✍️</div>
+    <div class="build-card-title">Editorial Writing Page</div>
+    <div class="build-card-body">A film review converted into a full editorial layout: drop caps, pull quotes, a full-bleed hero image, floated mid-article photography, and a page-specific tan background — each with its own CSS variables and override logic.</div>
+  </div>
+  <div class="build-card">
+    <div class="build-card-icon">📊</div>
+    <div class="build-card-title">Analytics Case Study</div>
+    <div class="build-card-body">A full project page featuring interactive Chart.js visualizations from GA4 data, stat cards, data tables, and an embedded 6-slide RevealJS presentation — plus a Flexdashboard with crosstalk-linked filters, scatter plots, and a correlation heatmap.</div>
+  </div>
+  <div class="build-card">
+    <div class="build-card-icon">📄</div>
+    <div class="build-card-title">Resume Page</div>
+    <div class="build-card-body">Custom HTML tables, an auto-generated table of contents, SVG decorative dividers, targeted font overrides per section, and university seals sized with pixel-level precision — because markdown tables weren't going to cut it.</div>
+  </div>
+</div>
+````
+
+::: {style="border: 1px solid #c5cfe0; border-radius: 8px; padding: 1.1rem 1.4rem; background-color: #f7f9fc; font-size: 0.88rem; color: #6c757d; line-height: 1.7;"}
+*The site you're looking at is the sum of 71 logged changes, a handful of 404 errors, at least one Git catastrophe, and a lot of iterating on things that almost-but-didn't-quite look right. That's what building something from scratch actually looks like.*
+:::
