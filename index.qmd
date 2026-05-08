@@ -25,7 +25,7 @@ a.anchor-section { display: none; }
 </div>
 ```
 
-::: {style="font-size: 1.4rem;"}
+::: {style="font-size: 1.4rem; margin-top: .5rem; margin-bottom: 0rem;"}
 Contact Me: [email](mailto:kathleenrjuarez8@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kathleen-juarez-digital-marketer-writer/)
 :::
 
