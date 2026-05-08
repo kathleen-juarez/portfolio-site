@@ -25,11 +25,10 @@ a.anchor-section { display: none; }
 </div>
 ```
 
-::: {style="font-size: 1.3rem;"}
-#### Get in Touch:
-
-[email me](mailto:kathleenrjuarez8@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/kathleen-juarez-digital-marketer-writer/)
+::: {style="font-size: 1.4rem;"}
+Contact Me: [email](mailto:kathleenrjuarez8@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kathleen-juarez-digital-marketer-writer/)
 :::
+
 ------------------------------------------------------------------------
 
 ```{=html}
