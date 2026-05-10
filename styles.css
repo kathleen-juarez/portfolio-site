@@ -142,7 +142,6 @@ $border-radius: .4rem !default;
 #title-block-header {
   display: none !important;
 }
-
 .hero-wrapper {
   position: relative;
   width: 100vw;
@@ -152,16 +151,14 @@ $border-radius: .4rem !default;
   height: 80vh;
   max-height: 700px;
 }
-
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: contrast(1.05);
+  filter: brightness(1) 
 }
-
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -171,11 +168,11 @@ $border-radius: .4rem !default;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: background: rgba(0, 0, 0, 0.4);
+  justify-content: flex-start; /* ← pushes text to top */
+  padding-bottom: 1rem;      /* ← controls distance from bottom edge */
+  background: rgba(0, 0, 0, 0.4); /* ← fixed the duplicate "background:" */
   z-index: 10;
 }
-
 .hero-title {
   color: white !important;
   font-size: clamp(1.2rem, 3.5vw, 3rem);
@@ -187,17 +184,21 @@ $border-radius: .4rem !default;
   letter-spacing: 0.05em;
   z-index: 11;
 }
-
 .hero-subtitle {
   color: white !important;
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 300;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-  margin-top: 1rem;
+  margin-top: .25rem;
   padding: 0 2rem;
   letter-spacing: 0.03em;
   z-index: 11;
+}
+
+.hero-subtitle--bottom {
+  margin-top: auto;  /* ← pushes this element to the bottom */
+  padding-bottom: 1rem;
 }
 
 .navbar-nav a[href*="about"] {
@@ -217,8 +218,8 @@ $border-radius: .4rem !default;
   font-size: 0.75rem;
   white-space: nowrap;
   pointer-events: none;
+  z-index: 9999; /* ensures it's not hidden under other elements */
 }
-
 .hero-image,
 .quarto-hero-banner {
   margin-top: 0 !important;
