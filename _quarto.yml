@@ -5,6 +5,7 @@ project:
 website:
   title: "Kathleen Juarez"
   site-url: "https://kathleenjuarez.com"
+  google-analytics: "G-3HP1RH107X"
   navbar:
     background: "#6a81a5"
     left:
