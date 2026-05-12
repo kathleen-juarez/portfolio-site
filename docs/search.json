@@ -285,5 +285,12 @@
     "title": "",
     "section": "",
     "text": "GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other’s work.\nIf you’re asking yourself this question, you’ve clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman’s innocence. ::: :::::\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nQuarto\nSite framework & rendering\n\n\nCSS / SCSS\nCustom styling & Bootswatch overrides\n\n\nHTML\nCustom components & page structure\n\n\nR\nDashboard templating & rendering\n\n\nGitHub\nVersion control & hosting\n\n\nChart.js\nInteractive data visualizations\n\n\nFlexdashboard\nAnalytics dashboard layout"
+  },
+  {
+    "objectID": "analytics.html",
+    "href": "analytics.html",
+    "title": "Site Analytics",
+    "section": "",
+    "text": "Site Analytics\n  A live look at how visitors are engaging with this site — traffic trends, popular pages, and where readers are coming from.\n\n\n\n  \n  \n\n\n\n  Dashboard powered by Google Analytics & Looker Studio · Data refreshes automatically"
   }
 ]

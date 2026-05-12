@@ -24,6 +24,8 @@ website:
         menu:
           - text: Funnel Analysis
             href: Funnel Analysis/funnel-analysis.qmd
+          - text: GA4 Site Analytics
+            href: GA4-Looker-Dash.qmd
           # - text: Interactive Dashboard
           #  href: 
       - text: Design
