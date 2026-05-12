@@ -1,3 +1,55 @@
 ---
-title: "GA4-Looker-Dash"
+title: "Site Analytics"
+format:
+  html:
+    page-layout: full
+    toc: false
 ---
+
+:::{.analytics-intro}
+# Site Analytics
+
+This dashboard tracks real-time visitor activity on my portfolio site using Google Analytics 4 and Looker Studio. Setting it up involved configuring a GA4 property and data stream, embedding a tracking tag directly into my Quarto site, and designing a custom Looker Studio report to visualize the data. The dashboard updates automatically and tracks key metrics including page views, session duration, traffic sources, device types, and visitor locations worldwide
+:::
+
+```{=html}
+<style>
+
+  .dashboard-container {
+    display: flex;
+    justify-content: center;
+     padding: 0.25rem 0 3rem 0;
+  }
+
+  .dashboard-container iframe {
+    width: 100%;
+    max-width: 1100px;
+    height: 850px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(126, 130, 173, 0.15);
+    border: 1px solid #e8e8f0;
+  }
+
+  .analytics-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    padding-bottom: 2rem;
+  }
+</style>
+
+
+<div class="dashboard-container">
+  <iframe
+    src="https://datastudio.google.com/embed/reporting/b2f6c6dd-6e8a-48a9-b143-3497fdfa620a/page/QvtxF"
+    frameborder="0"
+    style="border:0"
+    allowfullscreen
+    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+  </iframe>
+</div>
+
+<div class="analytics-note">
+  Dashboard powered by Google Analytics & Looker Studio · Data refreshes automatically
+</div>
+```

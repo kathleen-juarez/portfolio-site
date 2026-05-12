@@ -292,5 +292,12 @@
     "title": "Site Analytics",
     "section": "",
     "text": "Site Analytics\nThis dashboard tracks real-time visitor activity on my portfolio site using Google Analytics 4 and Looker Studio. Setting it up involved configuring a GA4 property and data stream, embedding a tracking tag directly into my Quarto site, and designing a custom Looker Studio report to visualize the data. The dashboard updates automatically and tracks key metrics including page views, session duration, traffic sources, device types, and visitor locations worldwide\n\n\n\n\n\n  \n  \n\n\n\n  Dashboard powered by Google Analytics & Looker Studio · Data refreshes automatically"
+  },
+  {
+    "objectID": "GA4-Looker-Dash.html",
+    "href": "GA4-Looker-Dash.html",
+    "title": "Site Analytics",
+    "section": "",
+    "text": "Site Analytics\nThis dashboard tracks real-time visitor activity on my portfolio site using Google Analytics 4 and Looker Studio. Setting it up involved configuring a GA4 property and data stream, embedding a tracking tag directly into my Quarto site, and designing a custom Looker Studio report to visualize the data. The dashboard updates automatically and tracks key metrics including page views, session duration, traffic sources, device types, and visitor locations worldwide\n\n\n\n\n\n  \n  \n\n\n\n  Dashboard powered by Google Analytics & Looker Studio · Data refreshes automatically"
   }
 ]
