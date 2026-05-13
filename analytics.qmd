@@ -6,7 +6,7 @@ format:
     toc: false
 ---
 
-:::{.analytics-intro}
+::: analytics-intro
 # Site Analytics
 
 This dashboard tracks real-time visitor activity on my portfolio site using Google Analytics 4 and Data Studio (formerly Looker Studio). Setting it up involved configuring a GA4 property and data stream, embedding a tracking tag directly into my Quarto site, and designing a custom Data Studio report to visualize the data. The dashboard updates automatically and tracks key metrics including page views, session duration, traffic sources, device types, and visitor locations worldwide

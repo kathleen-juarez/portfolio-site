@@ -23,6 +23,9 @@ execute:
 ---
 
 ```{=html}
+<style>
+/* paste the full contents of ao5-styles.css here */
+</style>
 ```
 
 ```{r}

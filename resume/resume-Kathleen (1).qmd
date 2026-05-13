@@ -8,6 +8,7 @@ format:
     css: styles.css
     toc: true
     toc-location: right
+ #  embed-resources: true
 ---
 
 ```{=html}
@@ -139,7 +140,7 @@ format:
 # Education
 
 |   | Institution | Degree | Year | College / Department |
-|:--:|:--:|:--:|:--:|:--:|
+|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 | ![](CPP.png){width="140" height="110"} | Cal Poly Pomona, Singelyn Graduate School of Business | Master of Science | 2024-2026 | Digital Marketing and Analytics |
 | ![](USC-SEAL.png){width="120"} | University of Southern California | Bachelor of Arts | 2013-2016 | English - Creative Writing |
 
@@ -173,3 +174,39 @@ format:
 -   Composed organizational documents and correspondence, supporting clear communication across staff, stakeholders, and leadership.
 -   Led recruitment marketing efforts for seasonal staff, including crafting job postings and screening applicants.
 -   Planned, scheduled, and executed field trips and daily events, balancing logistics, vendor coordination, and budget adherence.
+
+# Certificates
+
+## GA4 Certificate
+
+## Data Certificates:
+
+### Data Analytics with Google Cloud BigQuery and Looker Studio
+
+![](/CertificateOfCompletion_Data%20Analytics%20with%20Google%20Cloud%20BigQuery%20and%20Looker%20Studio.jpg)
+
+### Introduction to BigQuery
+
+![](/Intro-BigQuery.jpg)
+
+### Introduction to SQL
+
+![](/Intro-SQL.jpg)
+
+### Intermediate SQL
+
+![](/Int-SQL.jpg)
+
+### Data Wrangling and Visualization
+
+```{=html}
+<iframe src="https://badges.parchment.com/public/assertions/M9bOXtWwSS-nHuV9PJL18g?embedVersion=1&amp;embedWidth=370&amp;embedHeight=167&amp;utm_source=html_embed" title="Badge: Data Wrangling and Visualization" style="width: 370px; height: 167px; border: 0px;"></iframe>
+```
+
+## Deloitte Future of Work Institute
+
+```{=html}
+<div style="width: 100%; max-width: 600px;">
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8870a40d-cb85-4ed6-b114-0c58d213728c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+</div>
+```
