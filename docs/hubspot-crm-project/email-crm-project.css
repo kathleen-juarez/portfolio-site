@@ -376,3 +376,23 @@ th {
   grid-template-columns: repeat(5, 1fr);
   align-items: stretch;
 }
+
+.hero-stats {
+  gap: 12px; /* increase spacing between chips */
+}
+
+.stat-chip {
+  padding: 10px 20px;   /* taller and wider */
+  font-size: 1rem;    /* larger text */
+  border-radius: 50px;  /* adjust if needed */
+  gap: 8px;             /* space between icon and text */
+}
+
+.stat-chip i {
+  font-size: 1.2rem;    /* larger Font Awesome icons */
+}
+
+.stat-chip .fa-regular,
+.stat-chip .fa-solid {
+  font-size: 1.2rem;
+}
