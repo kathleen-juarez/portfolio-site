@@ -1,0 +1,233 @@
+[
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#project-overview",
+    "href": "Funnel Analysis/funnel-analysis.html#project-overview",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Project Overview",
+    "text": "Project Overview\n\nThis report is part of a larger consulting engagement examining how digital marketing activity translates into customer bookings for a small service-based business. This objective focuses on website behavior and booking funnel optimization. Despite traffic arriving through multiple acquisition channels, the business lacked visibility into where visitors were dropping off and which channels were actually converting. This analysis uses GA4 event-level data to diagnose that gap.\n\n\n  \n    ⚠️\n    The Problem\n    \n      No visibility into where users were leaving the site\n      Traffic volume treated as a proxy for success\n      Booking form drop-off untracked and unaddressed\n      Channel quality vs. volume not distinguished\n    \n  \n  \n    ✅\n    The Analytical Goal\n    \n      Map the four-stage booking funnel using GA4 events\n      Identify the largest friction point in the user journey\n      Segment funnel performance by traffic channel\n      Validate patterns through subgroup analysis"
+  },
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#methodology",
+    "href": "Funnel Analysis/funnel-analysis.html#methodology",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Methodology",
+    "text": "Methodology\nThe method selected is a Descriptive Funnel Analysis using GA4 event-level exports. The funnel maps user progression through four sequential behavioral stages, using total users (not event count) throughout to avoid inflation from repeat-event firing within a single session.\n\nFunnel Stages\n\n  \n    \n      Sessions\n      Entry point — all website visits; denominator for overall conversion rate\n    \n  \n  →\n  \n    \n      Page Views\n      Users engaging with site content; surface-level behavioral signal\n    \n  \n  →\n  \n    \n      Form Start\n      User begins filling the booking form — highest-intent observable action\n    \n  \n  →\n  \n    \n      Booking Complete\n      Form submitted — confirmed booking intent; the conversion event\n    \n  \n\n\n\nDerived Metrics\n\n\n\nMetric\nFormula\n\n\n\n\nPage View Rate\npage_view users ÷ sessions\n\n\nForm Start Rate\nform_start users ÷ page_view users\n\n\nBooking Rate\nbooking_complete ÷ form_start users\n\n\nOverall Conv. Rate\nbooking_complete ÷ sessions\n\n\n\nTraffic channel (GA4 Default Channel Group) is used as the primary segmentation variable, enabling comparison across six acquisition sources: Direct, Organic Search, Organic Social, Referral, Unassigned, and Paid Search."
+  },
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#statistical-summary",
+    "href": "Funnel Analysis/funnel-analysis.html#statistical-summary",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Statistical Summary",
+    "text": "Statistical Summary\n\n\n\n\n\nMetric\nValue\n\n\n\n\nTotal Sessions\n563\n\n\nPage View Users\n470\n\n\nForm Start Users\n38\n\n\nBookings Completed\n5\n\n\nPage View Rate\n83.5%\n\n\nForm Start Rate (of page views)\n8.1%\n\n\nBooking Rate (of form starts)\n13.2%\n\n\nOverall Conversion Rate\n0.9%\n\n\nLargest Drop-off Stage\npage_view → form_start (91.9% drop-off)"
+  },
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#key-findings",
+    "href": "Funnel Analysis/funnel-analysis.html#key-findings",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Key Findings",
+    "text": "Key Findings\nThe funnel narrows sharply and unevenly. The dominant friction point is the transition from page viewing to form initiation — a 91.9% drop-off rate that holds across every traffic channel.\n\nFunnel: Most Users Exit Before Starting the Booking Form\n\n\nShow figure code\nfunnel_long &lt;- tibble(\n  stage = factor(\n    c(\"Sessions\", \"Page Views\", \"Form Start\", \"Booking\\nComplete\"),\n    levels = c(\"Sessions\", \"Page Views\", \"Form Start\", \"Booking\\nComplete\")\n  ),\n  count     = c(totals$sessions, totals$page_views,\n                totals$form_starts, totals$bookings),\n  highlight = c(FALSE, FALSE, TRUE, FALSE)\n)\n\nggplot(funnel_long, aes(x = stage, y = count, fill = highlight)) +\n  geom_col(width = 0.52) +\n  geom_text(aes(label = comma(count)),\n            vjust = -0.4, size = 3.8, fontface = \"bold\", color = \"#1A1A1A\") +\n  scale_fill_manual(values = c(\"FALSE\" = \"#66ada9\", \"TRUE\" = \"#C0392B\")) +\n  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +\n  labs(title = \"Most Users Exit Before Completing Any High-Intent Action\",\n       x = NULL, y = \"Users\") +\n  theme_ao5\n\n\n\n\n\n\n\n\nFigure 1: Unique users at each stage of the booking funnel. Red bar indicates the largest drop-off point.\n\n\n\n\n\n\n\n\nConversion Rate by Traffic Channel\n\n\nShow figure code\nga4_data |&gt;\n  mutate(\n    channel   = fct_reorder(channel, overall_conv_rate),\n    above_avg = overall_conv_rate &gt; site_avg\n  ) |&gt;\n  ggplot(aes(x = channel, y = overall_conv_rate, fill = above_avg)) +\n  geom_col(width = 0.52) +\n  geom_text(aes(label = percent(overall_conv_rate, accuracy = 0.1)),\n            hjust = -0.15, size = 3.8, fontface = \"bold\", color = \"#1A1A1A\") +\n  geom_hline(yintercept = site_avg, linetype = \"dashed\",\n             color = \"#888888\", linewidth = 0.5) +\n  annotate(\"text\", x = 0.65, y = site_avg + 0.0025,\n           label = paste0(\"Site avg: \", percent(site_avg, accuracy = 0.1)),\n           size = 3.2, color = \"#888888\", hjust = 0) +\n  coord_flip() +\n  scale_fill_manual(values = c(\"FALSE\" = \"#7aa496\", \"TRUE\" = \"#66ada9\")) +\n  scale_y_continuous(labels = percent_format(accuracy = 1),\n                     expand = expansion(mult = c(0, 0.28))) +\n  labs(x = NULL, y = NULL) +\n  theme_ao5 +\n  theme(panel.grid.major.y = element_blank(),\n        panel.grid.major.x = element_line(color = \"#edf0f7\"))\n\n\n\n\n\n\n\n\nFigure 2: Booking conversion rate by traffic channel. Dashed line = site average."
+  },
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#booking-funnel-performance-by-traffic-channel",
+    "href": "Funnel Analysis/funnel-analysis.html#booking-funnel-performance-by-traffic-channel",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Booking Funnel Performance by Traffic Channel",
+    "text": "Booking Funnel Performance by Traffic Channel\n\n\n\n\nTable 1\n\n\n\n\n\n\nTraffic Channel\nSessions\nPage Views\nContact Us\nForm Starts\nSched. Appts\nConv. Rate\n\n\n\n\nUnassigned\n32\n29\n2\n3\n2\n3.1%\n\n\nOrganic Search\n86\n61\n4\n4\n4\n2.3%\n\n\nOrganic Social\n207\n203\n2\n12\n3\n0.5%\n\n\nDirect\n213\n167\n9\n18\n6\n0.5%\n\n\nReferral\n21\n6\n2\n1\n2\n0.0%\n\n\nPaid Search\n4\n4\n0\n0\n0\n0.0%\n\n\nTOTAL\n563\n470\n19\n38\n17\n0.9%\n\n\n\n\n\n\n\n\n\n\nHigh-Intent Behavioral Signals\nSchedule_Appointment and contact_us are link clicks to the page hosting the booking form. They are reported here as behavioral context rather than sequential funnel stages.\n\n\n\n\nTable 2\n\n\n\n\n\n\nTraffic Channel\nSessions\nSched. Appt Clicks\nContact Us Clicks\nForm Starts\nBookings\n\n\n\n\nDirect\n213\n6\n9\n18\n1\n\n\nOrganic Social\n207\n3\n2\n12\n1\n\n\nOrganic Search\n86\n4\n4\n4\n2\n\n\nUnassigned\n32\n2\n2\n3\n1\n\n\nReferral\n21\n2\n2\n1\n0\n\n\nPaid Search\n4\n0\n0\n0\n0\n\n\nTOTAL\n563\n17\n19\n38\n5"
+  },
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#recommendations",
+    "href": "Funnel Analysis/funnel-analysis.html#recommendations",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Recommendations",
+    "text": "Recommendations\n\n  \n    \n      Redesign the Mid-Funnel Experience\n      The 91.9% drop-off between page views and form starts is the highest-leverage fix available. Strengthening calls to action, sharpening the value proposition, and reducing booking form friction can increase appointments without requiring additional marketing spend.\n    \n  \n  \n    \n      Prioritize Organic Search & SEO Investment\n      Organic Search converts at 2.3% — more than twice the site average and more than 4× the efficiency of Organic Social. Shifting content and budget investment toward this channel is likely to yield stronger returns than broad social reach alone.\n    \n  \n  \n    \n      Audit Channel Tracking & UTM Configuration\n      Unassigned traffic converts at 3.1% — the highest rate on the site — but its source is currently invisible. Auditing UTM tagging and GA4 configuration to properly classify this traffic is a critical step toward understanding what is driving the best results.\n    \n  \n  \n    \n      Deploy Purchase Event Tracking via Google Tag Manager\n      Current tracking measures booking form submissions — not completed purchases. Configuring GTM to capture purchase completions will allow future analyses to connect marketing activity to actual revenue outcomes, enabling true ROI measurement."
+  },
+  {
+    "objectID": "Funnel Analysis/funnel-analysis.html#appendix",
+    "href": "Funnel Analysis/funnel-analysis.html#appendix",
+    "title": "Website Behavior & Booking Funnel Analysis",
+    "section": "Appendix",
+    "text": "Appendix\n\nR Packages\n\n\n\nPackage\nRole\n\n\n\n\ntidyverse\nData wrangling and visualization (dplyr, ggplot2, readr)\n\n\nscales\nPercent and comma formatting for labels\n\n\nknitr / kableExtra\nTable rendering with custom styling"
+  },
+  {
+    "objectID": "marketing-analytics.html",
+    "href": "marketing-analytics.html",
+    "title": "marketing analytics",
+    "section": "",
+    "text": "Oleo Script, Story Script - for headings?Lobster, Carter One\nCharm, Pattaya, Arima"
+  },
+  {
+    "objectID": "Longform-listing-folder/Westwood/westwood-review.html",
+    "href": "Longform-listing-folder/Westwood/westwood-review.html",
+    "title": "Westwood",
+    "section": "",
+    "text": "FILM REVIEW\n    WESTWOOD\n    Punk. Icon. Activist.\n    \n    \n      DIR. LORNA TUCKER\n      ·\n      DOCUMENTARY\n      ·\n      REVIEW BY KATHLEEN JUAREZ\n    \n  \n\n  \n  \n    \n      “When does someone cease to be a daring provocateur,and become museum worthy?”\n    \n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n  \n\n    For those unfamiliar with Vivienne Westwood save for her moniker on a clothing label, the designer might strike you as a demure British dame within the first few minutes of director Lorna Tucker's Westwood. Lounging in a tufted chair next to an exquisite floral arrangement, Westwood seems sweet in grandmotherly way, if not eccentric.\n\n    Fast-forward to a few minutes later into the documentary and Westwood leaves you with a very different impression of the designer. The night before her London Fashion Week show, she goes over the minutia of each piece, model, and accessory. Nothing escapes her notice and she berates an assistant for making an egregious error: a judgment call for a small hem on a garment where a large ribbed hem should be. \"I don't remember doing this. Fuck them, they're just disgusting. What's with this tiny hem? It's crap,\" she says.\n\n    \n      \n      \"I don't know what I'm doing, it's a mess. It's my fault, it's just not good.\"\n      — Vivienne Westwood\n    \n\n    Director Lorna Tucker's talent comes in the keen juxtaposition of the two sides of Westwood's demeanor. While the documentary is laden with incidences of Westwood's ferocity, it's contrasted with more intimate moments of Westwood at work. Camera panned at a distance, she confides in her husband post tiny-hem tirade, \"I don't know what I'm doing, it's a mess. It's my fault, it's just not good.\" We can see where the weight of her work weighs heavily on her shoulders.\n\n    Several times throughout the documentary, Westwood iterates a version of \"If I don't like it, I just won't put it out.\" Though her desire for complete creative control leads her to be tyrannical at times, Westwood is revealed to be a deeply sensitive, and introspective artist who pours herself into every detail of her work.\n\n    \n      ✦\n    \n\n    Westwood's work is one of constant rebellion both against the status quo of stuffy English society and at certain points even her own previous designs. One portion of the documentary shows a museum curator from The Victoria and Albert Museum delicately handling Westwood's most famous piece: a muslin t-shirt adorned with a swastika and other subversive imagery. In another moment of brilliant juxtaposition, tinkling classical piano music plays as the curator runs her gloved hand over the inverted cross printed on the shirt.\n\n    The emotional weight of the documentary relies on Westwood examining this question herself. Much of the documentary seems to be Westwood grappling with her name, company, and designs becoming globally known and marketable while still maintaining her artistic integrity as her company is on the verge of becoming a leviathan. \"I'm in danger of not being able to control everything properly,\" she laments.\n\n    \n      VERDICT\n      Perhaps most poignant about this documentary is the fact that despite having essentially built her career rebelling against the status quo, later Westwood is ironically resistant to change, evident in her fight against climate change and the uncontrollable growth of her own company.\n      Overall the film succeeds in taking Vivienne Westwood into the third dimension. The designer is a deeply complicated character and Lorna Tucker takes great care in exploring the intricacies of the designer's psyche over the course of the documentary. Through Tucker's lens, Westwood is more than just a label on a tag; she's a true artist willing to sacrifice monetary gain and fame to maintain her own creative vision.\n    \n\n  \n\n  \n    \n    Written by Kathleen Juarez"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html",
+    "href": "Funnel Analysis/ao5-presentation.html",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "",
+    "text": "Analytics Objective 5\n\n\nUsing GA4 event-level data to find where users drop off, what creates friction, and what drives bookings.\n\n📅 Jan 1 – Apr 21, 2026 563 Sessions 6 Traffic Channels R / tidyverse"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#section",
+    "href": "Funnel Analysis/ao5-presentation.html#section",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "",
+    "text": "Analytics Objective 5\n\n\nUsing GA4 event-level data to find where users drop off, what creates friction, and what drives bookings.\n\n📅 Jan 1 – Apr 21, 2026 563 Sessions 6 Traffic Channels R / tidyverse"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#methodology",
+    "href": "Funnel Analysis/ao5-presentation.html#methodology",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "Methodology",
+    "text": "Methodology\nDescriptive Funnel Analysis — GA4 event-level data, total users metric throughout\n\n\nFunnel Stages (Dependent Variable)\n\n\n\n#\nStage\nDescription\n\n\n\n\n1\nSessions\nEntry point\n\n\n2\nPage Views\nSurface engagement\n\n\n3\nForm Start\nBooking initiated\n\n\n4\nBooking Complete\nConversion\n\n\n\n\nTraffic Channels (Independent Variable)\n\nDirect\nOrganic Search\nOrganic Social\nReferral\nUnassigned\nPaid Search"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#the-core-problem",
+    "href": "Funnel Analysis/ao5-presentation.html#the-core-problem",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "The Core Problem",
+    "text": "The Core Problem\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n91.9% drop-off from page views to form starts — the critical friction point, consistent across all six channels"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#not-all-traffic-is-equal",
+    "href": "Funnel Analysis/ao5-presentation.html#not-all-traffic-is-equal",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "Not All Traffic Is Equal",
+    "text": "Not All Traffic Is Equal\n\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#funnel-performance-by-channel",
+    "href": "Funnel Analysis/ao5-presentation.html#funnel-performance-by-channel",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "Funnel Performance by Channel",
+    "text": "Funnel Performance by Channel\n\n\n\n\nTable 1\n\n\n\n\n\n\nTraffic Channel\nSessions\nPage Views\nContact Us\nForm Starts\nSched. Appts\nConv. Rate\n\n\n\n\nUnassigned\n32\n29\n2\n3\n2\n3.1%\n\n\nOrganic Search\n86\n61\n4\n4\n4\n2.3%\n\n\nOrganic Social\n207\n203\n2\n12\n3\n0.5%\n\n\nDirect\n213\n167\n9\n18\n6\n0.5%\n\n\nReferral\n21\n6\n2\n1\n2\n0.0%\n\n\nPaid Search\n4\n4\n0\n0\n0\n0.0%\n\n\nTOTAL\n563\n470\n19\n38\n17\n0.9%\n\n\n\n Contact Us and Sched. Appts are high-intent signals (link clicks), not sequential funnel gates."
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#subgroup-validation",
+    "href": "Funnel Analysis/ao5-presentation.html#subgroup-validation",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "Subgroup Validation",
+    "text": "Subgroup Validation\nDrop-off from page views → form starts, confirmed across all channels\n\n\n\n\nTable 2\n\n\n\n\n\n\nTraffic Channel\nPage Views\nForm Starts\nForm Start Rate\nDrop-off Rate\n\n\n\n\nReferral\n6\n1\n16.7%\n83.3%\n\n\nDirect\n167\n18\n10.8%\n89.2%\n\n\nUnassigned\n29\n3\n10.3%\n89.7%\n\n\nOrganic Search\n61\n4\n6.6%\n93.4%\n\n\nOrganic Social\n203\n12\n5.9%\n94.1%\n\n\nPaid Search\n4\n0\n0.0%\n100.0%\n\n\n\n\n\n\n\n\n\nDrop-off exceeds 83% in every channel — confirming a structural on-site barrier, not a channel-specific issue"
+  },
+  {
+    "objectID": "Funnel Analysis/ao5-presentation.html#strategic-recommendations",
+    "href": "Funnel Analysis/ao5-presentation.html#strategic-recommendations",
+    "title": "Website Behavior & Booking Funnel Optimization",
+    "section": "Strategic Recommendations",
+    "text": "Strategic Recommendations\n\n\n1 Redesign the Mid-Funnel Experience — Strengthen CTAs, sharpen the value proposition, and simplify the path to the booking form. Highest-leverage fix without additional spend.\n\n\n2 Invest in Organic Search & SEO — Converts at 2.3%, more than 2× the site average. Shift content and budget toward this channel.\n\n\n3 Audit UTM Tagging for Unassigned Traffic — The site’s highest-converting source (3.1%) is currently unlabeled. Classify it through proper UTM configuration and GA4 audit.\n\n\n4 Deploy Purchase Event Tracking via GTM — Track completed purchases, not just bookings, to connect marketing to actual revenue outcomes."
+  },
+  {
+    "objectID": "resume-Kathleen.html",
+    "href": "resume-Kathleen.html",
+    "title": "resume-Kathleen",
+    "section": "",
+    "text": "Professional Summary\n\nA digital marketer with a writer’s instinct and an analyst’s curiosity, using data to tell better stories and make smarter marketing decisions. \n\nMy interests lie in digital marketing strategy, audience engagement, and campaign performance, understanding how people discover, interact with, and respond to digital content. What sets my approach apart is an analytical perspective: I enjoy using tools such as Google Analytics 4, Hubspot CRM, and R to explore customer behavior and uncover insights that help refine messaging, improve digital experiences, and guide smarter marketing decisions. \n\n\nMy professional background spans communications, marketing, and event coordination, where I’ve managed multi-channel campaigns and projects from concept through execution — developing content, coordinating across teams, and tracking performance to measure what works. These experiences shaped my interest in the convergence of creative messaging, audience connection, and measurable outcomes. I’m drawn to the intersection where a well-told story meets a well-read dataset. That’s where the most interesting marketing problems live and where I do my best work.\n\n\n\n\nSkills\n\nDigital Marketing & Campaigns\n\nMulti-channel campaign planning, execution & performance optimization\nSocial media content, management & digital storytelling\nEmail marketing, automation & brand messaging\nDatabase marketing & audience segmentation\n\nContent Creation & Design\n\nAdobe Creative Suite (Photoshop, Illustrator, InDesign)\nCanva, CapCut (video editing)\nHTML/CSS fundamentals (website & email editing)\nWriting — email, social media, web, newsletters, presentations, editorial, promotional, film & TV scripts\n\nMarketing Technology\n\nHubSpot CRM (segmentation, workflows & automation)\nGoogle Analytics 4 (GA4)\nSEO/SEM — SEMrush, Moz\nWebsite CMS & content management\n\nAnalytics & Reporting\n\nAudience engagement metrics & conversion analysis\nMarketing forecasting & performance analysis\nR, SQL/BigQuery & data visualization\n\nApplied AI for Marketing\n\nAI-assisted campaign optimization & content development\nPredictive modeling for marketing performance\nAI-powered digital marketing workflows\n\n\n\n\nEducation\n\n\n\n\n\n\n\n\n\n\n\nInstitution\nDegree\nYear\nCollege / Department\n\n\n\n\n\nCal Poly Pomona, Singelyn Graduate School of Business\nMaster of Science\n2024-2026\nDigital Marketing and Analytics\n\n\n\nUniversity of Southern California\nBachelor of Arts\n2013-2016\nEnglish - Creative Writing\n\n\n\n\n\nWork Experience\n\nCommunications Coordinator and Property Assistant, The Ratkovich Company\n[2019 – Present]\n\nDesigned and executed multi-channel campaigns across email, print, and digital platforms to drive community engagement and connection.\nBuilt and managed audience segmentation strategies in HubSpot CRM, using engagement metrics to refine messaging, optimize timing, and improve communication effectiveness.\nProduced branded content including newsletters, social media graphics, flyers, and event materials to support engagement initiatives and maintain consistent storytelling.\nCollaborated cross-functionally with internal teams and stakeholders to align messaging, coordinate timelines, and support property-wide communications.\n\n\n\n\nEditorial Intern, Flaunt Magazine\n[2018]\n\nWrote and edited editorial content aligned with brand voice, increasing audience engagement and relevance.\nSupported content production, event coordination, and stakeholder communication for brand activations and media initiatives.\nEnsured brand consistency through fact-checking, proofreading, and adherence to editorial standards\n\n\n\nSummer Day Camp Director and Grant Writer, YMCA of West San Gabriel Valley\n[2014 – 2017]\n\nDirected internal communications and coordinated daily schedules for 200+ campers and a team of 20+ staff, ensuring consistent messaging and smooth operations.\nResearched, budgeted, and wrote grants, and supported implementation once funds were received, contributing to program funding and sustainability.\nComposed organizational documents and correspondence, supporting clear communication across staff, stakeholders, and leadership.\nLed recruitment marketing efforts for seasonal staff, including crafting job postings and screening applicants.\nPlanned, scheduled, and executed field trips and daily events, balancing logistics, vendor coordination, and budget adherence."
+  },
+  {
+    "objectID": "about-old.html",
+    "href": "about-old.html",
+    "title": "About This Site",
+    "section": "",
+    "text": "About This Site\n\n\nThis portfolio was designed and hand-coded by me using  Quarto, HTML, and CSS. No drag-and-drop builders involved!\n\n\nSee how it all came together:  https://github.com/kathleen-juarez/portfolio-site.git\n\n\n\n\n\n\nNoteWhat’s GitHub?\n\n\n\n\n\nGitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for software projects. It lets developers save their work, track changes over time, and collaborate with others without overwriting each other’s work\nIf you’re asking yourself this question, you’ve clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code to GitHub, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman’s innocence.\n\n\n\n\n\n\nWhat went into it\n\nDesign — layout, color, and typography decisions made from scratch\nStructure — built with Quarto’s publishing framework\nStyling — custom CSS for that extra bit of flare\n\n\n\nTools Used\n\n\n\nTool\nPurpose\n\n\n\n\nQuarto\nSite framework\n\n\nCSS\nCustom styling\n\n\nGitHub\nVersion control & hosting"
+  },
+  {
+    "objectID": "analytics.html",
+    "href": "analytics.html",
+    "title": "Site Analytics",
+    "section": "",
+    "text": "Site Analytics\nThis dashboard tracks real-time visitor activity on my portfolio site using Google Analytics 4 and Data Studio (formerly Looker Studio). Setting it up involved configuring a GA4 property and data stream, embedding a tracking tag directly into my Quarto site, and designing a custom Data Studio report to visualize the data. The dashboard updates automatically and tracks key metrics including page views, session duration, traffic sources, device types, and visitor locations worldwide\n\n\n\n\n\n  \n  \n\n\n\n  Dashboard powered by Google Analytics & Looker Studio · Data refreshes automatically"
+  },
+  {
+    "objectID": "resume/resume-Kathleen.html",
+    "href": "resume/resume-Kathleen.html",
+    "title": "resume-Kathleen",
+    "section": "",
+    "text": "Professional Summary\n\nA digital marketer with a writer’s instinct and an analyst’s curiosity, using data to tell better stories and make smarter marketing decisions. \n\nMy interests lie in digital marketing strategy, audience engagement, and campaign performance, understanding how people discover, interact with, and respond to digital content. What sets my approach apart is an analytical perspective: I enjoy using tools such as Google Analytics 4, Hubspot CRM, and R to explore customer behavior and uncover insights that help refine messaging, improve digital experiences, and guide smarter marketing decisions. \n\n\nMy professional background spans communications, marketing, and event coordination, where I’ve managed multi-channel campaigns and projects from concept through execution — developing content, coordinating across teams, and tracking performance to measure what works. These experiences shaped my interest in the convergence of creative messaging, audience connection, and measurable outcomes. I’m drawn to the intersection where a well-told story meets a well-read dataset. That’s where the most interesting marketing problems live and where I do my best work.\n\n\n\n\nSkills\n\nDigital Marketing & Campaigns\n\nMulti-channel campaign planning, execution & performance optimization\nSocial media content, management & digital storytelling\nEmail marketing, automation & brand messaging\nDatabase marketing & audience segmentation\n\nContent Creation & Design\n\nAdobe Creative Suite (Photoshop, Illustrator, InDesign)\nCanva, CapCut (video editing)\nHTML/CSS fundamentals (website & email editing)\nWriting — email, social media, web, newsletters, presentations, editorial, promotional, film & TV scripts\n\nMarketing Technology\n\nHubSpot CRM (segmentation, workflows & automation)\nGoogle Analytics 4 (GA4)\nSEO/SEM — SEMrush, Moz\nWebsite CMS & content management\n\nAnalytics & Reporting\n\nAudience engagement metrics & conversion analysis\nMarketing forecasting & performance analysis\nR, SQL/BigQuery & data visualization\n\nApplied AI for Marketing\n\nAI-assisted campaign optimization & content development\nPredictive modeling for marketing performance\nAI-powered digital marketing workflows\n\n\n\n\nEducation\n\n\n\n\n\n\n\n\n\n\n\nInstitution\nDegree\nYear\nCollege / Department\n\n\n\n\n\nCal Poly Pomona, Singelyn Graduate School of Business\nMaster of Science\n2024-2026\nDigital Marketing and Analytics\n\n\n\nUniversity of Southern California\nBachelor of Arts\n2013-2016\nEnglish - Creative Writing\n\n\n\n\n\nWork Experience\n\nCommunications Coordinator and Property Assistant, The Ratkovich Company\n[2019 – Present]\n\nDesigned and executed multi-channel campaigns across email, print, and digital platforms to drive community engagement and connection.\nBuilt and managed audience segmentation strategies in HubSpot CRM, using engagement metrics to refine messaging, optimize timing, and improve communication effectiveness.\nProduced branded content including newsletters, social media graphics, flyers, and event materials to support engagement initiatives and maintain consistent storytelling.\nCollaborated cross-functionally with internal teams and stakeholders to align messaging, coordinate timelines, and support property-wide communications.\n\n\n\n\nEditorial Intern, Flaunt Magazine\n[2018]\n\nWrote and edited editorial content aligned with brand voice, increasing audience engagement and relevance.\nSupported content production, event coordination, and stakeholder communication for brand activations and media initiatives.\nEnsured brand consistency through fact-checking, proofreading, and adherence to editorial standards\n\n\n\nSummer Day Camp Director and Grant Writer, YMCA of West San Gabriel Valley\n[2014 – 2017]\n\nDirected internal communications and coordinated daily schedules for 200+ campers and a team of 20+ staff, ensuring consistent messaging and smooth operations.\nResearched, budgeted, and wrote grants, and supported implementation once funds were received, contributing to program funding and sustainability.\nComposed organizational documents and correspondence, supporting clear communication across staff, stakeholders, and leadership.\nLed recruitment marketing efforts for seasonal staff, including crafting job postings and screening applicants.\nPlanned, scheduled, and executed field trips and daily events, balancing logistics, vendor coordination, and budget adherence."
+  },
+  {
+    "objectID": "GA4-Looker-Dash.html",
+    "href": "GA4-Looker-Dash.html",
+    "title": "Site Analytics",
+    "section": "",
+    "text": "Site Analytics\nThis dashboard tracks real-time visitor activity on my portfolio site using Google Analytics 4 and Looker Studio. Setting it up involved configuring a GA4 property and data stream, embedding a tracking tag directly into my Quarto site, and designing a custom Looker Studio report to visualize the data. The dashboard updates automatically and tracks key metrics including page views, session duration, traffic sources, device types, and visitor locations worldwide\n\n\n\n\n\n  \n  \n\n\n\n  Dashboard powered by Google Analytics & Looker Studio · Data refreshes automatically"
+  },
+  {
+    "objectID": "resume/resume-Kathleen (1).html",
+    "href": "resume/resume-Kathleen (1).html",
+    "title": "resume-Kathleen",
+    "section": "",
+    "text": "Professional Summary\n\nDigital marketer with a background in communications, content, and campaign execution. I bring an analytical edge to creative work to understand audience behavior and translate insights into stronger strategy. My best work lives where a compelling story meets a well-read dataset.\n\n\n\nSkills\n\n\n\n\n\n\n\n\nDigital Marketing & Campaigns\nContent Creation & Design\nMarketing Technology\n\n\n\n\n\nMulti-channel campaign planning, execution & performance optimization\n\n\nSocial media content, management & digital storytelling\n\n\nEmail marketing, automation & brand messaging\n\n\nDatabase marketing & audience segmentation\n\n\nAdobe Creative Suite (Photoshop, Illustrator, InDesign)\n\n\nCanva, CapCut (video editing)\n\n\nHTML/CSS fundamentals (website & email editing)\n\n\nWriting — email, social media, web, newsletters, presentations, editorial, promotional, film & TV scripts\n\n\nHubSpot CRM (segmentation, workflows & automation)\n\n\nGoogle Analytics 4 (GA4)\n\n\nSEO/SEM — SEMrush, Moz\n\n\nWebsite CMS & content management\n\n\n\nAnalytics & Reporting\nApplied AI for Marketing\n\n\n\n\nAudience engagement metrics & conversion analysis\n\n\nMarketing forecasting & performance analysis\n\n\nR, SQL/BigQuery & data visualization\n\n\nAI-assisted campaign optimization & content development\n\n\nPredictive modeling for marketing performance\n\n\nAI-powered digital marketing workflows\n\n\n\n\n\n\n\nEducation\n\n\n\n\n\n\n\n\n\n\n\nInstitution\nDegree\nYear\nCollege / Department\n\n\n\n\n\nCal Poly Pomona, Singelyn Graduate School of Business\nMaster of Science\n2024-2026\nDigital Marketing and Analytics\n\n\n\nUniversity of Southern California\nBachelor of Arts\n2013-2016\nEnglish - Creative Writing\n\n\n\n\n\nWork Experience\n\nCommunications Coordinator and Property Assistant, The Ratkovich Company\n[2019 – Present]\n\nDesigned and executed multi-channel campaigns across email, print, and digital platforms to drive community engagement and connection.\nBuilt and managed audience segmentation strategies in HubSpot CRM, using engagement metrics to refine messaging, optimize timing, and improve communication effectiveness.\nProduced branded content including newsletters, social media graphics, flyers, and event materials to support engagement initiatives and maintain consistent storytelling.\nCollaborated cross-functionally with internal teams and stakeholders to align messaging, coordinate timelines, and support property-wide communications.\n\n\n\n\nEditorial Intern, Flaunt Magazine\n[2018]\n\nWrote and edited editorial content aligned with brand voice, increasing audience engagement and relevance.\nSupported content production, event coordination, and stakeholder communication for brand activations and media initiatives.\nEnsured brand consistency through fact-checking, proofreading, and adherence to editorial standards\n\n\n\nSummer Day Camp Director and Grant Writer, YMCA of West San Gabriel Valley\n[2014 – 2017]\n\nDirected internal communications and coordinated daily schedules for 200+ campers and a team of 20+ staff, ensuring consistent messaging and smooth operations.\nResearched, budgeted, and wrote grants, and supported implementation once funds were received, contributing to program funding and sustainability.\nComposed organizational documents and correspondence, supporting clear communication across staff, stakeholders, and leadership.\nLed recruitment marketing efforts for seasonal staff, including crafting job postings and screening applicants.\nPlanned, scheduled, and executed field trips and daily events, balancing logistics, vendor coordination, and budget adherence."
+  },
+  {
+    "objectID": "Design.html",
+    "href": "Design.html",
+    "title": "Design",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "Hubspot-CRM-Project/email-crm-project.html#project-overview",
+    "href": "Hubspot-CRM-Project/email-crm-project.html#project-overview",
+    "title": "Tenant Email Notification System",
+    "section": "Project Overview",
+    "text": "Project Overview\n\nProperty Management Office previously relied on a fully manual email workflow: contacts were individually entered into Outlook folders based on tenant self-submitted forms, with no automated way to update, remove, or segment contacts. This project replaced that system end-to-end with a HubSpot CRM, delivering a dynamic, compliant, and analytics-ready email notification platform."
+  },
+  {
+    "objectID": "Hubspot-CRM-Project/email-crm-project.html#tools-technologies",
+    "href": "Hubspot-CRM-Project/email-crm-project.html#tools-technologies",
+    "title": "Tenant Email Notification System",
+    "section": "Tools & Technologies",
+    "text": "Tools & Technologies\n\n\n\n\n\n\n\nTool\nRole\n\n\n\n\nHubSpot\nCRM, contact management, email builder, analytics\n\n\nBitly\nURL shortening for printed materials and QR codes\n\n\nMicrosoft Excel\nData export / migration from Outlook\n\n\nOutlook\nLegacy system (replaced)\n\n\n\n\n\n  \n    ⚠️\n    The Problem\n    \n      Static contact lists required constant manual upkeep\n      No automated bounce-back removal\n      Opt-outs required emailing staff directly\n      General and sensitive notifications shared the same list\n      No open/click tracking or delivery analytics\n    \n  \n  \n    ✅\n    The Solution\n    \n      HubSpot CRM with dynamic, self-updating contact lists\n      Custom email sign-up form with automatic contact creation\n      Resubmission auto-updates existing contacts\n      Personalization tokens (e.g., tenant name in greeting)\n      Built-in unsubscribe, mobile-optimized templates"
+  },
+  {
+    "objectID": "Hubspot-CRM-Project/email-crm-project.html#the-challenge-a-broken-manual-system",
+    "href": "Hubspot-CRM-Project/email-crm-project.html#the-challenge-a-broken-manual-system",
+    "title": "Tenant Email Notification System",
+    "section": "The Challenge: A Broken Manual System",
+    "text": "The Challenge: A Broken Manual System\nThe legacy process for managing tenant communications was outdated and created significant operational overhead and compliance risk."
+  },
+  {
+    "objectID": "Hubspot-CRM-Project/email-crm-project.html#the-solution-hubspot-crm-pipeline",
+    "href": "Hubspot-CRM-Project/email-crm-project.html#the-solution-hubspot-crm-pipeline",
+    "title": "Tenant Email Notification System",
+    "section": "The Solution: HubSpot CRM Pipeline",
+    "text": "The Solution: HubSpot CRM Pipeline\n\n  \n    \n      Data Migration\n      Existing Outlook contacts exported to .xls and bulk-imported into HubSpot, preserving all prior tenant records.\n    \n  \n  \n    \n      Sign-up Form\n      A HubSpot-hosted form published via QR code and short link (Bitly) captures new subscribers automatically.\n    \n  \n  \n    \n      Dynamic Lists\n      Contacts are searchable and filterable. Form submissions auto-create or auto-update records — no manual entry.\n    \n  \n  \n    \n      Email Campaigns\n      One-time blasts or automated sequences with personalization tokens, branded templates, and compliance-ready unsubscribe links.\n    \n  \n  \n    \n      Analytics\n      Delivery, open rate, and click-through rate tracked per campaign — closing the loop on what actually reaches tenants.\n    \n  \n\n\nKey Feature Highlights\nDynamic Contact Management: HubSpot’s list engine means contacts are always current. Resubmitting the sign-up form automatically updates an existing record rather than creating a duplicate which solved the stale-data problem that plagued Outlook folders.\nCompliant Opt-Out: Every email includes a one-click unsubscribe footer, meeting CAN-SPAM requirements without requiring tenants to contact the office.\nPersonalization Tokens: Email greetings auto-populate with the tenant’s name, making mass communications feel more personal and increasing engagement.\nDelivery Analytics: The HubSpot dashboard tracks delivery status, open rates, and click-through rates per campaign, giving the property management team concrete feedback on communication effectiveness.\nCampus-Wide Rollou:t The launch used a printed flyer with QR code, a Bitly short link for digital sharing, and an introductory email to the existing list, inviting tenants to opt in to the new system."
+  },
+  {
+    "objectID": "Hubspot-CRM-Project/email-crm-project.html#outcomes-impact",
+    "href": "Hubspot-CRM-Project/email-crm-project.html#outcomes-impact",
+    "title": "Tenant Email Notification System",
+    "section": "Outcomes & Impact",
+    "text": "Outcomes & Impact\n\n  \n    ⏱️\n    Time Saved\n    Eliminated manual contact entry and bounce-back monitoring — routine list maintenance now requires no staff intervention.\n  \n  \n    📈\n    Better Reach\n    The QR-code and short-link sign-up flow makes it easy to grow the list beyond the original tenant base to campus employees and visitors.\n  \n  \n    🔍\n    Visibility\n    For the first time, the team can see open rates, click rates, and delivery stats — enabling data-driven improvements to future campaigns.\n  \n  \n    ⚖️\n    Compliance\n    Built-in unsubscribe links and opt-in forms align the system with email marketing best practices and CAN-SPAM requirements."
+  },
+  {
+    "objectID": "Longform-writing.html",
+    "href": "Longform-writing.html",
+    "title": "Long-form writing",
+    "section": "",
+    "text": "Westwood\n\n\n\n\n\n\nKathleen Juarez\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "",
+    "section": "",
+    "text": "Designed, built, and debugged.\n  \n    This portfolio is the product of learning by doing.Built with Quarto and styled with custom CSS/SCSS.\n  \n  \n    Quarto\n    HTML\n    CSS / SCSS\n    R\n    Chart.js\n    GitHub Pages\n  \n\n\n\n\n  \n    97\n    logged changes\n  \n  \n    8\n    sections built\n  \n  \n    6\n    stylesheets written\n  \n  \n    ∞\n    bugs encountered\n  \n\n\n\n\n\n\n\n\n\n\n\nNoteWhat’s GitHub?\n\n\n\n\n\nIf you’re asking yourself this question, you’ve clearly never spent the night crying in front of your computer after unsuccessfully trying to push your code, merge divergent branches, and then lose your entire document in the process. Ah, to have a layman’s innocence.\nGitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for coding projects. People can save their work, track changes over time, and collaborate without overwriting each other.\n\n\n\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nQuarto\nSite framework & rendering\n\n\nCSS / SCSS\nCustom styling & Bootswatch overrides\n\n\nHTML\nCustom components & page structure\n\n\nR\nDashboard templating & rendering\n\n\nGitHub\nVersion control & hosting\n\n\nChart.js\nInteractive data visualizations\n\n\nFlexdashboard\nAnalytics dashboard layout\n\n\n\n\n\n\n\n\n\n  \n    🚀\n    Deployment\n    Getting the site live involved more than clicking \"publish.\" Connecting a custom domain, resolving Jekyll conflicts with Quarto's file structure, fixing broken CSS on the live site, and wrangling Git branch divergence — all sorted, all documented.\n  \n  \n    🎨\n    Design System\n    A deliberate six-color palette, a multi-file SCSS architecture, and custom font overrides on top of Bootswatch Minty. Every element — navbar, hero, buttons, headings — styled intentionally rather than inherited by default.\n  \n  \n    🧭\n    Navigation\n    Dropdown menus, left-justified links, custom font sizing and weight, a tooltip that appears on hover over this very page's nav link — the navbar alone required half a dozen targeted CSS fixes.\n  \n  \n    ✍️\n    Editorial Writing Page\n    A film review converted into a full editorial layout: drop caps, pull quotes, a full-bleed hero image, floated mid-article photography, and a page-specific tan background — each with its own CSS variables and override logic.\n  \n  \n    📊\n    Analytics Case Study\n    A full project page featuring interactive Chart.js visualizations from GA4 data, stat cards, data tables, and an embedded 6-slide RevealJS presentation. \n  \n  \n    📄\n    Resume Page\n    Custom HTML tables, an auto-generated table of contents, SVG decorative dividers, targeted font overrides per section, and university seals sized with pixel-level precision — because markdown tables weren't going to cut it."
+  },
+  {
+    "objectID": "about.html#build-highlights",
+    "href": "about.html#build-highlights",
+    "title": "",
+    "section": "",
+    "text": "🚀\n    Deployment\n    Getting the site live involved more than clicking \"publish.\" Connecting a custom domain, resolving Jekyll conflicts with Quarto's file structure, fixing broken CSS on the live site, and wrangling Git branch divergence — all sorted, all documented.\n  \n  \n    🎨\n    Design System\n    A deliberate six-color palette, a multi-file SCSS architecture, and custom font overrides on top of Bootswatch Minty. Every element — navbar, hero, buttons, headings — styled intentionally rather than inherited by default.\n  \n  \n    🧭\n    Navigation\n    Dropdown menus, left-justified links, custom font sizing and weight, a tooltip that appears on hover over this very page's nav link — the navbar alone required half a dozen targeted CSS fixes.\n  \n  \n    ✍️\n    Editorial Writing Page\n    A film review converted into a full editorial layout: drop caps, pull quotes, a full-bleed hero image, floated mid-article photography, and a page-specific tan background — each with its own CSS variables and override logic.\n  \n  \n    📊\n    Analytics Case Study\n    A full project page featuring interactive Chart.js visualizations from GA4 data, stat cards, data tables, and an embedded 6-slide RevealJS presentation. \n  \n  \n    📄\n    Resume Page\n    Custom HTML tables, an auto-generated table of contents, SVG decorative dividers, targeted font overrides per section, and university seals sized with pixel-level precision — because markdown tables weren't going to cut it."
+  },
+  {
+    "objectID": "Writing-test.html",
+    "href": "Writing-test.html",
+    "title": "Writing -Test - listings-yaml-index-thing",
+    "section": "",
+    "text": "No matching items"
+  }
+]
