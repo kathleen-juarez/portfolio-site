@@ -196,9 +196,19 @@ $border-radius: .4rem !default;
   z-index: 11;
 }
 
+.hero-subtitle--top-left {
+  position: absolute;  /* takes it out of the flex flow entirely */
+  top: 2rem;
+  left: .5rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
 .hero-subtitle--bottom {
-  margin-top: auto;  /* ← pushes this element to the bottom */
-  padding-bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  text-align: right;
 }
 
 .navbar-nav a[href*="about"] {
@@ -258,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: #dff3fb
+  background-color: #EAE8EF
 }
 
 .navbar-brand {
@@ -344,4 +354,19 @@ h4 {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.7;
+}
+
+.hero-subtitle--top-left {
+  position: absolute;
+  top: 2rem;
+  left: .1rem;
+  margin-left: 0;
+  font-size: 2rem
+}
+
+.hero-subtitle--bottom {
+  position: absolute;
+  bottom: .1rem;
+  right: 2rem; 
+  font-size: 3rem
 }
