@@ -1,9 +1,0 @@
----
-title: "Writing -Test - listings-yaml-index-thing"
-listing: 
-  contents: listing-folder
-  type: grid
-  categories: true
-  sort: 
-    - "title desc"
----

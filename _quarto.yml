@@ -12,33 +12,27 @@ website:
       - text: Home
         href: index.qmd
       - text: Resume
-        href: resume/resume-Kathleen (1).qmd
+        href: resume/resume-Kathleen.qmd
       - text: Marketing 
         menu:
           - text: Hubspot CRM
-            href: Hubspot-CRM-Project/email-crm-project.qmd
-        # - text: 
-          #  href: 
-      #  href: marketing-analytics.qmd
+            href: hubspot-crm-project/email-crm-project.qmd
       - text: Data Analytics
         menu:
           - text: Funnel Analysis
-            href: Funnel Analysis/funnel-analysis.qmd
+            href: funnel-analysis-fold/funnel-analysis.qmd
           - text: GA4 Site Analytics
             href: analytics.qmd
           - text: RevealJs Presentation
-            href: Funnel Analysis/ao5-presentation.qmd
+            href: funnel-analysis-fold/ao5-presentation.qmd
           # - text: Interactive Dashboard
           #  href: 
       - text: Design
         href: Design.qmd
-     # - href: Writing-test.qmd
       - text: Writing
         menu:
           - text: Long-Form
-            href: Longform-writing.qmd
-        #  - text: Sub Test 2
-         #   href: subtest2.qmd
+            href: longform-writing.qmd 
       - href: about.qmd
         text: About This Site
         id: about-nav-link

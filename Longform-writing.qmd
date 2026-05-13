@@ -1,9 +1,0 @@
----
-title: "Long-form writing"
-listing: 
-  contents: Longform-listing-folder
-  type: grid
-  categories: true
-  sort: 
-    - "title desc"
----
