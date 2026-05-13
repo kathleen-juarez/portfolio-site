@@ -197,6 +197,7 @@
   margin: 0 0 0.3rem 0;
   font-size: 0.9rem;
   font-weight: 700;
+  color: #879DB5;
 }
 
 .step-content p {
@@ -293,6 +294,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   margin: 0 0 0.3rem;
+   color: #879DB5;
 }
 
 .rec-body p {
@@ -380,5 +382,23 @@ tr:nth-child(even) td {
   color: white !important;
 }
 
+.hero-stats {
+  gap: 12px; /* increase spacing between chips */
+}
 
+.stat-chip {
+  padding: 10px 20px;   /* taller and wider */
+  font-size: 1rem;    /* larger text */
+  border-radius: 50px;  /* adjust if needed */
+  gap: 8px;             /* space between icon and text */
+}
+
+.stat-chip i {
+  font-size: 1.2rem;    /* larger Font Awesome icons */
+}
+
+.stat-chip .fa-regular,
+.stat-chip .fa-solid {
+  font-size: 1.2rem;
+}
 

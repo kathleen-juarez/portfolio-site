@@ -20,6 +20,7 @@ execute:
   warning: false
   message: false
   echo: false
+  freeze: auto
 ---
 
 ```{=html}
@@ -122,9 +123,9 @@ theme_ao5 <- theme_minimal(base_size = 12) +
     quality across a 112-day observation window.
   </p>
   <div class="hero-stats">
-    <div class="stat-chip">📈 GA4 Event Data</div>
-     <div class="stat-chip">🔢 R / tidyverse</div>
-    <div class="stat-chip">📉 Descriptive Funnel Analysis</div>
+    <div class="stat-chip"><i class="fa-brands fa-google"></i> Event Data GA4</div>
+     <div class="stat-chip"><i class="fa-brands fa-r-project"></i> R / tidyverse</div>
+    <div class="stat-chip"><i class="fa-solid fa-filter"></i> Descriptive Funnel Analysis</div>
   </div>
 </div>
 ```
