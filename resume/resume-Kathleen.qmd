@@ -181,6 +181,8 @@ format:
 
 ## Data Certificates:
 
+![](/ga4-cert.jpg)
+
 ### Data Analytics with Google Cloud BigQuery and Looker Studio
 
 ![](/CertificateOfCompletion_Data%20Analytics%20with%20Google%20Cloud%20BigQuery%20and%20Looker%20Studio.jpg)
