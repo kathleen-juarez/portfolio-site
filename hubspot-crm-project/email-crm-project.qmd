@@ -155,7 +155,7 @@ This approach did not scale, produced stale lists, and offered no visibility int
 ```{=html}
 <div class="outcomes-grid">
   <div class="outcome-card">
-    <div class="outcome-icon">⏱<i class="fa-solid fa-hourglass-half"></i></div>
+    <div class="outcome-icon"><i class="fa-solid fa-hourglass-half"></i></div>
     <h4>Time Saved</h4>
     <p>Eliminated manual contact entry and bounce-back monitoring — routine list maintenance now requires no staff intervention.</p>
   </div>
