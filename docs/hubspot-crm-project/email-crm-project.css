@@ -1,0 +1,400 @@
+/* ===== Hero Banner ===== */
+.hero-banner {
+  background: linear-gradient(135deg, #1a3a5c 0%, #0e6ba8 60%, #0a9396 100%);
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.2;
+  color: white !important;
+  border: none !important;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  opacity: 0.88;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.stat-chip {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ===== Problem / Solution Cards ===== */
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+@media (max-width: 700px) {
+  .card-row { grid-template-columns: 1fr; }
+}
+
+.info-card {
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  border-left: 5px solid;
+}
+
+.problem-card {
+  background: #fff8f0;
+  border-color: #e07b39;
+}
+
+.solution-card {
+  background: #f0faf4;
+  border-color: #2a9d5c;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-card h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ===== Pipeline Steps ===== */
+.pipeline-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.pipeline-step {
+  flex: 1 1 140px;
+  background: #f4f8ff;
+  border: 1px solid #c8daf5;
+  border-radius: 10px;
+  padding: 1rem 1rem 1.1rem 1rem;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  background: #7aa496;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.step-content h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #879DB5;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.pipeline-arrow {
+  font-size: 1.4rem;
+  color: #ad9ca4;
+  align-self: center;
+  padding: 0 0.1rem;
+  display: none; /* hidden on small viewports; flex on large */
+}
+
+@media (min-width: 900px) {
+  .pipeline-arrow { display: flex; }
+}
+
+/* ===== Slides Container ===== */
+.slides-container {
+  border: 1px solid #d0dbe8;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.slides-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a3a5c;
+  padding: 0.75rem 1.25rem;
+}
+
+.slides-label {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: white !important;
+  border-radius: 6px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s;
+}
+
+.download-btn:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+/* ===== Outcomes Grid ===== */
+.outcomes-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(2, auto) !important;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.outcome-card {
+  background: #fafafa;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem;
+  text-align: center;
+}
+
+.outcome-icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.outcome-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  color: #879DB5;
+}
+
+.outcome-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th {
+  background: #1a3a5c;
+  color: white;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.9rem;
+}
+
+tr:nth-child(even) td {
+  background: #f7f9fc;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+/* ===== Hero Banner ===== */
+.hero-banner {
+  background: linear-gradient(135deg, #7e82ad 0%, #6a81a5 55%, #66ada9 100%);
+}
+
+.problem-card {
+  background: #fdf6ec;
+  border-color: #ddc28f;
+}
+
+.solution-card {
+  background: #f0f7f4;
+  border-color: #669966;
+}
+
+.pipeline-step {
+  background: #f3f5f9;
+  border: 1px solid #c5cfe0;
+}
+
+.slides-header {
+  background: #7e82ad;
+}
+
+.outcome-card {
+  border: 1px solid #d5dce8;
+}
+
+tr:nth-child(even) td {
+  background: #f3f5f9;
+}
+
+th {
+  background: #7e82ad;
+}
+
+.project-overview-intro {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #6a81a5 0%, #66ada9 55%, #7aa496 100%);
+}
+
+.problem-card {
+  border: 2px solid #f0a500;
+}
+
+.solution-card {
+  border: 2px solid #4a7c4e;
+}
+
+.sidebar nav a {
+  color: #7aa496 !important;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: white !important;
+}
+
+/* ── Quarto TOC sidebar ──────────────────────────────── */
+#quarto-margin-sidebar .nav-link {
+  color: #7aa496;
+  font-size: 0.82rem;
+}
+
+#quarto-margin-sidebar .nav-link.active,
+#quarto-margin-sidebar .nav-link:hover {
+  color: #7aa496;
+  font-weight: 600;
+  border-left: 3px solid #7aa496 !important;
+}
+
+#quarto-margin-sidebar .nav-link.active,
+#quarto-margin-sidebar .nav-link:hover {
+  color: #66ada9  !important;
+  font-weight: 600;
+  border-radius: 4px !important;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: white !important;
+}
+
+#quarto-margin-sidebar .nav-link.active,
+#quarto-margin-sidebar .nav-link:hover {
+  color: #66ada9 !important;
+  font-weight: 600;
+  border-radius: 4px !important;
+  background:  rgba(255, 255, 255, 0.15) !important;
+  box-shadow: none !important;
+}
+
+
+.pipeline-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: stretch;
+}
+
+.pipeline-step {
+  display: flex;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.pipeline-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+}
+
+.hero-stats {
+  gap: 12px; /* increase spacing between chips */
+}
+
+.stat-chip {
+  padding: 10px 20px;   /* taller and wider */
+  font-size: 1rem;    /* larger text */
+  border-radius: 50px;  /* adjust if needed */
+  gap: 8px;             /* space between icon and text */
+}
+
+.stat-chip i {
+  font-size: 1.2rem;    /* larger Font Awesome icons */
+}
+
+.stat-chip .fa-regular,
+.stat-chip .fa-solid {
+  font-size: 1.2rem;
+}
