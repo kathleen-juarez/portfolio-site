@@ -13,6 +13,7 @@ format:
     css: ao5-styles.css
     page-layout: full
     embed-resources: true
+    self-contained: true
     code-fold: true
     code-summary: "Show figure code"
 execute:
