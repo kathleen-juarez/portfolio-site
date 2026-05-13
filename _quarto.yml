@@ -27,7 +27,7 @@ website:
           - text: GA4 Site Analytics
             href: analytics.qmd
           - text: RevealJs Presentation
-            href: ao5-presentation.qmd
+            href: Funnel Analysis/ao5-presentation.qmd
           # - text: Interactive Dashboard
           #  href: 
       - text: Design
