@@ -1,0 +1,158 @@
+/* =====================================================
+   ao5-presentation.css
+   RevealJS theme overrides — AO5 palette
+   ===================================================== */
+
+:root {
+  --r-background-color: #ffffff;
+  --r-main-color:       #1a1a2e;
+  --r-heading-color:    #1a1a2e;
+  --r-link-color:       #7aa496;
+  --header:             #7e82ad;
+  --teal:               #7aa496;
+  --red:                #C0392B;
+  --muted:              #6b7280;
+  --border:             #c5cfe0;
+  --step-bg:            #f3f5f9;
+}
+
+.reveal {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 18px;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: inherit;
+  color: var(--r-heading-color);
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.reveal h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.65em;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+/* ── Title slide ────────────────────────────────────── */
+.title-slide-custom {
+  background: linear-gradient(135deg, #6a81a5 0%, #66ada9 55%, #7aa496 100%) !important;
+}
+
+.title-block {
+  color: white;
+  max-width: 820px;
+  padding: 1rem 0;
+}
+
+.title-block > p:first-child {
+  font-size: 0.8em;
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title-block h1 {
+  font-size: 2em;
+  color: white !important;
+  line-height: 1.15;
+  margin: 0.25em 0 0.6em;
+  font-weight: 700;
+  border: none !important;
+}
+
+.title-block > p:last-of-type {
+  font-size: 0.9em;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 0.75rem;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: white;
+}
+
+/* ── Callout box ────────────────────────────────────── */
+.callout-box {
+  background: #eef2f9;
+  border-left: 4px solid var(--header);
+  border-radius: 0 8px 8px 0;
+  padding: 0.65rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.85em;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* ── Recommendations ────────────────────────────────── */
+.rec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.rec-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--step-bg);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.88em;
+  line-height: 1.55;
+}
+
+.rec-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--header);
+  color: white;
+  font-size: 0.78em;
+  font-weight: 700;
+}
+
+/* ── Tables ─────────────────────────────────────────── */
+.reveal table {
+  font-size: 0.8em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.reveal th {
+  background: var(--header);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+}
+
+.reveal td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.reveal tr:nth-child(even) td { background: var(--step-bg); }
+
+/* ── Progress & slide number ────────────────────────── */
+.reveal .slide-number { color: var(--muted); font-size: 0.7em; }
+.reveal .progress { background: rgba(126,130,173,0.2); }
+.reveal .progress span { background: var(--header); }
