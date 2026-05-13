@@ -65,7 +65,7 @@ Contact Me: [email](mailto:kathleenrjuarez8@gmail.com) or [LinkedIn](https://www
     </ul>
 
     <h4 style="color: #ad9ca4;"> Why I Built It This Way</h4>
-    <p>For better or for worse, I pay attention to the details most people scroll past Building it from scratch meant I could be deliberate about everything: the spacing, the tone, every pixel, every word. Every choice was intentional. </p>
+    <p>For better or for worse, I pay attention to the details most people scroll past. Building it from scratch meant I could be deliberate about everything: the spacing, the tone, every pixel, every word. Every choice was intentional. </p>
 
  
 
