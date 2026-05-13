@@ -120,8 +120,6 @@ a.anchor-section { display: none; }
 </div>
 ```
 
-
-
 ```{=html}
 
 <style>
