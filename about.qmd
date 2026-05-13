@@ -16,8 +16,16 @@ a.anchor-section { display: none; }
 
 ```{=html}
 <style>
+  h3 {
+    color:#5B787F;
+  }
+</style>
+```
+
+```{=html}
+<style>
   h4 {
-    color: #7e82ad;
+    color: #595A7A;
   }
 </style>
 ```
@@ -51,10 +59,13 @@ a.anchor-section { display: none; }
     color: #7aa496;
     margin-bottom: 0.6rem;
   }
+  :root {
+    --hero-headline-color: ##595A7A;
+  }
   .hero-box-headline {
     font-size: 1.55rem;
     font-weight: 700;
-    color: #2d3748;
+    color: var(--hero-headline-color);
     line-height: 1.35;
     margin-bottom: 0.75rem;
   }
@@ -67,20 +78,23 @@ a.anchor-section { display: none; }
     line-height: 1.7;
     margin-bottom: 1.4rem;
     max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-pill-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.6rem;
     margin-bottom: 1.4rem;
+    justify-content: center;
   }
   .hero-pill {
     display: inline-block;
     background-color: #fff;
-    border: 1.5px solid #c5cfe0;
+    border: 1.5px solid #7D7990;
     border-radius: 999px;
-    padding: 0.25rem 0.85rem;
-    font-size: 0.82rem;
+    padding: 0.45rem 1.2rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #6a81a5;
     letter-spacing: 0.02em;
@@ -105,16 +119,15 @@ a.anchor-section { display: none; }
 </style>
 
 <div class="hero-box">
-  <div class="hero-box-headline">Designed, built, and debugged.</div>
+  <div class="hero-box-headline">Designed, Built, and Debugged by Me</div>
   <div class="hero-box-sub">
-    This portfolio is the product of learning by doing.<br>Built with Quarto and styled with custom CSS/SCSS.
+    This portfolio is the product of learning by doing.
   </div>
   <div class="hero-pill-row">
     <span class="hero-pill">Quarto</span>
     <span class="hero-pill">HTML</span>
     <span class="hero-pill">CSS / SCSS</span>
     <span class="hero-pill">R</span>
-    <span class="hero-pill">Chart.js</span>
     <span class="hero-pill">GitHub Pages</span>
   </div>
 </div>
@@ -182,19 +195,7 @@ a.anchor-section { display: none; }
 **GitHub is a website where people store and share code. Think of it like Google Drive, but specifically designed for coding projects. People can save their work, track changes over time, and collaborate without overwriting each other.**
 :::
 
-### Tools Used
-
-| Tool          | Purpose                               |
-|---------------|---------------------------------------|
-| Quarto        | Site framework & rendering            |
-| CSS / SCSS    | Custom styling & Bootswatch overrides |
-| HTML          | Custom components & page structure    |
-| R             | Dashboard templating & rendering      |
-| GitHub        | Version control & hosting             |
-| Chart.js      | Interactive data visualizations       |
-| Flexdashboard | Analytics dashboard layout            |
-
-## Build Highlights:
+### Build Highlights:
 
 ```{=html}
 
@@ -235,34 +236,35 @@ a.anchor-section { display: none; }
 </style>
 <div class="build-grid">
   <div class="build-card">
-    <div class="build-card-icon">🚀</div>
+    <div class="build-card-icon"><i class="fa-solid fa-code-branch"></i></div>
     <div class="build-card-title">Deployment</div>
-    <div class="build-card-body">Getting the site live involved more than clicking "publish." Connecting a custom domain, resolving Jekyll conflicts with Quarto's file structure, fixing broken CSS on the live site, and wrangling Git branch divergence — all sorted, all documented.</div>
+    <div class="build-card-body">Getting the site live involved more than clicking "publish." Connecting a custom domain, resolving Jekyll conflicts with Quarto's file structure, fixing broken CSS on the live site, and wrangling Git branch divergence.</div>
   </div>
   <div class="build-card">
-    <div class="build-card-icon">🎨</div>
+    <div class="build-card-icon"><i class="fa-solid fa-file-code"></i></div>
     <div class="build-card-title">Design System</div>
-    <div class="build-card-body">A deliberate six-color palette, a multi-file SCSS architecture, and custom font overrides on top of Bootswatch Minty. Every element — navbar, hero, buttons, headings — styled intentionally rather than inherited by default.</div>
+    <div class="build-card-body">A deliberate six-color palette, a multi-file SCSS architecture, and custom font overrides. Every element — navbar, hero, buttons, headings — styled intentionally rather than inherited by default.</div>
   </div>
   <div class="build-card">
-    <div class="build-card-icon">🧭</div>
+    <div class="build-card-icon"><i class="fa-solid fa-sitemap"></i></div>
     <div class="build-card-title">Navigation</div>
     <div class="build-card-body">Dropdown menus, left-justified links, custom font sizing and weight, a tooltip that appears on hover over this very page's nav link — the navbar alone required half a dozen targeted CSS fixes.</div>
   </div>
   <div class="build-card">
-    <div class="build-card-icon">✍️</div>
-    <div class="build-card-title">Editorial Writing Page</div>
-    <div class="build-card-body">A film review converted into a full editorial layout: drop caps, pull quotes, a full-bleed hero image, floated mid-article photography, and a page-specific tan background — each with its own CSS variables and override logic.</div>
-  </div>
-  <div class="build-card">
-    <div class="build-card-icon">📊</div>
-    <div class="build-card-title">Analytics Case Study</div>
-    <div class="build-card-body">A full project page featuring interactive Chart.js visualizations from GA4 data, stat cards, data tables, and an embedded 6-slide RevealJS presentation. </div>
-  </div>
-  <div class="build-card">
-    <div class="build-card-icon">📄</div>
-    <div class="build-card-title">Resume Page</div>
-    <div class="build-card-body">Custom HTML tables, an auto-generated table of contents, SVG decorative dividers, targeted font overrides per section, and university seals sized with pixel-level precision — because markdown tables weren't going to cut it.</div>
+    <div class="build-card-icon"><i class="fa-brands fa-bootstrap"></i></div>
+    <div class="build-card-title">Iconography</div>
+    <div class="build-card-body">This site uses Bootstrap Icons and Font Awesome for inline iconography. Both libraries are loaded via CDN and do not require any local installation. Icons are embedded directly in the page using standard HTML syntax.</div>
   </div>
 </div>
 ```
+
+### Tools Used
+
+| Tool        | Purpose                               |
+|-------------|---------------------------------------|
+| Quarto      | Site framework & rendering            |
+| CSS / SCSS  | Custom styling & Bootswatch overrides |
+| HTML        | Custom components & page structure    |
+| R           | Dashboard templating & rendering      |
+| GitHub      | Version control & hosting             |
+| Data Studio | GA4 Analytics dashboard layout        |

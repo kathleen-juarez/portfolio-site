@@ -36,7 +36,7 @@ website:
         menu:
           - text: Long-Form
             href: longform-writing.qmd 
-      - href: about-2.qmd
+      - href: about.qmd
         text: About This Site
         id: about-nav-link
           
