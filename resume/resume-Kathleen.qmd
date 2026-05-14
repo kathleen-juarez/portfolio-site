@@ -9,6 +9,8 @@ format:
     toc: true
     toc-location: right
  #  embed-resources: true
+execute:
+  freeze: auto
 ---
 
 ```{=html}
@@ -17,6 +19,22 @@ format:
     max-width: 100% !important;
     width: 100% !important;
   }
+  
+  body, .quarto-container, #quarto-content, .page-columns {
+  max-width: 100% !important;
+  width: 100% !important;
+  font-family: font-family: Georgia, serif;
+}
+
+h3, h4 {
+  font-family: Georgia, serif;
+  color: #4a5568;
+}
+
+h1, h2 {
+  font-family: Georgia, serif;
+  color: #444444;
+}
 
   /* ── Skills 3×3 grid table ── */
   .skills-table {
@@ -71,8 +89,84 @@ format:
     line-height: 1.5;
   }
   .skill-item::before {
-    content: "→ ";
-    color: #7f8c8d;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00c";
+  color: #7aa496;
+  margin-right: 6px;}
+</style>
+```
+
+```{=html}
+<style>
+  .edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Georgia, serif;
+    font-size: 0.93rem;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .edu-table th {
+    background-color: #7aa496;
+    color: #ffffff;
+    text-align: center;
+    padding: 13px 18px;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .edu-table td {
+    padding: 16px 18px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #e4e8ed;
+    border-right: 1px solid #e4e8ed;
+    color: #2d3748;
+  }
+  .edu-table td:last-child {
+    border-right: none;
+  }
+  .edu-table tr:last-child td {
+    border-bottom: none;
+  }
+  .edu-table tr:hover {
+    background-color: #f0f5f3;
+    transition: background-color 0.2s ease;
+  }
+  .edu-table td:first-child {
+    width: 130px;
+  }
+  .edu-table td img {
+    max-width: 110px;
+    max-height: 100px;
+    object-fit: contain;
+  }
+  .edu-institution {
+    font-weight: 700;
+    color: #2d3748;
+  }
+  .edu-degree {
+    color: #7aa496;
+    font-style: italic;
+  }
+  .edu-year {
+    display: inline-block;
+    background: #7aa496;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+  }
+  .edu-dept {
+    display: inline-block;
+    background: #f0f5f3;
+    color: #4a5568;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.82rem;
   }
 </style>
 ```
@@ -89,41 +183,41 @@ format:
 <table class="skills-table">
   <thead>
     <tr>
-      <th>Digital Marketing &amp; Campaigns</th>
-      <th>Content Creation &amp; Design</th>
+      <th>Digital Campaigns</th>
+      <th>Content Creation</th>
       <th>Marketing Technology</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <div class="skill-item">Multi-channel campaign planning, execution &amp; performance optimization</div>
-        <div class="skill-item">Social media content, management &amp; digital storytelling</div>
-        <div class="skill-item">Email marketing, automation &amp; brand messaging</div>
-        <div class="skill-item">Database marketing &amp; audience segmentation</div>
+        <div class="skill-item">Multi-channel campaign <br> planning &amp; execution</div>
+        <div class="skill-item">Social media content management</div>
+        <div class="skill-item">Email marketing</div>
+        <div class="skill-item">Brand messaging</div>
+        <div class="skill-item">Audience segmentation</div>
       </td>
       <td>
-        <div class="skill-item">Adobe Creative Suite (Photoshop, Illustrator, InDesign)</div>
-        <div class="skill-item">Canva, CapCut (video editing)</div>
-        <div class="skill-item">HTML/CSS fundamentals (website &amp; email editing)</div>
-        <div class="skill-item">Writing — email, social media, web, newsletters, presentations, editorial, promotional, film &amp; TV scripts</div>
+        <div class="skill-item"> CapCut (video editing)</div>
+        <div class="skill-item"> Writing: email, social media, web, newsletters, presentations, editorial, promotional, film &amp; TV scripts</div>
       </td>
       <td>
         <div class="skill-item">HubSpot CRM (segmentation, workflows &amp; automation)</div>
         <div class="skill-item">Google Analytics 4 (GA4)</div>
-        <div class="skill-item">SEO/SEM — SEMrush, Moz</div>
+        <div class="skill-item">SEO/SEM</div>
         <div class="skill-item">Website CMS &amp; content management</div>
       </td>
     </tr>
     <tr>
       <th style="background-color:#7aa496; color:#fff; text-transform:uppercase; letter-spacing:0.06em; font-size:0.88rem; padding:13px 18px;">Analytics &amp; Reporting</th>
       <th style="background-color:#7aa496; color:#fff; text-transform:uppercase; letter-spacing:0.06em; font-size:0.88rem; padding:13px 18px;">Applied AI for Marketing</th>
-      <th style="background-color:#7aa496; color:#fff; text-transform:uppercase; letter-spacing:0.06em; font-size:0.88rem; padding:13px 18px;"></th>
+      <th style="background-color:#7aa496; color:#fff; text-transform:uppercase; letter-spacing:0.06em; font-size:0.88rem; padding:13px 18px;">Design</th>
     </tr>
     <tr>
       <td>
         <div class="skill-item">Audience engagement metrics &amp; conversion analysis</div>
-        <div class="skill-item">Marketing forecasting &amp; performance analysis</div>
+        <div class="skill-item">Conversion &amp; performance analysis</div>
+        <div class="skill-item">Marketing forecasting</div>
         <div class="skill-item">R, SQL/BigQuery &amp; data visualization</div>
       </td>
       <td>
@@ -131,7 +225,10 @@ format:
         <div class="skill-item">Predictive modeling for marketing performance</div>
         <div class="skill-item">AI-powered digital marketing workflows</div>
       </td>
-      <td></td>
+      <td>
+      <div class="skill-item"> Adobe Creative Suite <br> (Photoshop, Illustrator, InDesign)</div>
+      <div class="skill-item"> Canva</div>
+       <div class="skill-item">HTML/CSS fundamentals (website &amp; email editing)</div>
     </tr>
   </tbody>
 </table>
@@ -146,7 +243,7 @@ format:
 
 # Work Experience
 
-### Communications Coordinator and Property Assistant, The Ratkovich Company
+### Communications Coordinator and Property Assistant,<br>The Ratkovich Company
 
 *\[2019 – Present\]*
 
@@ -157,7 +254,7 @@ format:
 
 ------------------------------------------------------------------------
 
-### Editorial Intern, Flaunt Magazine
+### Editorial Intern,<br>Flaunt Magazine
 
 *\[2018\]*
 
@@ -165,7 +262,7 @@ format:
 -   Supported content production, event coordination, and stakeholder communication for brand activations and media initiatives.
 -   Ensured brand consistency through fact-checking, proofreading, and adherence to editorial standards
 
-### Summer Day Camp Director and Grant Writer, YMCA of West San Gabriel Valley
+### Summer Day Camp Director and Grant Writer,<br>YMCA of West San Gabriel Valley
 
 *\[2014 – 2017\]*
 
@@ -178,8 +275,6 @@ format:
 # Certificates
 
 ## GA4 Certificate
-
-## Data Certificates:
 
 ![](/ga4-cert.jpg)
 

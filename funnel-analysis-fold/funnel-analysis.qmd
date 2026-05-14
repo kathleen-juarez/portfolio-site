@@ -20,7 +20,7 @@ execute:
   warning: false
   message: false
   echo: false
-  freeze: auto
+ # freeze: auto
 ---
 
 ```{=html}
